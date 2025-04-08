@@ -18,8 +18,8 @@ const rotate = useTransform(scrollY, [0, 1000], [0, 500]); // Adjust scroll rang
   <img src="shape -1.png" alt="Orange Shape" className="floating absolute top-[-572px] left-[-730px] z-0" />
   <img src="shape-3.png" alt="White Shape" className="floating absolute top-[270px] right-[1300px] w-[600px]  z-100" />
   <img src="shape-2.png" alt="Green Shape" className="floating absolute bottom-[-50px] right-[-550px] w-[900px] h-[800px] z-0" />
-  <img src="shape-4.png" alt="Loop Shape" className="floating absolute top-[200px] left-[330px] w-[100px] z-100" />
-  <img src="shape-5.png" alt="Loop Shape" className="floating absolute bottom-[190px] right-[550px] w-[100px] z-100" />
+  <img src="shape-4.png" alt="Loop Shape" className="floating absolute top-[200px] left-[290px] w-[100px] z-100" />
+  <img src="shape-5.png" alt="Loop Shape" className="floating absolute bottom-[190px] right-[490px] w-[100px] z-100" />
 
   {/* Animated Title */}
   {[
