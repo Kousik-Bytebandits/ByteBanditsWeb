@@ -21,16 +21,16 @@ export default function Navbar() {
     <>
       <div className="fixed top-0 left-15 w-[90%] flex justify-between items-center text-white z-[1000]">
         {/* Logo Section */}
-        <div className="flex items-center gap-2.5 px-15 py-8 bg-[#353639] rounded-b-lg">
-  <img src="/header.png" alt="Logo" className="w-50 h-20 rounded-md object-cover" />
+        <div className="flex items-center gap-2.5 px-12 py-6 bg-[#353639] rounded-b-xl">
+  <img src="/header.png" alt="Logo" className="w-35 h-15 rounded-md object-cover" />
 </div>
 
 
         {/* Mail & Menu Button Group */}
-        <div className="flex bg-[#d8d8d8] px-4 py-3 rounded-full cursor-pointer gap-4">
+        <div className="flex bg-[#d8d8d8] px-2 py-2 rounded-full cursor-pointer gap-2 mt-4">
           {/* Email Icon */}
           <div
-            className="text-[30px] text-[#ff9b42] bg-black px-6 py-5 rounded-full"
+            className="text-[30px] text-[#ff9b42] bg-black px-3 py-3 rounded-full"
             onClick={scrollToContact}
           >
             <TfiEmail />
@@ -38,7 +38,7 @@ export default function Navbar() {
 
           {/* Menu Toggle Icon */}
           <div
-            className="text-[30px] text-[#ff9b42] bg-black px-6 py-5 rounded-full"
+            className="text-[30px] text-[#ff9b42] bg-black px-3 py-3 rounded-full"
             onClick={toggleSidebar}
           >
             {isSidebarOpen ? <FiX /> : <FiMenu />}
