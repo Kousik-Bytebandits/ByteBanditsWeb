@@ -36,31 +36,28 @@ export default function ServicesSection() {
   const maxSlide = Math.max(0, cards.length - visibleCards);
 
   const handleNext = () => {
-    if (slideIndex < maxSlide) setSlideIndex(prev => prev + 1);
+    if (slideIndex < maxSlide) setSlideIndex((prev) => prev + 1);
   };
 
   const handlePrev = () => {
-    if (slideIndex > 0) setSlideIndex(prev => prev - 1);
+    if (slideIndex > 0) setSlideIndex((prev) => prev - 1);
   };
 
   return (
-    <section className="bg-[#f5f5f5] py-[40px] px-[10%] font-poppins text-[#333] overflow-hidden">
-      {/* Heading */}
+    <section className="bg-[#f5f5f5] sm:py-[80px] px-[20px] sm:px-[40px] md:px-[50px] text-[#333] overflow-hidden lg:ml-35">
       <div className="mb-6">
-        <p className="text-sm uppercase tracking-widest text-gray-500 mb-10">
+        <p className="text-[10px] sm:text-[12px] uppercase tracking-widest text-[#818181] mb-6 inter">
           Solutions and Consulting
         </p>
-        <h2 className="text-4xl md:text-5xl lg:text-5xl font-black uppercase leading-tight text-[#333]">
-          Scalable <span className="text-red-600">Solutions</span> and{" "}
-          <span className="text-red-600">Consulting</span>
+        <h2 className="text-[30px] sm:text-[40px] md:text-[50px]  uppercase leading-tight text-[#333] font-[anton]">
+          Scalable <span className="text-[#BA4D4D]">Solutions</span> and <span className="text-[#BA4D4D]">Consulting</span>
           <br />
           For Diverse Industries
         </h2>
       </div>
 
-      {/* Prev/Next */}
       <div className="flex justify-end items-center mt-8 mb-6">
-        <div className="flex items-center gap-4 text-sm text-gray-500 uppercase font-semibold cursor-pointer select-none">
+        <div className="flex items-center gap-4 text-[12px] sm:text-[14px] text-gray-500 uppercase font-semibold cursor-pointer select-none">
           <span
             onClick={handlePrev}
             className={`flex items-center gap-1 hover:text-black transition-colors duration-200 ${
@@ -80,37 +77,33 @@ export default function ServicesSection() {
         </div>
       </div>
 
-      {/* Cards Carousel */}
       <div className="relative w-full overflow-hidden">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{
-            transform: `translateX(-${slideIndex * (cardWidth + 24)}px)`, // 24 is gap
+            transform: `translateX(-${slideIndex * (cardWidth + 24)}px)`,
           }}
         >
           {cards.map((item, i) => (
             <div
               key={i}
-              className="bg-white shadow-md px-10 py-10 rounded-lg w-[379px] h-[422px] flex-shrink-0 mr-6 flex flex-col justify-between"
+              className="bg-white shadow-xl px-6 py-8 sm:px-8 sm:py-10 rounded-lg w-[350px] sm:w-[340px] md:w-[360px] lg:w-[340px] h-[422px] flex-shrink-0 mr-6 flex flex-col justify-between"
             >
               <div>
-                <h3 className="text-lg font-bold uppercase">{item.title}</h3>
-                <p className="text-sm text-gray-600 my-8">{item.desc}</p>
+                <h3 className="text-[16px] sm:text-[18px] font-[anton] uppercase">{item.title}</h3>
+                <p className="text-[12px] sm:text-[14px] text-gray-600 my-6 sm:my-8 inter">{item.desc}</p>
               </div>
               <div>
-                <div className="flex gap-3 text-xs justify-center  font-bold text-black/80 mb-20 mt-2">
+                <div className="flex gap-3 text-[10px] sm:text-[12px] justify-center font-bold text-black/80 mb-8 mt-2">
                   {item.tags.map((tag, idx) => (
-                    <span
-                      key={idx}
-                      className="after:content-['•'] last:after:content-none after:mx-2"
-                    >
+                    <span key={idx} className="after:content-['•'] last:after:content-none after:mx-2">
                       {tag}
                     </span>
                   ))}
                 </div>
-                <button className="text-xs font-semibold uppercase flex items-center gap-2 text-gray-800 hover:text-red-500 transition-all">
-                  Learn more{" "}
-                  <span className="w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-sm">
+                <button className="text-[10px] sm:text-[12px] font-semibold uppercase flex items-center gap-2 text-gray-800 hover:text-[#BA4D4D] transition-all">
+                  Learn more
+                  <span className="w-5 h-5 sm:w-6 sm:h-6 bg-[#BA4D4D] text-white rounded-full flex items-center justify-center text-[10px]">
                     →
                   </span>
                 </button>

@@ -17,24 +17,24 @@ const BlogSection = () => {
   ];
 
   return (
-    <section className="bg-white py-16 px-50 ">
+    <section className="bg-white py-16 px-[20px] sm:px-[30px] md:px-[40px] lg:px-[50px]">
       {/* Section Heading */}
       <div className="mb-12">
-        <p className="mb-10 text-xs text-gray-400 uppercase tracking-widest">Newsletter</p>
-        <h2 className="text-3xl font-black mt-6 uppercase">
+        <p className="mb-10 text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] text-[#818181] uppercase lg:ml-35 tracking-widest">Newsletter</p>
+        <h2 className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-[anton] mt-6 uppercase lg:ml-35">
           Latest From <span className="text-green-500">Blog</span>
         </h2>
       </div>
 
       {/* Horizontal Container for Cards */}
-      <div className="flex flex-row gap-8 overflow-x-auto">
+      <div className="flex flex-row gap-8 overflow-x-auto lg:ml-50">
         {blogData.map((blog, index) => (
           <div
             key={index}
-            className="w-[400px] flex-shrink-0 bg-white shadow-md rounded-md p-3"
+            className="w-[300px] sm:w-[340px] md:w-[370px] lg:w-[400px] flex-shrink-0 bg-white shadow-md rounded-md p-3"
           >
             {/* Image */}
-            <div className="h-[260px] overflow-hidden rounded">
+            <div className="h-[200px] sm:h-[220px] md:h-[240px] lg:h-[260px] overflow-hidden rounded ">
               <img
                 src={blog.image}
                 alt={blog.title}
@@ -43,12 +43,12 @@ const BlogSection = () => {
             </div>
 
             {/* Text & Read More */}
-            <div className="mt-4 flex justify-between items-start py-6 text-bold">
-              <h3 className="text-xs font-semibold text-gray-800 leading-snug max-w-[250px]">
+            <div className="mt-4 flex justify-between items-start py-6 font-bold shadow-lg">
+              <p className="text-[12px] sm:text-[11px] md:text-[12px] lg:text-[15px]  font-[anton] text-[#454545] leading-8 max-w-[250px] tracking-wide font-100">
                 {blog.title}
-              </h3>
+              </p>
 
-              <button className="text-[10px] font-medium bg-gray-100 px-3 py-8 flex items-center gap-1 hover:bg-black hover:text-white transition">
+              <button className="text-[9px] sm:text-[9px] md:text-[10px] lg:text-[10px]  bg-[#D9D9D9] px-3 py-8 flex items-center gap-1 hover:bg-black hover:text-white transition">
                 READ MORE <ArrowUpRight size={12} />
               </button>
             </div>

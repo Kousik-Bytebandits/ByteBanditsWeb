@@ -2,6 +2,7 @@ import Solution from "./Solution";
 import Blog from "./Blog";
 import Navbar from "./Navbar";
 import { MdLocationOn, MdPhone, MdEmail } from "react-icons/md";
+import "@fontsource/inter"; 
 
 import "./App.css";
 
@@ -15,37 +16,34 @@ export default function AnimatedWebsite() {
       {/* Hero Section */}
       <section className="relative h-screen flex flex-col justify-center items-center text-center   uppercase text-[#353639]  overflow-hidden">
   {/* Floating 3D shapes */}
-  <img src="shape -1.png" alt="Orange Shape" className="floating absolute top-[-400px] left-[-550px] w-[900px] z-0" />
+  <img src="shape -1.png" alt="Orange Shape" className="floating absolute top-[-400px] left-[-580px] w-[900px] z-0" />
   <img src="shape-3.png" alt="White Shape" className="floating absolute top-[270px] right-[1300px] w-[600px]  z-100" />
-  <img src="shape-2.png" alt="Green Shape" className="floating absolute top-[-70px] right-[-500px] w-[800px] h-[700px] z-0" />
-  <img src="shape-4.png" alt="Loop Shape" className="floating absolute top-[170px] left-[200px] w-[100px] z-100" />
-  <img src="shape-5.png" alt="Loop Shape" className="floating absolute bottom-[170px] right-[450px] w-[100px] z-100" />
+  <img src="shape-2.png" alt="Green Shape" className="floating absolute top-[-60px] right-[-500px] w-[800px] h-[700px] z-0" />
+  <img src="shape-4.png" alt="Loop Shape" className="floating absolute top-[200px] left-[300px] w-[100px] z-100" />
+  <img src="shape-5.png" alt="Loop Shape" className="floating absolute top-[500px] right-[500px] w-[100px] z-100" />
 
   {/* Animated Title */}
-  {[
-    "TECH THAT TALKS",
-    "DESIGN THAT",
-    "DAZZLES"
-  ].map((line, lineIndex) => (
-    <div
-      key={lineIndex}
-      className="  flex flex-wrap justify-center  text-[115px] leading-[110px] tracking-[1px] text-center  "
-    >
-      {line.split("").map((char, i) => (
-        <span
-          key={i}
-          className={`inline-block transition-transform duration-300 hover:scale-y-120 origin-bottom ${
-            char === " " ? "" : ""
-          }`}
-        >
-          {char}
-        </span>
-      ))}
-      
-    </div>
-    
-  ))}
-<p className="year">Since 2024</p>
+  {["TECH THAT TALKS", "DESIGN THAT", "DAZZLES"].map((line, lineIndex) => (
+  <div
+    key={lineIndex}
+    className="flex flex-wrap justify-center items-center text-[60px] sm:text-[80px] md:text-[100px] lg:text-[128px] leading-[60px] sm:leading-[80px] md:leading-[100px] lg:leading-[130px] font-[anton] space-x-4"
+  >
+    {line.split(" ").map((word, wIndex) => (
+      <div key={wIndex} className="flex  ">
+        {word.split("").map((char, i) => (
+          <span
+            key={i}
+            className="inline-block transition-transform duration-300 hover:scale-y-110 origin-bottom"
+          >
+            {char}
+          </span>
+        ))}
+      </div>
+    ))}
+  </div>
+))}
+
+<p className="year ">Since 2024</p>
   
 
 </section>
@@ -53,32 +51,34 @@ export default function AnimatedWebsite() {
 
 
       {/* Image Section */}
-      <section className="h-screen">
-        <img src="hero.png" alt="Hero" className="w-full h-90% object-cover " />
-      </section>
+      <section className="w-full h-[50vh] sm:h-[80vh] md:h-[80vh]">
+  <img
+    src="hero.png"
+    alt="Hero"
+    className="w-full h-500px object-cover"
+  />
+</section>
 
-      {/* About Section */}
-      <section className="max-w-[1200px] mx-auto py-[100px] px-[50px] text-[#333]">
-        <p className="text-left mb-10">About Us</p>
-        <div className="flex gap-8">
-          <div className="flex-1 text-4xl  font-bold">
+ {/* About Section */}
+ <section className="max-w-[1200px] mx-auto  sm:py-[80px] px-[20px] sm:px-[40px] md:px-[50px] text-[#333]">
+        <p className="text-left mb-10 text-[14px] sm:text-[16px] text-[#818181]">About Us</p>
+        <div className="flex flex-col lg:flex-row gap-12 items-start">
+          <div className="flex-1 text-[40px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[1.3] font-[anton]">
             DISCOVER <br /> OUR <span className="text-green-400">AGENCY</span>
-            <div className="border-l-4 border-orange-500 pl-[30px] text-sm mt-30 max-w-[400px] font-inter text-[#666] ">
-            <p >
-              Welcome to <span className="text-green-400">Byte Bandits</span> where your ideas come to life. We specialize in crafting unique brands, captivating advertising campaigns, and effective digital strategies.
-            </p>
+            <div className="border-l-4 border-orange-500 pl-[20px] text-[14px] sm:text-[14px] mt-[50px] max-w-[400px]  text-[#666]">
+              <p className="inter">
+                Welcome to <span className="text-green-400">Byte Bandits</span> where your ideas come to life. We specialize in crafting unique brands, captivating advertising campaigns, and effective digital strategies.
+              </p>
             </div>
-            
           </div>
-          <div className="flex-2  text-base leading-relaxed max-w-[600px] text-[#444]">
-           
-            <p >
-              At <span className="text-green-400">Byte Bandits</span>, we believe technology is more than just functionality — it&apos;s about building emotional connections through digital experiences. Our mission is to combine your vision with our technical and creative expertise to craft solutions that not only engage and inspire, but also drive growth.
-              Using the latest tools, modern frameworks, and bold ideas, we turn concepts into impactful products. Whether it&apos;s a brand, a platform, or an app — when you trust us with your idea, we don&apos;t just build it — we elevate it. The result? A solution that leaves a lasting impression on your users — and on your business.
-            </p>
-            <p>We specialize in creating powerful brands, smart marketing strategies, and standout digital experiences. Our team of skilled developers, designers, marketers, and content creators works with passion and precision to help your business shine in the digital space.
+          <div className="flex-1 text-[14px] sm:text-[16px] leading-relaxed text-[#444] mt-6 lg:mt-0 ">
+            <p className="inter">
+              At <span className="text-green-400 ">Byte Bandits</span>,we believe technology is more than just functionality — it&apos;s about building emotional connections through digital experiences. Our mission is to combine your vision with our technical and creative expertise to craft solutions that not only engage and inspire, but also drive growth.
+              Using the latest tools, modern frameworks, and bold ideas, we turn concepts into impactful products. Whether it&apos;s a brand, a platform, or an app — when you trust us with your idea, we don&apos;t just build it — we elevate it. The result? A solution that leaves a lasting impression on your users — and on your business.</p>
+              <p className="mt-2 inter">We specialize in creating powerful brands, smart marketing strategies, and standout digital experiences. Our team of skilled developers, designers, marketers, and content creators works with passion and precision to help your business shine in the digital space.
 We don’t just build – we listen, strategise, and craft solutions that align with your goals. Whether it’s a website, app, ad campaign, or a full-scale product launch, we tailor every move to make sure your brand connects with the right audience, at the right time, on the right platform.
 </p>
+            
           </div>
         </div>
 
@@ -106,25 +106,25 @@ We don’t just build – we listen, strategise, and craft solutions that align 
         alt={item.title}
         className={`${i === 0 ? "w-[142px]" : "w-[108px]"} mx-auto`}
       />
-      <p className={`${i===0 ? "mt-2": "mt-10"} font-anton text-lg font-bold `}>{item.title}</p>
-      <p className="text-sm text-[#666] mt-1">{item.desc}</p>
+      <p className={`${i===0 ? "mt-2": "mt-10.5"}  text-lg font-[anton] `}>{item.title}</p>
+      <p className="text-sm text-[#666] mt-1 inter ">{item.desc}</p>
     </div>
   ))}
 </div>
-
+       
+        
       </section>
-
       <section>
          <Solution />
       </section>
  
-      <section className="bg-[#3a3a3c] text-white py-20 px-11  text-center font-poppins">
-  <p className="text-xs uppercase text-gray-400 tracking-widest mb-3 text-left px-32">
+      <section className="bg-[#3a3a3c] text-white py-20 px-11  text-center ">
+  <p className="text-xs uppercase text-[#818181] tracking-widest mb-3 text-left px-32 inter">
     Our Clients
   </p>
-  <h2 className="text-4xl md:text-5xl font-extrabold uppercase leading-tight text-left px-32">
-    Where <span className="text-red-400">Bold</span> Ideas Become<br />
-    Iconic <span className="text-orange-300">Brands.</span>
+  <h2 className="text-4xl md:text-5xl font-[anton] uppercase leading-tight text-left px-32">
+    Where <span className="text-[#BA4D4D]">Bold</span> Ideas Become<br />
+    Iconic <span className="text-[#FAAC61]">Brands.</span>
   </h2>
 
   {/* Clients Logos */}
@@ -150,20 +150,20 @@ We don’t just build – we listen, strategise, and craft solutions that align 
   </div>
 </section>
 
-<section className="bg-[#f9f9f9] text-gray-900 py-20 px-10 font-poppins">
+<section className="bg-[#f9f9f9] text-gray-900 py-20 px-10 ">
   <div className="max-w-[1300px] mx-auto">
     {/* Subheading */}
-    <p className="text-xs uppercase text-gray-500 tracking-widest mb-3 text-left">
+    <p className="text-xs uppercase text-[#818181] tracking-widest mb-3 text-left lg:ml-10">
       Our Tools
     </p>
 
     {/* Main Heading */}
-    <h2 className="text-4xl md:text-5xl font-extrabold uppercase leading-tight text-left mb-12">
+    <h2 className="text-4xl md:text-5xl font-[anton] uppercase leading-tight text-left mb-12 lg:ml-10">
       Our <span className="bg-gradient-to-r text-[#844BA6] bg-clip-text">Technology</span> Stack
     </h2>
 
     {/* Grid of Tool Cards */}
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 justify-items-center">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 justify-items-center lg:ml-15">
       {[
         { name: "Photoshop", img: "image 31.png" },
         { name: "Illustrator", img: "image 35.png" },
@@ -202,15 +202,15 @@ We don’t just build – we listen, strategise, and craft solutions that align 
 <div className="flex flex-col md:flex-row h-auto md:h-[500px] w-full">
   {/* Left Content */}
   <div className="bg-[#2c2c2c] text-white flex flex-col justify-left md:items-center items-start px-10 py-14 md:w-1/2 space-y-6">
-    <p className="text-xs uppercase text-gray-400  pl-3">
+    <p className="text-xs uppercase text-[#818181] lg:mr-160px  pl-3">
       Contact
     </p>
-    <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-left">
-      LET’S <span className="text-orange-400">MAKE</span><br />
-      AN <span className="text-orange-400">IMPACT</span><br />
+    <h2 className="text-4xl md:text-5xl font-[anton] leading-tight text-left ">
+      LET’S <span className="text-[#FAAC61]">MAKE</span><br />
+      AN <span className="text-[#FAAC61]">IMPACT</span><br />
       TOGETHER.
     </h2>
-    <p className="text-sm text-gray-300 max-w-sm text-left border-l-4 border-orange-400 px-5 ml-25">
+    <p className="text-sm text-gray-300 max-w-sm text-left border-l-4 border-[#FAAC61] px-5 lg:ml-40">
       Welcome to <span className="text-teal-400 font-semibold">BYTEBANDITS</span> where your ideas come to life. 
       We specialize in crafting unique brands, captivating campaigns, and effective digital strategies.
     </p>
@@ -231,8 +231,8 @@ We don’t just build – we listen, strategise, and craft solutions that align 
 
   {/* Our Agency Section */}
   <div className="bg-white text-center py-20 px-6">
-    <p className="text-xs uppercase text-gray-500 mb-4">Our Agency</p>
-    <h2 className="text-3xl md:text-4xl font-black leading-relaxed max-w-6xl mx-auto mb-6">
+    <p className="text-xs uppercase text-[#818181] mb-4">Our Agency</p>
+    <h2 className="text-60px md:text-4xl font-[anton] leading-15 max-w-3xl mx-auto mb-6 ">
       <span className="text-[#FAAC61]">BYTEBANDITS</span> IS WHERE BOLD IDEAS BECOME
       <span className="text-[#FAAC61]"> POWERFUL</span> DIGITAL
       <span className="text-[#FAAC61]"> REALITIES</span>. WE ENGINEER SMART SOLUTIONS, DESIGN
@@ -240,7 +240,7 @@ We don’t just build – we listen, strategise, and craft solutions that align 
       CHOOSE <span className="text-[#FAAC61]">BYTEBANDITS</span> BECAUSE WE ARE WORTH IT.
     </h2>
     <div className="flex justify-center items-center mt-8 gap-6 ">
-    <p className="mt-4 text-xs text-gray-500 ">
+    <p className="mt-4 text-xs  text-gray-500 ">
       We may be new, but we’re already building a portfolio we’re proud of.
     </p>
     <button className="mt-6 bg-green-500 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-green-600 transition-all">
