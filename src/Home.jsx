@@ -1,6 +1,7 @@
 import Solution from "./Solution";
 import Blog from "./Blog";
 import Navbar from "./Navbar";
+import CrossedTape from "./CrossedTape";
 import { MdLocationOn, MdPhone, MdEmail } from "react-icons/md";
 import "@fontsource/inter"; 
 import { useRef } from "react";
@@ -272,30 +273,7 @@ We don’t just build – we listen, strategise, and craft solutions that align 
 </section>
 
 {/* Tapes X Section */}
-<section className="relative w-full h-[500px] bg-white overflow-hidden">
-  {/* Tape 1 - Diagonal from top left to bottom right */}
-  <img
-    src="tape-2.png"
-    alt="Tape 2"
-    className="absolute top-1/2 left-0 w-[900%] rotate-[15deg] -translate-y-1/2 z-0"
-  />
-
-  {/* Tape 2 - Diagonal from bottom left to top right */}
-  <img
-    src="tape-1.png"
-    alt="Tape 1"
-    className="absolute top-1/2 left-0 w-[700%] h-[100px] rotate-[-15deg] -translate-y-1/2 z-0"
-  />
-
-  {/* 3D Shape in Center */}
-  <div className="relative z-10 flex justify-center items-center h-full">
-    <img
-      src="shapes-6.png"
-      alt="3D Shape"
-      className="w-[200px] h-[200px] object-contain"
-    />
-  </div>
-</section>
+<CrossedTape />
 
 
 {/* Blog Section */}
@@ -322,7 +300,7 @@ We don’t just build – we listen, strategise, and craft solutions that align 
 </div>
 
       
-      <p className="mt-4 text-sm text-[#E0E0E0] inter">
+      <p className="mt-4 text-[17px] text-[#E0E0E0] inter">
         We are a passionate team of tech innovators dedicated to crafting smart, scalable, and user-centric digital solutions. From custom software and mobile apps to eCommerce platforms, digital marketing, branding, and cloud services.
       </p>
     </div>
@@ -330,9 +308,9 @@ We don’t just build – we listen, strategise, and craft solutions that align 
     {/* Office Info */}
     
      
-      <div className="flex flex-col gap-2 text-sm text-[#E0E0E0] ">
-      <h4 className="text-sm inter mb-4 text-[#8F8F8F] ml-25">OFFICE</h4>
-  <div className="flex items-start gap-2 inter ">
+      <div className="flex flex-col gap-2  text-[#E0E0E0] ">
+      <h4 className="text-[20px] inter mb-4 text-[#8F8F8F] ml-25">OFFICE</h4>
+  <div className="flex items-start gap-2 inter text-[17px]">
     <MdLocationOn className="text-lg mt-[2px] ml-25 text-left" />
     <p>
       plot no.3a, door no.1/1033,<br />
@@ -341,12 +319,12 @@ We don’t just build – we listen, strategise, and craft solutions that align 
     </p>
   </div>
 
-  <div className="flex items-center gap-2 inter ml-25">
+  <div className="flex items-center gap-2 inter ml-25 text-[17px]">
     <MdPhone className="text-lg" />
     <p>Phone: +91 79048 12982</p>
   </div>
 
-  <div className="flex items-center gap-2 inter ml-25">
+  <div className="flex items-center gap-2 inter ml-25 text-[17px]">
     <MdEmail className="text-lg" />
     <p>Email: <a href="mailto:bbtechworks@gmail.com" className="underline inter">bbtechworks@gmail.com</a></p>
   </div>
@@ -355,8 +333,8 @@ We don’t just build – we listen, strategise, and craft solutions that align 
 
     {/* Links */}
     <div className="text-left ml-25">
-      <h4 className="text-sm mb-4 text-[#8F8F8F] inter ">LINKS</h4>
-      <ul className="space-y-2 text-sm text-[#E0E0E0] underline inter ">
+      <h4 className="text-[20px] mb-4 text-[#8F8F8F] inter ">LINKS</h4>
+      <ul className="space-y-2 text-[17px] text-[#E0E0E0] underline inter ">
         <li><a href="#">Home</a></li>
         <li><a href="#">Blogs</a></li>
         <li><a href="#">Services</a></li>
@@ -367,8 +345,8 @@ We don’t just build – we listen, strategise, and craft solutions that align 
 
     {/* Social Media */}
     <div>
-      <h4 className="text-sm inter mb-1  text-[#8F8F8F]">SOCIAL MEDIA</h4>
-      <div className="grid grid-cols-3 grid gap-3  ">
+      <h4 className="text-[20px] inter mb-1  text-[#8F8F8F]">SOCIAL MEDIA</h4>
+      <div className="grid grid-cols-3 grid gap-10  mt-6">
   {[ "image 23.png", "image 24.png", "Group 21.png", "image 27.png", "image 28.png", "image 26.png" ].map((img, i) => (
     <a key={i} href="#"><img src={img} alt="social" className="w-6 h-6" /></a>
   ))}
