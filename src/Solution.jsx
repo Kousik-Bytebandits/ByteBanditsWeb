@@ -21,7 +21,7 @@ export default function ServicesSection() {
     },
     {
       title: "Mobile Development",
-      desc: "Launch a custom mobile app that looks amazing and runs flawlessly. Everything is designed for usability and performance.",
+      desc: "Launch a custom mobile app that looks amazing and runs flawlessly on iOS and Android. Whether it’s for customers or internal use, everything is designed for usability and performance. Your idea turns into a powerful app. Built smart, built to last.",
       tags: ["UI/UX", "NATIVE", "STUDIO"],
     },
     {
@@ -31,7 +31,8 @@ export default function ServicesSection() {
     },
   ];
 
-  const cardWidth = 379; // same width as card
+  const cardWidth = 370;
+  const gap = 30; // 1.5rem (Tailwind's `mr-6`)
   const visibleCards = 3.5;
   const maxSlide = Math.max(0, cards.length - visibleCards);
 
@@ -44,20 +45,20 @@ export default function ServicesSection() {
   };
 
   return (
-    <section className="bg-[#f5f5f5] sm:py-[80px] px-[20px] sm:px-[40px] md:px-[50px] text-[#333] overflow-hidden lg:ml-35">
-      <div className="mb-6">
-        <p className="text-[10px] sm:text-[12px] uppercase tracking-widest text-[#818181] mb-6 inter">
+    <section className="mx-45 bg-[#f5f5f5] py-16 px-5 sm:px-10 md:px-20 text-[#333] overflow-hidden">
+      <div className="mb-15">
+        <p className="text-xs sm:text-sm uppercase tracking-widest text-[#818181] mb-15 inter">
           Solutions and Consulting
         </p>
-        <h2 className="text-[30px] sm:text-[40px] md:text-[50px]  uppercase leading-tight text-[#333] font-[anton]">
+        <h2 className="text-[28px] sm:text-[40px] md:text-[60px] uppercase leading-tight text-[#333] font-[anton]">
           Scalable <span className="text-[#BA4D4D]">Solutions</span> and <span className="text-[#BA4D4D]">Consulting</span>
           <br />
           For Diverse Industries
         </h2>
       </div>
 
-      <div className="flex justify-end items-center mt-8 mb-6">
-        <div className="flex items-center gap-4 text-[12px] sm:text-[14px] text-gray-500 uppercase font-semibold cursor-pointer select-none">
+      <div className="flex justify-end items-center mb-8">
+        <div className="flex items-center gap-4 text-xs sm:text-sm text-gray-500 uppercase font-semibold cursor-pointer select-none">
           <span
             onClick={handlePrev}
             className={`flex items-center gap-1 hover:text-black transition-colors duration-200 ${
@@ -77,36 +78,50 @@ export default function ServicesSection() {
         </div>
       </div>
 
-      <div className="relative w-full overflow-hidden">
+      <div className="relative w-full  mx-25 px-4 py-6">
         <div
-          className="flex transition-transform duration-500 ease-in-out"
+          className="flex transition-transform duration-500 ease-in-out "
           style={{
-            transform: `translateX(-${slideIndex * (cardWidth + 24)}px)`,
+            transform: `translateX(-${slideIndex * (cardWidth + gap)}px)`,
+            width: `${cards.length * (cardWidth + gap)}px`,
           }}
         >
           {cards.map((item, i) => (
             <div
               key={i}
-              className="bg-white shadow-xl px-6 py-8 sm:px-8 sm:py-10 rounded-lg w-[350px] sm:w-[340px] md:w-[360px] lg:w-[340px] h-[422px] flex-shrink-0 mr-6 flex flex-col justify-between"
+              className={`bg-white box  px-10 py-5 rounded-lg w-[370px] h-[400px] flex-shrink-0 flex flex-col justify-between shadow-xl ${
+                i !== cards.length - 1 ? "mr-8" : ""
+              }`}
             >
               <div>
-                <h3 className="text-[16px] sm:text-[18px] font-[anton] uppercase">{item.title}</h3>
-                <p className="text-[12px] sm:text-[14px] text-gray-600 my-6 sm:my-8 inter">{item.desc}</p>
+                <h3 className="text-[18px] sm:text-[25px] font-[anton] text-black uppercase">
+                  {item.title}
+                </h3>
+                <p className="text-[12px] sm:text-[13px] text-black my-6 sm:my-6 inter mx-3">
+                  {item.desc}
+                </p>
               </div>
-              <div>
-                <div className="flex gap-3 text-[10px] sm:text-[12px] justify-center font-bold text-black/80 mb-8 mt-2">
+
+              <div className="flex flex-col justify-end gap-6">
+                <div className="flex gap-3 text-xs justify-center font-bold text-black">
                   {item.tags.map((tag, idx) => (
-                    <span key={idx} className="after:content-['•'] last:after:content-none after:mx-2">
+                    <span key={idx} className="relative">
                       {tag}
+                      {idx < item.tags.length - 1 && (
+                        <span className="mx-4 text-[#BA4D4D]">•</span>
+                      )}
                     </span>
                   ))}
                 </div>
-                <button className="text-[10px] sm:text-[12px] font-semibold uppercase flex items-center gap-2 text-gray-800 hover:text-[#BA4D4D] transition-all">
-                  Learn more
-                  <span className="w-5 h-5 sm:w-6 sm:h-6 bg-[#BA4D4D] text-white rounded-full flex items-center justify-center text-[10px]">
+
+                <div className="border-t-[2px] border-[#818181] pt-20 flex justify-between items-center">
+                  <span className="text-[11px] sm:text-[13px] font-semibold uppercase text-black hover:text-[#BA4D4D] transition-all">
+                    Learn More
+                  </span>
+                  <span className="w-6 h-6 bg-[#BA4D4D] text-white rounded-full flex items-center justify-center text-sm">
                     →
                   </span>
-                </button>
+                </div>
               </div>
             </div>
           ))}

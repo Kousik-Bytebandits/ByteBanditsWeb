@@ -20,20 +20,20 @@ export default function Navbar() {
   return (
     <>
       <div className="fixed top-0 left-0 w-full flex justify-between items-center text-white z-[1000] px-[10px] sm:px-[20px] md:px-[40px] ">
-        <div className="flex items-center gap-2.5 bg-[#353639] px-6 py-4 rounded-b-xl">
-          <img src="/header.png" alt="Logo" className="w-[120px] h-auto object-cover" />
+        <div className="flex items-center gap-2.5 bg-[#353639] px-12 py-8 rounded-b-xl">
+          <img src="/header.png" alt="Logo" className="w-[180px] h-auto object-cover" />
         </div>
 
-        <div className="flex bg-[#d8d8d8] px-2 py-2 rounded-full cursor-pointer gap-2">
+        <div className="flex bg-[#d8d8d8] px-3 py-3 rounded-full cursor-pointer gap-2">
           <div
-            className="text-[20px] sm:text-[24px] md:text-[30px] text-[#ff9b42] bg-black px-3 py-3 rounded-full"
+            className="text-[20px] sm:text-[24px] md:text-[30px] text-[#ff9b42] bg-[#353639] px-4 py-4 rounded-full"
             onClick={scrollToContact}
           >
             <TfiEmail />
           </div>
 
           <div
-            className="text-[20px] sm:text-[24px] md:text-[30px] text-[#ff9b42] bg-black px-3 py-3 rounded-full"
+            className="text-[20px] sm:text-[24px] md:text-[30px] text-[#ff9b42] bg-[#353639] px-4 py-4 rounded-full"
             onClick={toggleSidebar}
           >
             {isSidebarOpen ? <FiX /> : <FiMenu />}

@@ -2,7 +2,27 @@
     color:  #818181;
     font-family: inter;
     margin-top: 15px;
+    font-weight: 600;
 }
 .inter,.year{
     font-family: 'inter';
+   
+}
+
+.about{
+    font-weight: 600;
+    color: #818181;
+    font-family: 'inter';
+}
+
+.box{
+    box-shadow: 6px 15px 25px rgba(0, 0, 0, 0.2);
+    
+}
+
+.grid{
+    
+    display: grid;
+    justify-items: center;
+      
 }
