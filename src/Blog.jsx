@@ -22,11 +22,12 @@ const BlogSection = () => {
   return (
     <section className="bg-white py-20 px-[20px] sm:px-[30px] md:px-[40px] lg:px-[20px]">
       {/* Section Heading */}
-      <div className="mb-12 mx-50"data-aos="fade-up"
-          data-aos-delay="10">
-        <p className="mb-4 text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] text-[#818181] uppercase tracking-widest">Newsletter</p>
+      <div className="mb-12 mx-50">
+        <p className="mb-4 text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] text-[#818181] uppercase tracking-widest"data-aos="fade-up"
+          data-aos-delay="10">Newsletter</p>
         <div className="flex justify-between items-center">
-          <h2 className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[60px] font-[anton] uppercase">
+          <h2 className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[60px] font-[anton] uppercase"data-aos="fade-up"
+          data-aos-delay="10">
             Latest From <span className="text-[#50BD8A]">Blog</span>
           </h2>
           <div className="flex items-center gap-2 cursor-pointer mr-70">

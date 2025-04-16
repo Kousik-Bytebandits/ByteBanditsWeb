@@ -45,7 +45,7 @@ export default function ServicesSection() {
   };
 
   return (
-    <section className="mx-45 bg-[#f5f5f5] py-16 px-5 sm:px-10 md:px-20 text-[#333] overflow-hidden">
+    <section className="mx-45 bg-[#f5f5f5] py-16 px-5 sm:px-10 md:px-20 text-[#333] ">
       <div className="mb-15"data-aos="fade-up"
           data-aos-delay="10">
         <p className="text-xs sm:text-sm uppercase tracking-widest text-[#818181] mb-15 inter">
@@ -79,8 +79,8 @@ export default function ServicesSection() {
         </div>
       </div>
 
-      <div className="relative mx-25 w-full px-4 py-6 overflow-hidden ">
-  <div className="overflow-x-auto scrollbar-hide ">
+      <div className="relative mx-25 w-full px-4 py-6  ">
+  <div className="overflow-x-auto scrollbar-hide  ">
     <div
       className="h-[600px] flex transition-transform duration-500 ease-in-out gap-8 "
       style={{

@@ -12,12 +12,12 @@
   
   /* Hide scrollbar utility */
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;
+  
+  height: 4px;
+  background-color:lightgray;  
+  border-radius: 5px;
 }
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
+
 /* Hide browser scrollbar across all browsers */
 html, body {
   overflow-y: scroll; /* or 'auto' if needed */
@@ -31,10 +31,7 @@ body::-webkit-scrollbar {
 }
 /* index.css or globals.css */
 
-.scrollbar-none {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
-}
+
 
 .scrollbar-none::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
