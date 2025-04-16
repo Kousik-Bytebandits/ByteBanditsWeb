@@ -24,6 +24,11 @@ export default function AnimatedWebsite() {
      
     });
   }, []);
+   // Scale the hero background image slightly on scroll
+   const scale = useTransform(scrollYProgress, [0, 1], [1.6, 1.1]);
+   //const scale2 = useTransform(scrollYProgress, [0, 1], [1.3, 1.1]);
+  
+ 
   
   return (
     <div className="w-full overflow-x-hidden bg-[whitesmoke] text-black  scrollbar-none">
@@ -31,14 +36,39 @@ export default function AnimatedWebsite() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative h-[92vh] flex flex-col justify-center items-center text-center ... hero-section"> 
+      <section className="relative h-[110vh] flex flex-col justify-center items-center text-center ... hero-section"> 
 
   {/* Floating 3D shapes */}
-  <img src="shape -1.png" alt="Orange Shape" className="floating absolute shape-1 top-[-430px] left-[-590px] w-[1000px] z-0" />
-  <img src="shape-3.png" alt="White Shape" className="floating absolute shape-3 top-[300px] right-[1550px] w-[850px]  z-0" />
-  <img src="shape-2.png" alt="Green Shape" className="floating absolute shape-2 top-[-120px] right-[-650px] w-[1000px] h-[1000px] z-0" />
-  <img src="shape-4.png" alt="Loop Shape" className="floating absolute shape-4 top-[160px] left-[480px] w-[120px] z-100" />
-  <img src="shape-5.png" alt="Loop Shape" className="floating absolute shape-5 top-[470px] right-[660px] w-[130px] z-100" />
+ 
+   <motion.img
+        src="shape -1.png"
+        alt="Orange Shape"
+       
+        className="floating absolute shape-1 top-[-430px] left-[-590px] w-[1000px] z-0"
+      />
+     <motion.img
+  src="shape-3.png"
+  alt="White Shape"
+  className="floating absolute shape-3 top-[300px] right-[1550px] w-[850px] z-0"
+/>
+
+<motion.img
+  src="shape-2.png"
+  alt="Green Shape"
+  className="floating absolute shape-2 top-[-120px] right-[-650px] w-[1000px] h-[1000px] z-0"
+/>
+
+
+      <img
+        src="shape-4.png"
+        alt="Loop Shape"
+        className="floating absolute shape-4 top-[250px] left-[480px] w-[120px] z-100"
+      />
+      <img
+        src="shape-5.png"
+        alt="Loop Shape"
+        className="floating absolute shape-5 top-[570px] right-[670px] w-[130px] z-100"
+      />
 
   {/* Animated Title */}
   <div className="animated-title">
@@ -71,20 +101,22 @@ export default function AnimatedWebsite() {
 
 <section
       ref={scrollRef}
-      className="w-full h-[60vh] sm:h-[50vh] md:h-[70vh] mb-10 relative " >
-      {/* Background Image */}
-      <img
+      className="w-full h-[60vh] sm:h-[50vh] md:h-[55vh] mb-10 relative "
+    >
+      {/* Background Image with Zoom */}
+      <motion.img
         src="hero.png"
         alt="Hero"
+        style={{ scale }}
         className="absolute w-full h-full object-cover z-0"
       />
 
-      {/* Scroll Down Icon */}
+      {/* Scroll Down Icon with Rotation */}
       <motion.img
         src="scroll-down.png"
         alt="Scroll Down"
         style={{ rotate }}
-       className="absolute -top-21 right-42 w-40 h-40 z-30"
+        className="absolute -top-60 right-50 w-45 h-45 z-30"
       />
     </section>
 
@@ -342,6 +374,7 @@ We don’t just build – we listen, strategise, and craft solutions that align 
         src="contacts.png" 
         alt="Team working"
         className="w-full h-full object-cover"
+        
       />
     </div>
   </div>
