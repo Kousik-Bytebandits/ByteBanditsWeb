@@ -385,9 +385,9 @@ We don’t just build – we listen, strategise, and craft solutions that align 
 {/* Blog Section */}
 <Blog />
 {/* Let's Talk Section */}
-<section className="w-full py-16  bg-white text-left"data-aos="fade-up"
+<section className="w-full py-16  bg-white text-left">
+  <h2 className="text-4xl md:text-[60px] mx-50 font-[anton] uppercase text-[#454545]  mb-15"data-aos="fade-up"
           data-aos-delay="10">
-  <h2 className="text-4xl md:text-[60px] mx-50 font-[anton] uppercase text-[#454545]  mb-15">
     Let&apos;s Talk
   </h2>
 </section>
