@@ -200,3 +200,344 @@
   margin-top: 1.5rem;
 }
 }
+
+/* Media queries for 125% resolution */
+@media (min-resolution: 120dpi) {
+/* Navbar */
+
+.navbar-container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.logo-box {
+  padding: 1.5rem 2.5rem; /* more room for zoomed scale */
+}
+
+.logo-box img {
+  width: 140px;
+}
+
+.navbar-icon {
+  font-size: 24px;
+  padding: 1rem 1rem;
+}
+.navbar-icons{
+  padding: 0.4rem;
+  gap: 0.5rem;
+  border-radius: 9999px;
+}
+
+.sidebar {
+  width: 30% !important; /* override Tailwind width */
+}
+
+.sibebar-links {
+  margin-top: 30%;
+  padding-left: 35px;
+  padding-right: 35px;
+  line-height: 80px;
+}
+
+.sibebar-links li {
+  font-size: 18px;
+}
+
+.sidebar-socials a {
+  font-size: 19px;
+  gap: 60px;
+}
+
+  /* 3d shapes positions and title */
+  .shape-1 {
+    top: -350px;
+    left: -500px;
+    width: 850px;
+  }
+
+  .shape-2 {
+  
+    right: -510px;
+    width: 750px;
+    height: 800px;
+  }
+
+  .shape-3 {
+    top: 380px;
+    right: 1250px;
+    width: 600px;
+  }
+
+  .shape-4 {
+    top: 220px;
+    left: 330px;
+    width: 110px;
+  }
+
+  .shape-5 {
+    top: 480px;
+    right: 510px;
+    width: 110px;
+  }
+
+  /* Title size adjustment */
+  .animated-title .title-line {
+    font-size: 110px !important;
+    line-height: 115px !important;
+  }
+
+  .animated-title .years {
+    font-size: 13px !important;
+    
+  }
+
+   /*image adjustments */
+  .hero-banner {
+    height: 65vh;
+    margin-bottom: 24px;
+  }
+
+  .hero-bg {
+    object-position: center;
+    transform: scale(1.05);
+  }
+
+  .scroll-icon {
+    top: -220px;
+    right: 200px;
+    width: 150px;
+    height: 150px;
+  }
+
+/*About section adjustments */
+  .about-section {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    padding-left: 10px;
+  
+  }
+
+  .about-section , .title {
+    font-size: 60px;
+  }
+
+  .about-section .about {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .about-section .year {
+    font-size: 11px;
+  }
+
+  .about-section .text-center img {
+    width: 100px ;
+    
+  }
+  .triangle{
+    gap:4rem;
+    width: 1200px;
+  }
+
+  .about-section .text-center p {
+    font-size: 13px;
+    text-align: center;
+    width: 250px;
+  }
+
+  .about-section .text-center .font-\[anton\] {
+    font-size: 20px;
+    margin-top: 10px !important;
+    text-align: center;
+  }
+
+/*Solution section adjustments */
+  .solutions-section {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .solutions-section h2 {
+    font-size: 50px;
+    line-height: 1.2;
+  }
+
+  .solutions-section .text-xs,
+  .solutions-section .text-sm {
+    font-size: 11px;
+  }
+
+  .solutions-section .box {
+    width: 330px;
+    height: 350px;
+    padding: 20px;
+  }
+
+  .solutions-section .box h3 {
+    font-size: 21px;
+  }
+
+  .solutions-section .box p {
+    font-size: 12.5px;
+  }
+
+  .solutions-section .w-8 {
+    width: 30px !important;
+    height: 30px;
+  }
+
+  .solutions-section .h-4\.5 {
+    height: 15px !important;
+  }
+
+/*Client logos section adjustments */
+  .client-logos > div {
+    width: 180px;
+    height: 220px;
+  }
+
+
+  .client-section .text-xs,
+  .client-section .text-sm {
+    font-size: 11px;
+    margin-left: 170px;
+  }
+.client-head{
+  font-size: 50px;
+  line-height: 1.2;
+  margin-top: 50px;
+  margin-left: 170px;
+}
+
+  .client-section .client-logos > div {
+    width: 180px;
+    height: 220px;
+  }
+
+ 
+  .client-section{
+       height: 85vh;
+
+  }
+
+ /*Tools logos section adjustments */
+ .tech-card {
+  width: 180px;
+  height: 160px;
+  
+}
+
+.tech-card-description {
+  font-size: 12px;
+}
+
+.tech-card-title {
+  font-size: 15px;
+}
+
+.grid {
+  gap: 50px !important;
+  
+}
+.tool{
+  font-size: 11px;
+    }
+.tool-head{
+  font-size: 50px;
+  margin-top: 40px;
+}
+
+/*Contact-section adjustments*/
+.contact-section h2 {
+font-size: 50px !important;
+line-height: 1.2 !important;
+}
+.contact-section .year{
+font-size: 12px;
+margin-left: 15px;
+}
+.contact-section p.about {
+font-size: 13px;
+margin-left: 10.5rem;
+padding-left: 1.25rem;
+width: 370px;
+}
+.contact-section{
+height: 80vh;
+}
+.contact-section button {
+font-size: 15px;
+padding: 0.75rem 2rem;
+margin-top: 1rem;
+}
+
+/*Agency section adjustments */
+.agency-section h2 {
+  font-size: 48px !important;
+  line-height: 1.2 !important;
+  padding: 0 2rem;
+}
+
+.agency-section .about {
+  font-size: 14px;
+  margin-top: 0.4rem;
+  padding: 0 1rem;
+}
+
+.agency-section button {
+  padding: 1rem 2.5rem;
+  font-size: 13px;
+}
+.ml-30{
+  margin-left: 100px;
+}
+
+/* Blog section image adjustments */
+.blog-section h2 {
+font-size: 45px !important;
+}
+
+.blog-section .text-blog-title {
+font-size: 20px !important;
+line-height: 1.4;
+}
+
+.blog-section button span {
+font-size: 11px !important;
+}
+
+.container{
+width: 500px;
+height: 600px;
+}
+
+/* Footer section adjustments */
+.custom-footer p,
+.custom-footer li,
+.custom-footer a,
+.custom-footer h4 {
+font-size: 14.5px !important;
+line-height: 1.5 !important;
+}
+
+
+
+.custom-footer .inter {
+line-height: 1.5 !important;
+}
+
+.custom-footer img.w-10 {
+width: 26px !important;
+height: 26px !important;
+
+}
+.grid{
+  gap: 25px !important;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+} 
+}
+  
+

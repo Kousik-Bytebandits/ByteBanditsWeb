@@ -116,15 +116,15 @@ export default function AnimatedWebsite() {
         src="scroll-down.png"
         alt="Scroll Down"
         style={{ rotate }}
-        className="absolute -top-70 right-60 w-50 h-50 z-30"
+        className="absolute -top-70 right-60 w-50 h-50 z-30 scroll-icon"
       />
     </section>
 
  {/* About Section */}
- <section className=" mx-50 mt-50 sm:py-[80px]  sm:px-[30px] md:px-[50px] text-[#333]">
+ <section className="about-section mx-50 mt-50 sm:py-[80px]  sm:px-[30px] md:px-[50px] text-[#333]">
         <p className="text-left mb-10 text-[12px] sm:text-[12px] text-[#818181] year">ABOUT US</p>
         <div className="flex flex-col lg:flex-row  items-start">
-          <div className="flex-1 text-[40px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[1.3] font-[anton]
+          <div className="flex-1 text-[40px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[1.3] font-[anton] title
           " data-aos="fade-up"
           data-aos-delay="10">
             DISCOVER <br /> OUR <span className="text-[#50BD8A]">AGENCY</span>
@@ -148,7 +148,7 @@ We don’t just build – we listen, strategise, and craft solutions that align 
           </div>
         </div>
 
-        <div className="flex justify-center gap-[100px] mt-[150px]">
+        <div className="flex justify-center gap-[100px] mt-[150px] triangle">
   {[
     {
       img: "shape-7.png",
@@ -187,19 +187,19 @@ We don’t just build – we listen, strategise, and craft solutions that align 
          <Solution />
       </section>
  
-      <section className="bg-[#353639] text-white py-20 px-11  text-center h-190"> 
+      <section className="bg-[#353639] text-white py-20 px-11  text-center h-190 client-section"> 
   <p className="mx-50 text-xs uppercase text-[#818181] tracking-widest mb-3 text-left  inter"data-aos="fade-up"
           data-aos-delay="10">
     Our Clients
   </p>
-  <h2 className="text-4xl md:text-6xl font-[anton] uppercase leading-tight text-left mx-50 mt-15"data-aos="fade-up"
+  <h2 className=" client-head text-4xl md:text-6xl font-[anton] uppercase leading-tight text-left mx-50 mt-15"data-aos="fade-up"
           data-aos-delay="10">
     Where <span className="text-[#BA4D4D]">Bold</span> Ideas Become<br />
     Iconic <span className="text-[#FAAC61]">Brands.</span>
   </h2>
 
   {/* Clients Logos */}
-  <div className="flex justify-center flex-wrap gap-30 mt-15"data-aos="fade-up"
+  <div className="client-logos flex justify-center flex-wrap gap-30 mt-15"data-aos="fade-up"
           data-aos-delay="10">
     {[
        "image 54.png",
@@ -223,15 +223,15 @@ We don’t just build – we listen, strategise, and craft solutions that align 
 </section>
 
 <section className="bg-[#ececea] mt-25 mx-50 px-10 py-20">
-  <div className="max-w-[1500px]"data-aos="fade-up"
+  <div className=" max-w-[1500px]"data-aos="fade-up"
           data-aos-delay="10">
     {/* Subheading */}
-    <p className="text-xs inter uppercase text-[#818181] tracking-widest mb-3 text-left">
+    <p className="tool text-xs inter uppercase text-[#818181] tracking-widest mb-3 text-left">
       Our Tools
     </p>
 
     {/* Main Heading */}
-    <h2 className="text-4xl md:text-5xl font-[anton] uppercase leading-tight text-left mt-15"data-aos="fade-up"
+    <h2 className="tool-head text-4xl md:text-5xl font-[anton] uppercase leading-tight text-left mt-15"data-aos="fade-up"
           data-aos-delay="10">
       Our <span className="bg-gradient-to-r text-[#844BA6] bg-clip-text ">Technology</span> Stack
     </h2>
@@ -344,7 +344,7 @@ We don’t just build – we listen, strategise, and craft solutions that align 
 <section className="w-full mt-20">
   {/* Contact Section */}
  
-<div className="flex flex-col md:flex-row h-auto md:h-[700px] w-full">
+<div className="contact-section flex flex-col md:flex-row h-auto md:h-[700px] w-full">
   {/* Left Content */}
   <div className="bg-[#2c2c2c] text-white flex flex-col  md:items-center   px-10 py-14 md:w-1/2 space-y-15">
     <p className="mr-42 uppercase text-left  year  " data-aos="fade-up"
@@ -380,7 +380,7 @@ We don’t just build – we listen, strategise, and craft solutions that align 
   </div>
 
   {/* Our Agency Section */}
-  <div className="bg-[#ececea] text-center py-20 px-6">
+  <div className="agency-section bg-[#ececea] text-center py-20 px-6">
   <p className="uppercase  year mb-4 tracking-wide"data-aos="fade-up"
           data-aos-delay="10">Our Agency</p>
 
@@ -399,7 +399,7 @@ We don’t just build – we listen, strategise, and craft solutions that align 
   <div className="flex flex-col sm:flex-row sm:items-center justify-center gap-15 mt-15 sm:mt-14 px-2">
     <div className="  about max-w-md sm:leading-[1] sm:mt-1 "data-aos="fade-up"
           data-aos-delay="10">
-      We may be new, but we’re already building <div className="mt-1.5 ml-30">a portfolio we’re proud of</div>
+      We may be new, but we’re already building <div className="mt-1.5 ml-30 ">a portfolio we’re proud of</div>
     </div>
 
     <button className="bg-[#37CC8D] text-[12px] hover:bg-[#43a976] text-black px-8 py-6 rounded-full text-sm inter  transition-all whitespace-nowrap tracking-[1px]"data-aos="fade-up"
@@ -426,7 +426,7 @@ We don’t just build – we listen, strategise, and craft solutions that align 
 </section>
 
 {/* Footer Section */}
-<footer className="bg-[#353639] text-white pt-15">
+<footer className="custom-footer bg-[#353639] text-white pt-15">
   <div className="max-w-10xl px-6 py-5 flex flex-col md:flex-row gap-10">
 
     {/* Left Section - 40% */}

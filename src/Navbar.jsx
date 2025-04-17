@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="navbar-container fixed top-0 left-0 w-full flex justify-between items-center text-white z-[1000] px-[10px] sm:px-[10px] md:px-[40px] ">
+      <div className="navbar-container fixed top-0 left-0 w-full flex justify-between items-center text-white z-[1000] px-[10px] sm:px-[10px] md:px-[40px]  ">
         <div className="logo-box flex items-center gap-2.5 bg-[#353639] px-12 py-8 rounded-b-xl ">
           <img src="/header.png" alt="Logo" className="w-[180px] h-auto object-cover" />
         </div>
