@@ -1,22 +1,23 @@
 .year{
-  color:  #818181;
-  font-family: inter;
-  margin-top: 15px;
+  color:  #808080;
+  font-family: 'Outfit',sans-serif;
+  margin-top: 25px;
   font-weight: 600;
 }
 .inter,.year{
-  font-family: 'inter';
+  font-family: 'Outfit',sans-serif;
  
 }
 .foot{
-  font-family: 'inter';
+  font-family: 'Outfit',sans-serif;
   font-weight: 600;
-  color: white
+  color:#E0E0E0
 }
 .about{
-  font-weight: 600;
-  color: #818181;
-  font-family: 'inter';
+  
+  color: #808080;
+  font-family:'Outfit',sans-serif;
+  font-weight: 200;
 }
 
 .box{

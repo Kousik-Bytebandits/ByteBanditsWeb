@@ -26,17 +26,17 @@ export default function AnimatedWebsite() {
   }, []);
    // Scale the hero background image slightly on scroll
    const scale = useTransform(scrollYProgress, [0, 1], [1.6, 1.1]);
-   //const scale2 = useTransform(scrollYProgress, [0, 1], [1.3, 1.1]);
+   
   
  
   
   return (
-    <div className="w-full overflow-x-hidden bg-[whitesmoke] text-black  scrollbar-none">
+    <div className="w-full overflow-x-hidden bg-[#ececea] text-black  scrollbar-none">
     
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative h-[110vh] flex flex-col justify-center items-center text-center ... hero-section"> 
+      <section className="relative h-[117vh] flex flex-col justify-center items-center text-center ... hero-section"> 
 
   {/* Floating 3D shapes */}
  
@@ -49,25 +49,25 @@ export default function AnimatedWebsite() {
      <motion.img
   src="shape-3.png"
   alt="White Shape"
-  className="floating absolute shape-3 top-[300px] right-[1550px] w-[850px] z-0"
+  className="floating absolute shape-3 top-[400px] right-[1550px] w-[800px] z-0"
 />
 
 <motion.img
   src="shape-2.png"
   alt="Green Shape"
-  className="floating absolute shape-2 top-[-120px] right-[-650px] w-[1000px] h-[1000px] z-0"
+  className="floating absolute shape-2 top-[-50px] right-[-600px] w-[900px] h-[1000px] z-0"
 />
 
 
       <img
         src="shape-4.png"
         alt="Loop Shape"
-        className="floating absolute shape-4 top-[250px] left-[480px] w-[120px] z-100"
+        className="floating absolute shape-4 top-[290px] left-[460px] w-[120px] z-100"
       />
       <img
         src="shape-5.png"
         alt="Loop Shape"
-        className="floating absolute shape-5 top-[570px] right-[670px] w-[130px] z-100"
+        className="floating absolute shape-5 top-[590px] right-[650px] w-[130px] z-100"
       />
 
   {/* Animated Title */}
@@ -75,7 +75,7 @@ export default function AnimatedWebsite() {
   {["TECH THAT TALKS", "DESIGN THAT", "DAZZLES"].map((line, lineIndex) => (
   <div
     key={lineIndex}
-    className=" title-line flex flex-wrap justify-center items-center text-[60px] sm:text-[40px] md:text-[90px] lg:text-[120px] sm:leading-[50px] md:leading-[100px] lg:leading-[140px] font-[anton] text-[#353639] sm:space-x-4 lg:space-x-6  "
+    className=" title-line flex flex-wrap justify-center items-center text-[60px] sm:text-[40px] md:text-[90px] lg:text-[130px] sm:leading-[50px] md:leading-[100px] lg:leading-[130px] font-[anton] text-[#353639] sm:space-x-4 lg:space-x-6  "
   >
     {line.split(" ").map((word, wIndex) => (
       <div key={wIndex} className="flex  ">
@@ -92,7 +92,7 @@ export default function AnimatedWebsite() {
   </div>
 ))}
 
-<p className="year years text-[25px]  ">SINCE 2024</p>
+<p className="year years text-[15px]  ">SINCE 2024</p>
   
 </div>
 </section>
@@ -101,7 +101,7 @@ export default function AnimatedWebsite() {
 
 <section
       ref={scrollRef}
-      className="w-full h-[60vh] sm:h-[50vh] md:h-[55vh] mb-10 relative "
+      className="w-full h-[60vh] sm:h-[50vh] md:h-[55vh] mb-20 relative "
     >
       {/* Background Image with Zoom */}
       <motion.img
@@ -116,13 +116,13 @@ export default function AnimatedWebsite() {
         src="scroll-down.png"
         alt="Scroll Down"
         style={{ rotate }}
-        className="absolute -top-60 right-50 w-45 h-45 z-30"
+        className="absolute -top-70 right-60 w-50 h-50 z-30"
       />
     </section>
 
  {/* About Section */}
- <section className=" mx-50  sm:py-[80px]  sm:px-[30px] md:px-[50px] text-[#333]">
-        <p className="text-left mb-10 text-[14px] sm:text-[14px] text-[#818181] year">ABOUT US</p>
+ <section className=" mx-50 mt-50 sm:py-[80px]  sm:px-[30px] md:px-[50px] text-[#333]">
+        <p className="text-left mb-10 text-[12px] sm:text-[12px] text-[#818181] year">ABOUT US</p>
         <div className="flex flex-col lg:flex-row  items-start">
           <div className="flex-1 text-[40px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[1.3] font-[anton]
           " data-aos="fade-up"
@@ -130,12 +130,12 @@ export default function AnimatedWebsite() {
             DISCOVER <br /> OUR <span className="text-[#50BD8A]">AGENCY</span>
             <div className="border-l-4 border-[#FAAC61] pl-[20px] text-[14px] sm:text-[15px] mt-[50px] max-w-[400px]  text-[#666]"  data-aos="fade-up"
           data-aos-delay="10">
-              <p className="about mt-15">
+              <p className="about mt-25 leading-6">
                 Welcome to <span className="text-[#50BD8A]">Byte Bandits</span> where your ideas come to life. We specialize in crafting unique brands, captivating advertising campaigns, and effective digital strategies.
               </p>
             </div>
           </div>
-          <div className="flex-1 text-[14px] sm:text-[16px] leading-relaxed text-[#444] mt-6 lg:mt-0 ">
+          <div className="flex-1 text-[16px] sm:text-[16px] leading-relaxed text-[#808080] mt-6 tracking-wide lg:mt-0 ">
             <p className="about"data-aos="fade-up"
           data-aos-delay="10">
               At <span className="text-[#50BD8A] ">Byte Bandits</span>,we believe technology is more than just functionality — it&apos;s about building emotional connections through digital experiences. Our mission is to combine your vision with our technical and creative expertise to craft solutions that not only engage and inspire, but also drive growth.
@@ -166,16 +166,14 @@ We don’t just build – we listen, strategise, and craft solutions that align 
       desc: "We prioritize client needs, deeply understanding them to create tailored solutions for maximum results.",
     },
   ].map((item, i) => (
-    <div key={i} className="text-center max-w-[300px]"data-aos="fade-up"
-    data-aos-delay="5">
+    <div key={i} className="text-center max-w-[300px]">
       <img
         src={item.img}
         alt={item.title}
         className={`${i === 0 ? "w-[142px]" : "w-[108px]"} mx-auto`}
       />
-      <p className={`${i===0 ? "mt-2": "mt-10.5"}  text-lg font-[anton] data-aos="fade-up"
-          data-aos-delay="10"`}>{item.title}</p>
-      <p className="text-sm text-[#666] mt-1 inter "data-aos="fade-up"
+      <p className={`${i===0 ? "mt-2": "mt-10.5"}  text-[24px] font-[anton] " `}>{item.title}</p>
+      <p className="text-[16px] mt-6 about "data-aos="fade-up"
           data-aos-delay="5">{item.desc}</p>
     </div>
   ))}
@@ -187,7 +185,7 @@ We don’t just build – we listen, strategise, and craft solutions that align 
          <Solution />
       </section>
  
-      <section className="bg-[#3a3a3c] text-white py-20 px-11  text-center h-190"> 
+      <section className="bg-[#353639] text-white py-20 px-11  text-center h-190"> 
   <p className="mx-50 text-xs uppercase text-[#818181] tracking-widest mb-3 text-left  inter"data-aos="fade-up"
           data-aos-delay="10">
     Our Clients
@@ -222,7 +220,7 @@ We don’t just build – we listen, strategise, and craft solutions that align 
   </div>
 </section>
 
-<section className="bg-[#f9f9f9] mt-25 mx-50 px-10 py-20">
+<section className="bg-[#ececea] mt-25 mx-50 px-10 py-20">
   <div className="max-w-[1500px]"data-aos="fade-up"
           data-aos-delay="10">
     {/* Subheading */}
@@ -347,7 +345,7 @@ We don’t just build – we listen, strategise, and craft solutions that align 
 <div className="flex flex-col md:flex-row h-auto md:h-[700px] w-full">
   {/* Left Content */}
   <div className="bg-[#2c2c2c] text-white flex flex-col  md:items-center   px-10 py-14 md:w-1/2 space-y-15">
-    <p className="mr-42 uppercase text-left text-[#818181] year  " data-aos="fade-up"
+    <p className="mr-42 uppercase text-left  year  " data-aos="fade-up"
           data-aos-delay="10">
       Contact
     </p>
@@ -357,12 +355,12 @@ We don’t just build – we listen, strategise, and craft solutions that align 
       AN <span className="text-[#FAAC61]">IMPACT</span><br />
       TOGETHER.
     </h2>
-    <p className="text-[16px] text-gray-300 max-w-sm text-left border-l-4 border-[#FAAC61] px-5 ml-32"data-aos="fade-up"
+    <p className="text-[16px] about max-w-sm text-left border-l-4 border-[#FAAC61] px-5 ml-32"data-aos="fade-up"
           data-aos-delay="10">
       Welcome to <span className="text-[#50BD8A] font-semibold">BYTEBANDITS</span> where your ideas come to life. 
       We specialize in crafting unique brands, captivating campaigns, and effective digital strategies.
     </p>
-    <button className="bg-[#50BD8A] tracking-[2px] text-[18px] text-white px-6 py-4 rounded-full text-sm font-semibold w-50 transition-all"data-aos="fade-up"
+    <button className="bg-[#37CC8D] tracking-[2px] text-[18px] text-white px-6 py-4 rounded-full text-sm font-semibold w-50 transition-all"data-aos="fade-up"
           data-aos-delay="10">
       CONTACT
     </button>
@@ -380,11 +378,11 @@ We don’t just build – we listen, strategise, and craft solutions that align 
   </div>
 
   {/* Our Agency Section */}
-  <div className="bg-white text-center py-20 px-6">
-  <p className="uppercase text-[#818181] about mb-4 tracking-wide"data-aos="fade-up"
+  <div className="bg-[#ececea] text-center py-20 px-6">
+  <p className="uppercase  year mb-4 tracking-wide"data-aos="fade-up"
           data-aos-delay="10">Our Agency</p>
 
-  <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] font-[anton] leading-tight max-w-8xl mx-auto space-y-4 mt-15 text-[#312F2F]">
+  <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] font-[anton] leading-tight max-w-8xl mx-auto  mt-10 text-[#312F2F]">
     <div><span className="text-[#FAAC61]"data-aos="fade-up"
           data-aos-delay="10">BYTEBANDITS</span> IS WHERE BOLD IDEAS BECOME <span className="text-[#FAAC61]"data-aos="fade-up"
           data-aos-delay="10">POWERFUL</span> </div>
@@ -397,12 +395,12 @@ We don’t just build – we listen, strategise, and craft solutions that align 
   </h2>
 
   <div className="flex flex-col sm:flex-row sm:items-center justify-center gap-15 mt-15 sm:mt-14 px-2">
-    <div className="text-[#818181]  inter max-w-md sm:leading-[1] sm:mt-1 "data-aos="fade-up"
+    <div className="  about max-w-md sm:leading-[1] sm:mt-1 "data-aos="fade-up"
           data-aos-delay="10">
-      We may be new, but we’re already building <div className="mt-1.5 ml-32">a portfolio we’re proud of</div>
+      We may be new, but we’re already building <div className="mt-1.5 ml-30">a portfolio we’re proud of</div>
     </div>
 
-    <button className="bg-[#50BD8A] text-[16px] hover:bg-[#43a976] text-black px-8 py-6 rounded-full text-sm inter font-semibold transition-all whitespace-nowrap"data-aos="fade-up"
+    <button className="bg-[#37CC8D] text-[12px] hover:bg-[#43a976] text-black px-8 py-6 rounded-full text-sm inter  transition-all whitespace-nowrap tracking-[1px]"data-aos="fade-up"
           data-aos-delay="10">
       VIEW PORTFOLIO
     </button>
@@ -418,7 +416,7 @@ We don’t just build – we listen, strategise, and craft solutions that align 
 {/* Blog Section */}
 <Blog />
 {/* Let's Talk Section */}
-<section className="w-full py-16  bg-white text-left">
+<section className="w-full py-16  bg-[#ececea] text-left">
   <h2 className="text-4xl md:text-[60px] mx-50 font-[anton] uppercase text-[#454545]  mb-15"data-aos="fade-up"
           data-aos-delay="10">
     Let&apos;s Talk
@@ -438,7 +436,7 @@ We don’t just build – we listen, strategise, and craft solutions that align 
           className="w-full h-auto object-contain"
         />
       </div>
-      <p className="text-[17px] inter max-w-[75%] ml-2">
+      <p className="text-[16px] text-[#E0E0E0] inter max-w-[70%] lg:ml-2 leading-8">
         We are a passionate team of tech innovators dedicated to crafting smart, scalable, and user-centric digital solutions. From custom software and mobile apps to eCommerce platforms, digital marketing, branding, and cloud services.
       </p>
     </div>
@@ -450,7 +448,7 @@ We don’t just build – we listen, strategise, and craft solutions that align 
       <div className="text-[#E0E0E0]">
         <h4 className="text-[20px] inter mb-4 text-[#8F8F8F] font-bold">OFFICE</h4>
 
-        <div className="flex items-start gap-2 foot text-[18px]">
+        <div className="flex items-start gap-2 foot text-[20px]">
           <img src="Mask group (1).png" alt="Location" className="w-5 h-5 mt-[6px]" />
           <p>
             plot no.3a, door no.1/1033,<br />
@@ -459,12 +457,12 @@ We don’t just build – we listen, strategise, and craft solutions that align 
           </p>
         </div>
 
-        <div className="flex items-center gap-2 foot text-[19px] mt-3">
+        <div className="flex items-center gap-2 foot text-[20px] mt-5">
           <img src="Mask group (2).png" alt="Phone" className="w-5 h-5" />
           <p>Phone: +91 79048 12982</p>
         </div>
 
-        <div className="flex items-center gap-2 foot text-[19px] mt-3">
+        <div className="flex items-center gap-2 foot text-[20px] mt-4">
           <img src="Mask group (3).png" alt="Email" className="w-5 h-5" />
           <p>
             Email: <a href="mailto:bbtechworks@gmail.com" className="underline foot">
@@ -477,7 +475,7 @@ We don’t just build – we listen, strategise, and craft solutions that align 
       {/* Links */}
       <div>
         <h4 className="text-[20px] mb-4 text-[#8F8F8F] inter font-bold">LINKS</h4>
-        <ul className="space-y-2 text-[19px] text-[#E0E0E0] underline foot">
+        <ul className="space-y-2 text-[20px] text-[#E0E0E0] underline foot">
           <li><a href="#">Home</a></li>
           <li><a href="#">Blogs</a></li>
           <li><a href="#">Services</a></li>

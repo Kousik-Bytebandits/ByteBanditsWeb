@@ -45,13 +45,14 @@ export default function ServicesSection() {
   };
 
   return (
-    <section className="mx-45 bg-[#f5f5f5] py-16 px-5 sm:px-10 md:px-20 text-[#333] ">
-      <div className="mb-15"data-aos="fade-up"
-          data-aos-delay="10">
-        <p className="text-xs sm:text-sm uppercase tracking-widest text-[#818181] mb-15 inter">
+    <section className="mx-45 bg-[#ececea] py-16 px-5 sm:px-10 md:px-20 text-[#333] ">
+      <div className="mb-15">
+        <p className="text-xs sm:text-sm uppercase tracking-widest text-[#818181] mb-15 inter"data-aos="fade-up"
+    data-aos-delay="5">
           Solutions and Consulting
         </p>
-        <h2 className="text-[28px] sm:text-[40px] md:text-[60px] uppercase leading-tight text-[#333] font-[anton]">
+        <h2 className="text-[28px] sm:text-[40px] md:text-[60px] uppercase leading-tight text-[#333] font-[anton]"data-aos="fade-up"
+    data-aos-delay="5">
           Scalable <span className="text-[#BA4D4D]">Solutions</span> and <span className="text-[#BA4D4D]">Consulting</span>
           <br />
           For Diverse Industries
@@ -98,7 +99,7 @@ export default function ServicesSection() {
             <h3 className="text-[18px] sm:text-[25px] font-[anton] text-black uppercase">
               {item.title}
             </h3>
-            <p className="text-[12px] sm:text-[13px] text-black my-6 inter">
+            <p className="text-[12px] sm:text-[14px] text-[#000000] my-5 inter">
               {item.desc}
             </p>
           </div>

@@ -20,7 +20,7 @@ const BlogSection = () => {
   ];
 
   return (
-    <section className="bg-white py-20 px-[20px] sm:px-[30px] md:px-[40px] lg:px-[20px]">
+    <section className="bg-[#ececea] py-20 px-[20px] sm:px-[30px] md:px-[40px] lg:px-[20px]">
       {/* Section Heading */}
       <div className="mb-12 mx-50">
         <p className="mb-4 text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] text-[#818181] uppercase tracking-widest"data-aos="fade-up"
@@ -43,7 +43,7 @@ const BlogSection = () => {
         {blogData.map((blog, index) => (
           <div
             key={index}
-            className="relative w-[300px] sm:w-[340px] md:w-[370px] lg:w-[600px] flex-shrink-0 bg-white "
+            className="relative w-[300px] sm:w-[340px] md:w-[370px] lg:w-[600px] flex-shrink-0 bg-[#ececea] "
           >
             {/* Tag */}
             <div className="absolute top-9 left-4 bg-[#353639] inter tracking-[0.5px] text-white px-5 py-2 text-[10px] sm:text-[12px] md:text-[14px] lg:text-[15px]  rounded-full uppercase shadow">
