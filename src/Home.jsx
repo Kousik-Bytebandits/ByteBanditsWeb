@@ -166,13 +166,15 @@ We don’t just build – we listen, strategise, and craft solutions that align 
       desc: "We prioritize client needs, deeply understanding them to create tailored solutions for maximum results.",
     },
   ].map((item, i) => (
-    <div key={i} className="text-center max-w-[300px]">
+    <div key={i} className="text-center max-w-[300px]"data-aos="fade-up"
+    data-aos-delay="5">
       <img
         src={item.img}
         alt={item.title}
         className={`${i === 0 ? "w-[142px]" : "w-[108px]"} mx-auto`}
       />
-      <p className={`${i===0 ? "mt-2": "mt-10.5"}  text-[24px] font-[anton] " `}>{item.title}</p>
+      <p className={`${i===0 ? "mt-2": "mt-10.5"}  text-[24px] font-[anton] " `}data-aos="fade-up"
+          data-aos-delay="5">{item.title}</p>
       <p className="text-[16px] mt-6 about "data-aos="fade-up"
           data-aos-delay="5">{item.desc}</p>
     </div>
