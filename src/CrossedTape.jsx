@@ -26,7 +26,7 @@ export default function CrossedBanner() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-[80vh] bg-[#ececea] overflow-hidden"
+      className="relative w-full h-[80vh] bg-[#ececea] overflow-hidden "
     >
       {/* Orange Tape - Capsule Style with Custom Words */}
       <motion.div

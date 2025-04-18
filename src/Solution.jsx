@@ -46,21 +46,21 @@ export default function ServicesSection() {
 
   return (
     <section className="solutions-section mx-45 bg-[#ececea] py-16 px-5 sm:px-10 md:px-20 text-[#333] ">
-      <div className="mb-15">
-        <p className="text-xs sm:text-sm uppercase tracking-widest text-[#818181] mb-15 inter"data-aos="fade-up"
+      <div className="mb-15 solutions-header">
+        <p className="section-label text-xs sm:text-sm uppercase tracking-widest text-[#818181] mb-15 inter"data-aos="fade-up"
     data-aos-delay="5">
           Solutions and Consulting
         </p>
-        <h2 className="text-[28px] sm:text-[40px] md:text-[60px] uppercase leading-tight text-[#333] font-[anton]"data-aos="fade-up"
+        <h2 className="section-title text-[28px] sm:text-[40px] md:text-[60px] uppercase leading-tight text-[#333] font-[anton]"data-aos="fade-up"
     data-aos-delay="5">
-          Scalable <span className="text-[#BA4D4D]">Solutions</span> and <span className="text-[#BA4D4D]">Consulting</span>
+          Scalable <span className="highlight text-[#BA4D4D]">Solutions</span> and <span className="highlight  text-[#BA4D4D]">Consulting</span>
           <br />
           For Diverse Industries
         </h2>
       </div>
 
-      <div className="flex justify-end items-center mb-8">
-        <div className="flex items-center  gap-4 text-xs sm:text-sm text-gray-500 uppercase font-semibold cursor-pointer select-none">
+      <div className="solutions-nav flex justify-end items-center mb-8">
+        <div className="nav-controls flex items-center  gap-4 text-xs sm:text-sm text-gray-500 uppercase font-semibold cursor-pointer select-none">
           <span
             onClick={handlePrev}
             className={`flex items-center gap-1 hover:text-black transition-colors duration-200 ${
@@ -80,10 +80,10 @@ export default function ServicesSection() {
         </div>
       </div>
 
-      <div className="relative mx-25 w-full px-4 py-6  ">
-  <div className="overflow-x-auto scrollbar-hide  ">
+      <div className="solutions-carousel relative md:mx-25 w-full px-4 py-6  ">
+  <div className="carousel-wrapper overflow-x-auto scrollbar-hide  ">
     <div
-      className="h-[500px] flex transition-transform duration-500 ease-in-out gap-8 "
+      className=" carousel-track h-[500px] flex transition-transform duration-500 ease-in-out gap-8 "
       style={{
         transform: `translateX(-${slideIndex * (cardWidth + gap)}px)`,
         width: `${cards.length * (cardWidth + gap)}px`,
@@ -92,26 +92,26 @@ export default function ServicesSection() {
       {cards.map((item, i) => (
         <div
           key={i}
-          className="box bg-white px-10 py-5 rounded-lg w-[370px] h-[400px] flex-shrink-0 flex flex-col justify-between shadow-xl"
+          className="solution-card box bg-white px-10 py-5 rounded-lg w-[370px] h-[400px] flex-shrink-0 flex flex-col justify-between shadow-xl"
         >
           {/* Title & Description */}
           <div>
-            <h3 className="text-[18px] sm:text-[25px] font-[anton] text-black uppercase">
+            <h3 className="card-title text-[18px] sm:text-[25px] font-[anton] text-black uppercase">
               {item.title}
             </h3>
-            <p className="text-[12px] sm:text-[14px] text-[#000000] my-5 inter">
+            <p className="card-desc text-[12px] sm:text-[14px] text-[#000000] my-5 inter">
               {item.desc}
             </p>
           </div>
 
           {/* Tags */}
-          <div className="flex flex-col justify-end gap-6">
-            <div className="flex gap-3 text-[13px] justify-center font-bold text-black tracking-[1px]">
+          <div className="card-tags flex flex-col justify-end gap-6">
+            <div className="tags flex gap-3 text-[13px] justify-center font-bold text-black tracking-[1px]">
               {item.tags.map((tag, idx) => (
-                <span key={idx} className="relative">
+                <span key={idx} className="tag relative">
                   {tag}
                   {idx < item.tags.length - 1 && (
-                   <span className="mx-1 text-[#BA4D4D] text-[20px] leading-[2px]">•</span>
+                   <span className="dot mx-1 text-[#BA4D4D] text-[20px] leading-[2px]">•</span>
 
                   )}
                 </span>
@@ -119,20 +119,20 @@ export default function ServicesSection() {
             </div>
 
             <div className="pt-1">
-              <div className="flex items-center mb-8">
+              <div className="card-footer flex items-center mb-8">
                 {/* Red + Gray Line */}
-                <div className="flex w-full items-center">
-                  <div className="h-[2px] w-[20px] bg-[#BA4D4D] mr-1"></div>
-                  <div className="h-[2px] flex-1 bg-[#D3D3D3]"></div>
+                <div className="kine-wrapper flex w-full items-center">
+                  <div className="red-line h-[2px] w-[20px] bg-[#BA4D4D] mr-1"></div>
+                  <div className="gray-line h-[2px] flex-1 bg-[#D3D3D3]"></div>
                 </div>
               </div>
 
-              <div className="flex items-center justify-flex-end gap-2 cursor-pointer mb-5">
-                <span className="text-[11px] sm:text-[13px] font-bold uppercase text-black hover:text-[#BA4D4D] transition-all">
+              <div className="learn-more flex items-center justify-flex-end gap-2 cursor-pointer mb-5">
+                <span className="learn-text text-[11px] sm:text-[13px] font-bold uppercase text-black hover:text-[#BA4D4D] transition-all">
                   Learn More
                 </span>
-                <span className="w-8 h-8 bg-[#BA4D4D] rounded-full flex items-center justify-center">
-  <ArrowRight className="text-white w-8 h-4.5" />
+                <span className="learn-icon w-8 h-8 bg-[#BA4D4D] rounded-full flex items-center justify-center">
+  <ArrowRight className="icon text-white w-8 h-4.5" />
 </span>
               </div>
             </div>
@@ -142,7 +142,7 @@ export default function ServicesSection() {
     </div>
   </div>
 
-  {/* Optional: Prev / Next buttons here */}
+  
 </div>
 
     </section>

@@ -101,14 +101,14 @@ export default function AnimatedWebsite() {
 
 <section
       ref={scrollRef}
-      className="w-full h-[60vh] sm:h-[50vh] md:h-[55vh] mb-20 relative "
+      className="w-full   md:h-[55vh] md:mb-20 relative "
     >
       {/* Background Image with Zoom */}
       <motion.img
         src="hero.png"
         alt="Hero"
         style={{ scale }}
-        className="absolute w-full h-full object-cover z-0"
+        className="absolute w-full h-full object-cover z-0 hero"
       />
 
       {/* Scroll Down Icon with Rotation */}
@@ -122,23 +122,23 @@ export default function AnimatedWebsite() {
 
  {/* About Section */}
  <section className="about-section mx-50 mt-50 sm:py-[80px]  sm:px-[30px] md:px-[50px] text-[#333]">
-        <p className="text-left mb-10 text-[12px] sm:text-[12px] text-[#818181] year">ABOUT US</p>
-        <div className="flex flex-col lg:flex-row  items-start">
-          <div className="flex-1 text-[40px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[1.3] font-[anton] title
+        <p className="section-label text-left mb-10 text-[12px] sm:text-[12px] text-[#818181] year">ABOUT US</p>
+        <div className="about-content flex flex-col lg:flex-row  items-start">
+          <div className="about-title flex-1 text-[40px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[1.3] font-[anton] title
           " data-aos="fade-up"
           data-aos-delay="10">
-            DISCOVER <br /> OUR <span className="text-[#50BD8A]">AGENCY</span>
-            <div className="border-l-4 border-[#FAAC61] pl-[20px] text-[14px] sm:text-[15px] mt-[50px] max-w-[400px]  text-[#666]"  data-aos="fade-up"
+            DISCOVER <br /> OUR <span className="highlight text-[#50BD8A]">AGENCY</span>
+            <div className="about-description border-l-4 border-[#FAAC61] pl-[20px] text-[14px] sm:text-[15px] mt-[50px] max-w-[400px]  text-[#666]"  data-aos="fade-up"
           data-aos-delay="10">
-              <p className="about mt-25 leading-6">
-                Welcome to <span className="text-[#50BD8A]">Byte Bandits</span> where your ideas come to life. We specialize in crafting unique brands, captivating advertising campaigns, and effective digital strategies.
+              <p className="about md:mt-25 leading-6">
+                Welcome to <span className="highlight text-[#50BD8A]">Byte Bandits</span> where your ideas come to life. We specialize in crafting unique brands, captivating advertising campaigns, and effective digital strategies.
               </p>
             </div>
           </div>
-          <div className="flex-1 text-[16px] sm:text-[16px] leading-relaxed text-[#808080] mt-6 tracking-wide lg:mt-0 ">
+          <div className="about-text flex-1 text-[16px] sm:text-[16px] leading-relaxed text-[#808080] mt-6 tracking-wide lg:mt-0 ">
             <p className="about"data-aos="fade-up"
           data-aos-delay="10">
-              At <span className="text-[#50BD8A] ">Byte Bandits</span>,we believe technology is more than just functionality — it&apos;s about building emotional connections through digital experiences. Our mission is to combine your vision with our technical and creative expertise to craft solutions that not only engage and inspire, but also drive growth.
+              At <span className="highlight text-[#50BD8A] ">Byte Bandits</span>,we believe technology is more than just functionality — it&apos;s about building emotional connections through digital experiences. Our mission is to combine your vision with our technical and creative expertise to craft solutions that not only engage and inspire, but also drive growth.
               Using the latest tools, modern frameworks, and bold ideas, we turn concepts into impactful products. Whether it&apos;s a brand, a platform, or an app — when you trust us with your idea, we don&apos;t just build it — we elevate it. The result? A solution that leaves a lasting impression on your users — and on your business.</p>
               <p className="mt-2 about"data-aos="fade-up"
           data-aos-delay="10">We specialize in creating powerful brands, smart marketing strategies, and standout digital experiences. Our team of skilled developers, designers, marketers, and content creators works with passion and precision to help your business shine in the digital space.
@@ -148,7 +148,7 @@ We don’t just build – we listen, strategise, and craft solutions that align 
           </div>
         </div>
 
-        <div className="flex justify-center gap-[100px] mt-[150px] triangle">
+        <div className="triangle-section flex justify-center gap-[100px] mt-[150px] triangle">
   {[
     {
       img: "shape-7.png",
@@ -166,16 +166,16 @@ We don’t just build – we listen, strategise, and craft solutions that align 
       desc: "We prioritize client needs, deeply understanding them to create tailored solutions for maximum results.",
     },
   ].map((item, i) => (
-    <div key={i} className="text-center max-w-[300px]"data-aos="fade-up"
+    <div key={i} className="triangle-card text-center max-w-[300px]"data-aos="fade-up"
     data-aos-delay="5">
       <img
         src={item.img}
         alt={item.title}
         className={`${i === 0 ? "w-[142px]" : "w-[108px]"} mx-auto`}
       />
-      <p className={`${i===0 ? "mt-2": "mt-10.5"}  text-[24px] font-[anton] " `}data-aos="fade-up"
+      <p className={`${i===0 ? "mt-2": "mt-10.5"} triangle-title text-[24px] font-[anton] " `}data-aos="fade-up"
           data-aos-delay="5">{item.title}</p>
-      <p className="text-[16px] mt-6 about "data-aos="fade-up"
+      <p className="triangle-desc text-[16px] mt-6 about "data-aos="fade-up"
           data-aos-delay="5">{item.desc}</p>
     </div>
   ))}
@@ -187,15 +187,15 @@ We don’t just build – we listen, strategise, and craft solutions that align 
          <Solution />
       </section>
  
-      <section className="bg-[#353639] text-white py-20 px-11  text-center h-190 client-section"> 
-  <p className="mx-50 text-xs uppercase text-[#818181] tracking-widest mb-3 text-left  inter"data-aos="fade-up"
+      <section className="bg-[#353639] text-white md:py-20 px-11  text-center  client-section"> 
+  <p className="client-label mx-50 text-xs uppercase text-[#818181] tracking-widest md:mb-3 text-left  inter"data-aos="fade-up"
           data-aos-delay="10">
     Our Clients
   </p>
-  <h2 className=" client-head text-4xl md:text-6xl font-[anton] uppercase leading-tight text-left mx-50 mt-15"data-aos="fade-up"
+  <h2 className=" client-head text-4xl md:text-6xl font-[anton] uppercase leading-tight text-left mx-50 md:mt-15"data-aos="fade-up"
           data-aos-delay="10">
-    Where <span className="text-[#BA4D4D]">Bold</span> Ideas Become<br />
-    Iconic <span className="text-[#FAAC61]">Brands.</span>
+    Where <span className="text-[#BA4D4D] red">Bold</span> Ideas Become<br />
+    Iconic <span className="text-[#FAAC61] yellow">Brands.</span>
   </h2>
 
   {/* Clients Logos */}
@@ -210,19 +210,20 @@ We don’t just build – we listen, strategise, and craft solutions that align 
     ].map((logo, index) => (
       <div
         key={index}
-        className="w-[250px] h-[300px] bg-none p-3 rounded-sm  hover:scale-105 transition-transform duration-300"
+        className="client-logo md:w-[250px] md:h-[300px] bg-none p-3 rounded-sm  hover:scale-105 transition-transform duration-300 overflow-x-auto"
       >
         <img
           src={logo}
           alt={`Client ${index + 1}`}
-          className="w-full h-full object-contain"
+          className="w-full h-full object-contain client-image"
         />
       </div>
     ))}
   </div>
 </section>
 
-<section className="bg-[#ececea] mt-25 mx-50 px-10 py-20">
+<div className="sections-wrapper flex flex-col">
+<section className="bg-[#ececea] md:mt-25 md:mx-50 px-10 py-20 tools-section">
   <div className=" max-w-[1500px]"data-aos="fade-up"
           data-aos-delay="10">
     {/* Subheading */}
@@ -237,7 +238,7 @@ We don’t just build – we listen, strategise, and craft solutions that align 
     </h2>
 
     {/* Grid of Tool Cards */}
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-15 justify-items-center lg:ml-25 mt-20"data-aos="fade-up"
+    <div className="tech-card-container grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-15 justify-items-center lg:ml-25 mt-20"data-aos="fade-up"
           data-aos-delay="10">
       {[
        {
@@ -351,12 +352,18 @@ We don’t just build – we listen, strategise, and craft solutions that align 
           data-aos-delay="10">
       Contact
     </p>
-    <h2 className="text-4xl md:text-6xl font-[anton] leading-tight text-left "data-aos="fade-up"
-          data-aos-delay="10">
-      LET’S <span className="text-[#FAAC61]">MAKE</span><br />
-      AN <span className="text-[#FAAC61]">IMPACT</span><br />
-      TOGETHER.
-    </h2>
+   
+    <h2
+  className="text-4xl md:text-[60px] font-[anton] leading-tight text-left md:text-left"
+  data-aos="fade-up"
+  data-aos-delay="10"
+>
+  <span className="block">LET’S <span className="text-[#FAAC61]">MAKE</span></span>
+  <span className="block">AN <span className="text-[#FAAC61]">IMPACT</span></span>
+  <span className="block">TOGETHER.</span>
+</h2>
+
+   
     <p className="text-[16px] about max-w-sm text-left border-l-4 border-[#FAAC61] px-5 ml-32"data-aos="fade-up"
           data-aos-delay="10">
       Welcome to <span className="text-[#50BD8A] font-semibold">BYTEBANDITS</span> where your ideas come to life. 
@@ -378,7 +385,8 @@ We don’t just build – we listen, strategise, and craft solutions that align 
       />
     </div>
   </div>
-
+</section>
+<section>
   {/* Our Agency Section */}
   <div className="agency-section bg-[#ececea] text-center py-20 px-6">
   <p className="uppercase  year mb-4 tracking-wide"data-aos="fade-up"
@@ -412,8 +420,10 @@ We don’t just build – we listen, strategise, and craft solutions that align 
 </section>
 
 {/* Tapes X Section */}
+<section className="tape-section">
 <CrossedTape />
-
+</section>
+</div>
 
 {/* Blog Section */}
 <Blog />
