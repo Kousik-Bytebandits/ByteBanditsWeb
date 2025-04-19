@@ -482,33 +482,33 @@ height: 26px !important;
 
   /* 3d shapes positions and title */
   .shape-1 {
-    top: -5svh;
-    left: -17svh;
+    top: -5lvh;
+    left: -17lvh;
     width: 320px;
   }
 
   .shape-2 {
   
-    right: -14svh;
+    right: -14lvh;
     width: 280px;
     height: 280px;
   }
 
   .shape-3 {
-    top: 76svh;
-    right: 33svh;
+    top: 76lvh;
+    right: 33lvh;
     width: 250px;
   }
 
   .shape-4 {
-    top: 36svh;
-    left: 1.1svh;
+    top: 36lvh;
+    left: 1.1lvh;
     width: 50px;
   }
 
   .shape-5 {
-    top: 53svh;
-    right: 9.4svh;
+    top: 53lvh;
+    right: 9.4lvh;
     width: 50px;}
 
     .animated-title .title-line {
