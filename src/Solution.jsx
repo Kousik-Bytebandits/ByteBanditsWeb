@@ -81,7 +81,7 @@ export default function ServicesSection() {
       </div>
 
       <div className="solutions-carousel relative md:mx-25 w-full px-4 py-6  ">
-  <div className="carousel-wrapper overflow-x-auto scrollbar-hide  ">
+  <div className="carousel-wrapper overflow-x-auto scrollbar-hide ">
     <div
       className=" carousel-track h-[500px] flex transition-transform duration-500 ease-in-out gap-8 "
       style={{

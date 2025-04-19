@@ -25,7 +25,7 @@ export default function AnimatedWebsite() {
     });
   }, []);
    // Scale the hero background image slightly on scroll
-   const scale = useTransform(scrollYProgress, [0, 1], [1.6, 1.1]);
+   const scale = useTransform(scrollYProgress, [0, 1], [1.5, 1.1]);
    
   
  
@@ -37,45 +37,52 @@ export default function AnimatedWebsite() {
 
       {/* Hero Section */}
       <section className="relative h-[117vh] flex flex-col justify-center items-center text-center ... hero-section"> 
+<div className="landing-hero ">
 
   {/* Floating 3D shapes */}
- 
-   <motion.img
-        src="shape -1.png"
-        alt="Orange Shape"
-       
-        className="floating absolute shape-1 top-[-430px] left-[-590px] w-[1000px] z-0"
-      />
-     <motion.img
-  src="shape-3.png"
-  alt="White Shape"
-  className="floating absolute shape-3 top-[400px] right-[1550px] w-[800px] z-0"
-/>
+  <div className="shapes">
+  {/* Scroll-based animated shapes with Framer Motion */}
+  <div className="floating">
+  <motion.img
+    src="shape-1.png"
+    alt="Orange Shape"
+    style={{ scale }}
+    className="absolute shape-1 top-[-630px] left-[-1000px] w-[700px] z-0"
+  />
+  <motion.img
+    src="shape-3.png"
+    alt="White Shape"
+    style={{ scale }}
+    className="absolute shape-3 top-[300px] right-[1100px] w-[550px] z-0"
+  />
+  <motion.img
+    src="shape-2.png"
+    alt="Green Shape"
+    style={{ scale }}
+    className="absolute shape-2 top-[-200px] right-[-1000px] w-[600px] h-[600px] z-0"
+  />
+</div>
+  {/* Floating non-animated shapes */}
+  <img
+    src="shape-4.png"
+    alt="Loop Shape"
+    className="floating absolute shape-4 top-[290px] left-[460px] w-[120px] z-100"
+  />
+  <img
+    src="shape-5.png"
+    alt="Loop Shape"
+    className="floating absolute shape-5 top-[590px] right-[650px] w-[130px] z-100"
+  />
+</div>
 
-<motion.img
-  src="shape-2.png"
-  alt="Green Shape"
-  className="floating absolute shape-2 top-[-50px] right-[-600px] w-[900px] h-[1000px] z-0"
-/>
-
-
-      <img
-        src="shape-4.png"
-        alt="Loop Shape"
-        className="floating absolute shape-4 top-[290px] left-[460px] w-[120px] z-100"
-      />
-      <img
-        src="shape-5.png"
-        alt="Loop Shape"
-        className="floating absolute shape-5 top-[590px] right-[650px] w-[130px] z-100"
-      />
 
   {/* Animated Title */}
-  <div className="animated-title">
+  <motion.div className="animated-title">
   {["TECH THAT TALKS", "DESIGN THAT", "DAZZLES"].map((line, lineIndex) => (
   <div
     key={lineIndex}
-    className=" title-line flex flex-wrap justify-center items-center text-[60px] sm:text-[40px] md:text-[90px] lg:text-[130px] sm:leading-[50px] md:leading-[100px] lg:leading-[130px] font-[anton] text-[#353639] sm:space-x-4 lg:space-x-6  "
+    style={{ scale }}
+    className=" title-line flex flex-wrap justify-center items-center text-[60px] sm:text-[40px] md:text-[90px] lg:text-[130px] sm:leading-[50px] md:leading-[110px] lg:leading-[140px] font-[anton] text-[#353639] sm:space-x-4 lg:space-x-6  "
   >
     {line.split(" ").map((word, wIndex) => (
       <div key={wIndex} className="flex  ">
@@ -94,6 +101,7 @@ export default function AnimatedWebsite() {
 
 <p className="year years text-[15px]  ">SINCE 2024</p>
   
+</motion.div>
 </div>
 </section>
 
@@ -113,11 +121,14 @@ export default function AnimatedWebsite() {
 
       {/* Scroll Down Icon with Rotation */}
       <motion.img
-        src="scroll-down.png"
-        alt="Scroll Down"
-        style={{ rotate }}
-        className="absolute -top-70 right-60 w-50 h-50 z-30 scroll-icon"
-      />
+  src="scroll-down.png"
+  alt="Scroll Down"
+  style={{
+    transform: 'translate3d(0px, 10px, 0px)',rotate
+  }}
+  className="absolute -top-65 right-60 w-55 h-55 z-30 scroll-icon"
+/>
+
     </section>
 
  {/* About Section */}
@@ -357,10 +368,11 @@ We don’t just build – we listen, strategise, and craft solutions that align 
   className="text-4xl md:text-[60px] font-[anton] leading-tight text-left md:text-left"
   data-aos="fade-up"
   data-aos-delay="10"
->
-  <span className="block">LET’S <span className="text-[#FAAC61]">MAKE</span></span>
-  <span className="block">AN <span className="text-[#FAAC61]">IMPACT</span></span>
-  <span className="block">TOGETHER.</span>
+><div className="md:flex flex-col">
+  <span className="sp0" >LET’S <span className="text-[#FAAC61] sp1">MAKE</span></span>
+  <span className="sp2">AN <span className="sp3 text-[#FAAC61]">IMPACT</span></span>
+  <span className="sp4">TOGETHER.</span>
+  </div>
 </h2>
 
    
@@ -389,11 +401,12 @@ We don’t just build – we listen, strategise, and craft solutions that align 
 <section>
   {/* Our Agency Section */}
   <div className="agency-section bg-[#ececea] text-center py-20 px-6">
-  <p className="uppercase  year mb-4 tracking-wide"data-aos="fade-up"
+  <p className="uppercase  year mb-4 tracking-wide agency"data-aos="fade-up"
           data-aos-delay="10">Our Agency</p>
 
-  <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] font-[anton] leading-tight max-w-8xl mx-auto  mt-10 text-[#312F2F]">
-    <div><span className="text-[#FAAC61]"data-aos="fade-up"
+  <h2 className="agency-heading-mobile text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] font-[anton] leading-tight max-w-8xl mx-auto  mt-10 text-[#312F2F]">
+    
+      <div><span className="text-[#FAAC61]"data-aos="fade-up"
           data-aos-delay="10">BYTEBANDITS</span> IS WHERE BOLD IDEAS BECOME <span className="text-[#FAAC61]"data-aos="fade-up"
           data-aos-delay="10">POWERFUL</span> </div>
     <div>DIGITAL <span className="text-[#FAAC61]"data-aos="fade-up"
@@ -402,15 +415,16 @@ We don’t just build – we listen, strategise, and craft solutions that align 
           data-aos-delay="10">BRANDS TO LIFE</span>. CHOOSE</div>
     <div> <span className="text-[#FAAC61]"data-aos="fade-up"
           data-aos-delay="10">BYTEBANDITS</span> BECAUSE WE ARE WORTH IT.</div>
+          
   </h2>
 
-  <div className="flex flex-col sm:flex-row sm:items-center justify-center gap-15 mt-15 sm:mt-14 px-2">
-    <div className="  about max-w-md sm:leading-[1] sm:mt-1 "data-aos="fade-up"
+  <div className="agency-para flex flex-col sm:flex-row sm:items-center justify-center md:gap-15 md:mt-15  px-2">
+    <div className=" agency-paragraph-mobile about max-w-md sm:leading-[1] sm:mt-1 "data-aos="fade-up"
           data-aos-delay="10">
-      We may be new, but we’re already building <div className="mt-1.5 ml-30 ">a portfolio we’re proud of</div>
+      We may be new, but we’re already building <div className="md:mt-1.5 md:ml-30  ">a portfolio we’re proud of</div>
     </div>
 
-    <button className="bg-[#37CC8D] text-[12px] hover:bg-[#43a976] text-black px-8 py-6 rounded-full text-sm inter  transition-all whitespace-nowrap tracking-[1px]"data-aos="fade-up"
+    <button className="agency-button-mobile bg-[#37CC8D] text-[12px] hover:bg-[#43a976] text-black md:px-8 md:py-6 rounded-full text-sm inter  transition-all whitespace-nowrap tracking-[1px]"data-aos="fade-up"
           data-aos-delay="10">
       VIEW PORTFOLIO
     </button>
