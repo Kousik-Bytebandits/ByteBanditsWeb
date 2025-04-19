@@ -501,7 +501,7 @@ height: 26px !important;
   }
 
   .shape-4 {
-    top: 36lvh;
+    top: 35lvh;
     left: 1.1lvh;
     width: 50px;
   }
@@ -522,12 +522,12 @@ height: 100vh;
 
 }
 .hero{
-height: 20dvh;
+height: 20lvh;
 }
 
 .scroll-icon {
-top: -9dvh;
-right: 4dvh;
+top: -11lvh;
+right: 4lvh;
 width: 80px;
 height: 80px;
 }
@@ -536,7 +536,7 @@ height: 80px;
 .about-section {
 margin: 20px;
 padding: 40px 20px;
-margin-top: 25dvh;
+margin-top: 25lvh;
 }
 
 .about-title {
