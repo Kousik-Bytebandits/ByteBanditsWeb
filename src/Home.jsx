@@ -469,7 +469,7 @@ We don’t just build – we listen, strategise, and craft solutions that align 
 
     {/* Right Section - 60% (3 sections inside) */}
     <div className="right-foot md:w-[60%] grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-8">
-    <div className="off-links">
+    
       {/* Office Info */}
       <div className="office-container text-[#E0E0E0]">
         <h4 className="office-head text-[20px] inter mb-4 text-[#8F8F8F] font-bold">OFFICE</h4>
@@ -509,11 +509,11 @@ We don’t just build – we listen, strategise, and craft solutions that align 
           <li><a href="#">Contact Us</a></li>
         </ul>
       </div>
-      </div>
+      
       {/* Social Media */}
       <div className="social-container">
         <h4 className="social-head text-[20px] inter mb-1 text-[#8F8F8F] font-bold">SOCIAL MEDIA</h4>
-        <div className="grid grid-cols-3 md:gap-8 mt-8">
+        <div className="grid grid-cols-3 gap-8 mt-8">
           {[
             "image 23.png", "image 24.png", "Group 21.png",
             "image 27.png", "image 28.png", "image 26.png"

@@ -961,9 +961,24 @@ height: 20px;
   height: 1.2rem !important;
 }
 
+.office-container {
+  grid-column: 1;
+}
+
+.links-container {
+  grid-column: 2;
+  margin-right: 15px;
+}
+
+.social-container {
+  grid-column: 1 / span 2;
+  margin-top: 1.5rem;
+}
+
 .copy-container {
   font-size: 10px !important;
   padding: 0.5rem 0 !important;
   margin-top: 1rem !important;
 }
-  }
+
+ }
