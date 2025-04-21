@@ -198,7 +198,7 @@ We don’t just build – we listen, strategise, and craft solutions that align 
          <Solution />
       </section>
  
-      <section className="bg-[#353639] text-white md:py-20 px-11  text-center  client-section"> 
+      <section className="bg-[#353639] text-white md:py-20 md:px-11  text-center  client-section"> 
   <p className="client-label mx-50 text-xs uppercase text-[#818181] tracking-widest md:mb-3 text-left  inter"data-aos="fade-up"
           data-aos-delay="10">
     Our Clients

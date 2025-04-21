@@ -482,33 +482,33 @@ height: 26px !important;
 
   /* 3d shapes positions and title */
   .shape-1 {
-    top: -35lvh;
+    top: -32lvh;
     left: -15lvh;
     width: 200px;
   }
 
   .shape-2 {
-     top: -35lvh;
+     top: -31lvh;
     right: -15lvh;
     width: 200px;
     height: 200px;
   }
 
   .shape-3 {
-    top: 43lvh;
+    top: 38lvh;
     right: 30lvh;
     width: 200px;
   }
 
   .shape-4 {
-    top: 38lvh;
-    left: 1.1lvh;
+    top: 33lvh;
+    left: 1.15lvh;
     width: 50px;
   }
 
   .shape-5 {
-    top: 51lvh;
-    right: 9.4lvh;
+    top: 46.5lvh;
+    right: 10lvh;
     width: 50px;}
 
     .animated-title .title-line {
@@ -519,7 +519,7 @@ height: 26px !important;
     }
 /** Hero image size adjustment */
 .hero-section {
-height: 100vh; 
+height: 90vh; 
 
 }
 .hero{
@@ -527,7 +527,7 @@ height: 20lvh;
 }
 
 .scroll-icon {
-top: -10lvh;
+top: -9lvh;
 right: 6lvh;
 width: 90px;
 height: 90px;
@@ -549,6 +549,7 @@ gap: 40px;
 margin-top: 50px;
 display: flex;
 flex-direction: column;
+align-items: center;
 }
 
 .triangle-title {
@@ -565,7 +566,7 @@ font-size: 14px;
 /*Solution section adjustments */
 .solutions-section {
 margin: 20px;
-padding: 2rem 1rem;
+padding: 1px;
 }
 
 .carousel-track {
@@ -582,13 +583,17 @@ height: 430px;
 .section-title {
 font-size: 24px;
 line-height: 2rem;
+padding: 1px;
 }
 .card-desc{
-font-size: 15px;
+font-size: 14.5px;
+
 
 }
 .solutions-carousel{
 width: 700px;
+padding: 0px;
+padding-bottom: 50px;
 }
 
 /*Client logos section adjustments */
@@ -599,7 +604,7 @@ text-align: left;
 width: 100%;
 }
 .client-label{
-padding: 50px 0px;
+padding: 50px 20px;
 }
 .client-section{
 height: 50vh;
@@ -607,6 +612,7 @@ height: 50vh;
 .client-head {
 font-size: 30px;
 line-height: 1.3;
+padding-left: 20px;
 }
 
 
@@ -632,7 +638,6 @@ height: 1px;
 
 .client-logos::-webkit-scrollbar-thumb {
 background: #888;
-border-radius: 4px;
 }
 
 /*Tools logos section adjustments */
