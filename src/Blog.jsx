@@ -31,7 +31,7 @@ const BlogSection = () => {
             Latest From <span className="highlight text-[#50BD8A]">Blog</span>
           </h2>
           <div className="blog-view-all flex items-center gap-2 cursor-pointer mr-70">
-            <span className="uppercase text-[10px] sm:text-[12px] md:text-[14px] lg:text-[14px] font-semibold">View All Publications</span>
+            <span className="uppercase text-[9px] sm:text-[12px] md:text-[14px] lg:text-[14px] font-semibold">View All Publications</span>
             <ArrowRight size={17} />
           </div>
         </div>
@@ -60,7 +60,7 @@ const BlogSection = () => {
             </div>
 
             {/* Text & Read More */}
-            <div className="blog-content mt-5 flex flex-row justify-between py-6 px-2 items-end">
+            <div className="blog-content mt-5 flex flex-row justify-between py-6 px-2 md:items-end">
               <p className="blog-title text-[12px] sm:text-[11px] md:text-[12px] lg:text-[25px] font-[anton] text-[#454545] leading-9 tracking-[0.5px] mb-10 max-w-[70%] text-blog-title">
                 {blog.title}
               </p>
@@ -68,9 +68,9 @@ const BlogSection = () => {
               <button className="read-more-button relative h-[110px] w-[120px] bg-[#D9D9D9] text-black">
                 <ArrowUpRight
                   size={40}
-                  className="arrow-icon absolute top-2 right-2 "
+                  className="arrow-icon absolute md:top-2 md:right-2 right-0 top-0"
                 />
-                <span className="read-more-text absolute bottom-4 left-1/2 transform -translate-x-1/2 text-[9px] sm:text-[10px] md:text-[11px] lg:text-[13px] font-semibold whitespace-nowrap">
+                <span className="read-more-text absolute md:bottom-4 md:left-1/2 md:transform -translate-x-1/2 text-[9px] sm:text-[10px] md:text-[11px] lg:text-[13px] font-semibold whitespace-nowrap">
     READ MORE
   </span>
               </button>

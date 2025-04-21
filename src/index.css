@@ -527,7 +527,7 @@ height: 20lvh;
 }
 
 .scroll-icon {
-top: -9lvh;
+top: -9.5lvh;
 right: 6lvh;
 width: 90px;
 height: 90px;
@@ -573,17 +573,23 @@ padding: 1px;
 gap: 1rem;
 height: auto;
 }
+.section-label{
 
+text-align: left;
+width: 100%;
+}
 .solution-card {
 width: 320px;
 height: 430px;
 
 }
-
+.solutions-header{
+margin-left: 20px;
+}
 .section-title {
 font-size: 24px;
 line-height: 2rem;
-padding: 1px;
+
 }
 .card-desc{
 font-size: 14.5px;
@@ -599,7 +605,7 @@ padding-bottom: 50px;
 /*Client logos section adjustments */
 .client-label,
 .client-head {
-margin-left: 0;
+margin-left: 20px;
 text-align: left;
 width: 100%;
 }
@@ -831,11 +837,15 @@ gap: 12px;
 }
 
 .blog-heading {
-font-size: 20px;
+font-size: 35px;
+margin-top: 20px;
 }
 
 .blog-view-all {
 margin-right: 0;
+margin-left: 23lvh;
+margin-top: 2lvh;
+
 }
 
 .blog-card-container {
@@ -857,17 +867,103 @@ height: 180px;
 }
 
 .blog-title {
-font-size: 11px;
-line-height: 1.4;
+font-size: 12px;
+line-height: 1.2rem;
 margin-bottom: 32px;
 }
 
 .read-more-button {
-width: 80px;
-height: 70px;
+width: 50px;
+height: 40px;
 }
 
 .read-more-text {
 font-size: 8px;
+padding-top: 5px;
+}
+.arrow-icon{
+width: 20px;
+height: 20px;
+
+}
+/* Footer section adjustments */
+.custom-footer {
+  padding-top: 2rem;
+}
+
+.left-foot {
+  margin-left: 3lvh !important;
+  width: 100% !important;
+}
+
+.lf-container {
+  width: 120px !important;
+  height: auto !important;
+}
+
+.lf-desc {
+  font-size: 14px !important;
+  max-width: 90% !important;
+  line-height: 1.6 !important;
+}
+
+.off-links{
+  display: flex;
+  gap: 1.5rem;
+}
+.right-foot {
+  grid-template-columns: 1fr !important;
+  gap: 2rem !important;
+  width: 100% !important;
+}
+
+.office-head,
+.links-head,
+.social-head {
+  font-size: 16px !important;
+ }
+
+.foot {
+  font-size: 14px !important;
+}
+
+.social-container .grid {
+  grid-template-columns: repeat(6, 1fr) !important;
+  gap: 1.5rem !important;
+  margin-top: 0rem !important;
+  
+}
+.social-head{
+  margin-left: 0 !important;
+  text-align: left !important;
+ 
+}
+
+.social-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.social-container a {
+  font-size: 14px !important;
+  padding: 0.5rem !important;
+  margin-top: 1rem !important;
+}
+
+.social-container img {
+  width: 20px !important;
+  height: 20px !important;
+
+  
+}
+.social-img {
+  width: 1.2rem !important;
+  height: 1.2rem !important;
+}
+
+.copy-container {
+  font-size: 10px !important;
+  padding: 0.5rem 0 !important;
+  margin-top: 1rem !important;
 }
   }

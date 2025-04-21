@@ -443,7 +443,7 @@ We don’t just build – we listen, strategise, and craft solutions that align 
 <Blog />
 {/* Let's Talk Section */}
 <section className="w-full py-16  bg-[#ececea] text-left">
-  <h2 className="text-4xl md:text-[60px] mx-50 font-[anton] uppercase text-[#454545]  mb-15"data-aos="fade-up"
+  <h2 className="text-4xl md:text-[60px] md:mx-50 font-[anton] uppercase text-[#454545] mx-8 md:mb-15"data-aos="fade-up"
           data-aos-delay="10">
     Let&apos;s Talk
   </h2>
@@ -451,28 +451,28 @@ We don’t just build – we listen, strategise, and craft solutions that align 
 
 {/* Footer Section */}
 <footer className="custom-footer bg-[#353639] text-white pt-15">
-  <div className="max-w-10xl px-6 py-5 flex flex-col md:flex-row gap-10">
+  <div className="max-w-10xl md:px-6 md:py-5 flex flex-col md:flex-row gap-10">
 
     {/* Left Section - 40% */}
-    <div className="md:w-[40%] ml-15">
-      <div className="w-[200px] h-[80px] mb-6">
+    <div className="left-foot md:w-[40%] ml-15">
+      <div className="lf-container w-[200px] h-[80px] mb-6">
         <img
           src="ByteBandits 2.png"
           alt="Byte Bandits Logo"
-          className="w-full h-auto object-contain"
+          className="w-full h-auto object-contain lf-img"
         />
       </div>
-      <p className="text-[16px] text-[#E0E0E0] inter max-w-[70%] lg:ml-2 leading-8">
+      <p className="lf-desc text-[16px] text-[#E0E0E0] inter max-w-[70%] lg:ml-2 leading-8">
         We are a passionate team of tech innovators dedicated to crafting smart, scalable, and user-centric digital solutions. From custom software and mobile apps to eCommerce platforms, digital marketing, branding, and cloud services.
       </p>
     </div>
 
     {/* Right Section - 60% (3 sections inside) */}
-    <div className="md:w-[60%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
+    <div className="right-foot md:w-[60%] grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-8">
+    <div className="off-links">
       {/* Office Info */}
-      <div className="text-[#E0E0E0]">
-        <h4 className="text-[20px] inter mb-4 text-[#8F8F8F] font-bold">OFFICE</h4>
+      <div className="office-container text-[#E0E0E0]">
+        <h4 className="office-head text-[20px] inter mb-4 text-[#8F8F8F] font-bold">OFFICE</h4>
 
         <div className="flex items-start gap-2 foot text-[20px]">
           <img src="Mask group (1).png" alt="Location" className="w-5 h-5 mt-[6px]" />
@@ -499,8 +499,8 @@ We don’t just build – we listen, strategise, and craft solutions that align 
       </div>
 
       {/* Links */}
-      <div>
-        <h4 className="text-[20px] mb-4 text-[#8F8F8F] inter font-bold">LINKS</h4>
+      <div className="links-container ">
+        <h4 className="links-head text-[20px] mb-4 text-[#8F8F8F] inter font-bold">LINKS</h4>
         <ul className="space-y-2 text-[20px] text-[#E0E0E0] underline foot">
           <li><a href="#">Home</a></li>
           <li><a href="#">Blogs</a></li>
@@ -509,16 +509,16 @@ We don’t just build – we listen, strategise, and craft solutions that align 
           <li><a href="#">Contact Us</a></li>
         </ul>
       </div>
-
+      </div>
       {/* Social Media */}
-      <div>
-        <h4 className="text-[20px] inter mb-1 text-[#8F8F8F] font-bold">SOCIAL MEDIA</h4>
-        <div className="grid grid-cols-3 gap-8 mt-8">
+      <div className="social-container">
+        <h4 className="social-head text-[20px] inter mb-1 text-[#8F8F8F] font-bold">SOCIAL MEDIA</h4>
+        <div className="grid grid-cols-3 md:gap-8 mt-8">
           {[
             "image 23.png", "image 24.png", "Group 21.png",
             "image 27.png", "image 28.png", "image 26.png"
           ].map((img, i) => (
-            <a key={i} href="#"><img src={img} alt="social" className="w-10 h-10" /></a>
+            <a key={i} href="#"><img src={img} alt="social" className="w-10 h-10 social-img" /></a>
           ))}
         </div>
       </div>
@@ -526,7 +526,7 @@ We don’t just build – we listen, strategise, and craft solutions that align 
   </div>
 
   {/* Copyright */}
-  <div className="text-center text-[#D9D9D9] mt-10 border-t border-[#444] py-6 inter bg-[#454545]">
+  <div className="copy-container text-center text-[#D9D9D9] mt-10 border-t border-[#444] py-6 inter bg-[#454545]">
     Copyright © Byte Bandits. All Rights Reserved.
   </div>
 </footer>
