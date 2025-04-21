@@ -10,18 +10,18 @@
   @keyframes stroke {
     0% {
       fill: rgba(72, 138, 204, 0);
-      stroke: rgba(54, 95, 160, 1);
+      stroke: #353639;
       stroke-dashoffset: 25%;
       stroke-dasharray: 0 50%;
       stroke-width: 2;
     }
     70% {
       fill: rgba(72, 138, 204, 0);
-      stroke: rgba(54, 95, 160, 1);
+      stroke:#353639;
     }
     80% {
       fill: rgba(72, 138, 204, 0);
-      stroke: rgba(54, 95, 160, 1);
+      stroke: #353639;
       stroke-width: 3;
     }
     100% {
@@ -49,7 +49,7 @@
   svg text {
     animation: stroke 5s infinite alternate;
     stroke-width: 2;
-    stroke: #365fa0;
+    stroke: #353639;
     font-size: 200px;
     fill: #353639; /* Optional: base fill */
   }
