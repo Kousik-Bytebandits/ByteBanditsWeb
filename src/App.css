@@ -25,14 +25,14 @@
       stroke-width: 3;
     }
     100% {
-      fill: rgba(72, 138, 204, 1);
+      fill: #353639; 
       stroke: rgba(54, 95, 160, 0);
       stroke-dashoffset: -25%;
       stroke-dasharray: 50% 0;
       stroke-width: 0;
     }
   }
-
+  
   .wrapper {
     background-color: #ffffff;
     width: 100vw;
@@ -43,16 +43,15 @@
   }
   
   svg {
-    font-family: "Russo One", sans-serif;
-   
+    font-family: "Anton", sans-serif;
   }
   
   svg text {
     animation: stroke 5s infinite alternate;
     stroke-width: 2;
     stroke: #365fa0;
-    font-size: 100px;
-    fill: transparent;
+    font-size: 200px;
+    fill: #353639; /* Optional: base fill */
   }
   
   
