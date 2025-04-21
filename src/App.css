@@ -1,10 +1,60 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
     100% { transform: translateY(0px); }
   }
+
+  @keyframes stroke {
+    0% {
+      fill: rgba(72, 138, 204, 0);
+      stroke: rgba(54, 95, 160, 1);
+      stroke-dashoffset: 25%;
+      stroke-dasharray: 0 50%;
+      stroke-width: 2;
+    }
+    70% {
+      fill: rgba(72, 138, 204, 0);
+      stroke: rgba(54, 95, 160, 1);
+    }
+    80% {
+      fill: rgba(72, 138, 204, 0);
+      stroke: rgba(54, 95, 160, 1);
+      stroke-width: 3;
+    }
+    100% {
+      fill: rgba(72, 138, 204, 1);
+      stroke: rgba(54, 95, 160, 0);
+      stroke-dashoffset: -25%;
+      stroke-dasharray: 50% 0;
+      stroke-width: 0;
+    }
+  }
+
+  .wrapper {
+    background-color: #ffffff;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  svg {
+    font-family: "Russo One", sans-serif;
+   
+  }
+  
+  svg text {
+    animation: stroke 5s infinite alternate;
+    stroke-width: 2;
+    stroke: #365fa0;
+    font-size: 100px;
+    fill: transparent;
+  }
+  
   
   .floating {
     animation: float 4s ease-in-out infinite;
@@ -36,3 +86,4 @@ body::-webkit-scrollbar {
 .scrollbar-none::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
+

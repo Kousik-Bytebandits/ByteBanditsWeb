@@ -142,22 +142,22 @@
 
   /* 3d shapes positions and title */
   .shape-1 {
-    top: -350px;
-    left: -500px;
-    width: 850px;
+    top: -450px;
+    left: -700px;
+    width: 500px;
   }
 
   .shape-2 {
   
-    right: -510px;
-    width: 750px;
-    height: 800px;
+    right: -860px;
+    width: 600px;
+    height: 600px;
   }
 
   .shape-3 {
-    top: 380px;
-    right: 1250px;
-    width: 600px;
+    top: 200px;
+    right: 900px;
+    width: 450px;
   }
 
   .shape-4 {
@@ -195,10 +195,10 @@
   }
 
   .scroll-icon {
-    top: -220px;
+    top: -200px;
     right: 200px;
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
   }
 
 /*About section adjustments */
@@ -294,13 +294,13 @@
   .client-section .text-xs,
   .client-section .text-sm {
     font-size: 11px;
-    margin-left: 170px;
+    margin-left: 200px;
   }
 .client-head{
-  font-size: 50px;
+  font-size: 60px;
   line-height: 1.2;
   margin-top: 50px;
-  margin-left: 170px;
+  margin-left: 200px;
 }
 
   .client-section .client-logos > div {
@@ -310,7 +310,7 @@
 
  
   .client-section{
-       height: 85vh;
+       height: 80vh;
 
   }
 
@@ -318,7 +318,7 @@
  .tech-card {
   width: 180px;
   height: 160px;
-  
+  margin-top: 40px;
 }
 
 .tech-card-description {
@@ -402,8 +402,9 @@ font-size: 11px !important;
 
 .container{
 width: 500px;
-height: 600px;
+height: 580px;
 }
+
 
 /* Footer section adjustments */
 .custom-footer p,
