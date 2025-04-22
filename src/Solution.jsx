@@ -1,7 +1,7 @@
-import { useState } from "react";
+import{ useRef } from "react";
 import { ArrowRight } from "lucide-react";
 export default function ServicesSection() {
-  const [slideIndex, setSlideIndex] = useState(0);
+  const carouselRef = useRef(null);
 
   const cards = [
     {
@@ -33,17 +33,41 @@ export default function ServicesSection() {
 
   const cardWidth = 370;
   const gap = 30; // 1.5rem (Tailwind's `mr-6`)
-  const visibleCards = 3.5;
-  const maxSlide = Math.max(0, cards.length - visibleCards);
+ 
+  
 
   const handleNext = () => {
-    if (slideIndex < maxSlide) setSlideIndex((prev) => prev + 1);
+    const container = carouselRef.current;
+    if (container) {
+      const maxScrollLeft = container.scrollWidth - container.clientWidth;
+      const newScrollLeft = Math.min(
+        container.scrollLeft + cardWidth + gap,
+        maxScrollLeft
+      );
+  
+      container.scrollTo({
+        left: newScrollLeft,
+        behavior: 'smooth',
+      });
+    }
   };
-
+  
+  
   const handlePrev = () => {
-    if (slideIndex > 0) setSlideIndex((prev) => prev - 1);
+    const container = carouselRef.current;
+    if (container) {
+      const newScrollLeft = Math.max(
+        container.scrollLeft - cardWidth - gap,
+        0
+      );
+  
+      container.scrollTo({
+        left: newScrollLeft,
+        behavior: 'smooth',
+      });
+    }
   };
-
+  
   return (
     <section className="solutions-section mx-45 bg-[#ececea] py-16 px-5 sm:px-10 md:px-20 text-[#333] ">
       <div className="mb-15 solutions-header">
@@ -63,17 +87,13 @@ export default function ServicesSection() {
         <div className="nav-controls flex items-center  gap-4 text-xs sm:text-sm text-gray-500 uppercase font-semibold cursor-pointer select-none">
           <span
             onClick={handlePrev}
-            className={`flex items-center gap-1 hover:text-black transition-colors duration-200 ${
-              slideIndex === 0 ? "opacity-30 cursor-not-allowed" : ""
-            }`}
+            className="flex items-center gap-1 hover:text-black transition-colors duration-200 "
           >
             ← Prev
           </span>
           <span
             onClick={handleNext}
-            className={`flex items-center gap-1 hover:text-black transition-colors duration-200 ${
-              slideIndex === maxSlide ? "opacity-30 cursor-not-allowed" : ""
-            }`}
+            className="flex items-center gap-1 hover:text-black transition-colors duration-200 "
           >
             Next →
           </span>
@@ -81,18 +101,17 @@ export default function ServicesSection() {
       </div>
 
       <div className="solutions-carousel relative md:mx-25 w-full px-4 py-6  ">
-  <div className="carousel-wrapper overflow-x-auto scrollbar-hide ">
+  <div  ref={carouselRef} className="carousel-wrapper overflow-x-auto scrollbar-hide   ">
     <div
-      className=" carousel-track h-[500px] flex transition-transform duration-500 ease-in-out gap-8 "
-      style={{
-        transform: `translateX(-${slideIndex * (cardWidth + gap)}px)`,
-        width: `${cards.length * (cardWidth + gap)}px`,
-      }}
+   
+      className=" carousel-track h-[500px] flex transition-transform duration-500 ease-in-out gap-8  "
+      style={{ scrollSnapType: "x mandatory" }}
     >
       {cards.map((item, i) => (
         <div
           key={i}
-          className="solution-card box bg-white px-10 py-5 rounded-lg w-[370px] h-[400px] flex-shrink-0 flex flex-col justify-between shadow-xl"
+          className=" solution-card box bg-white px-10 py-5 rounded-lg w-[370px] h-[400px] min-w-[340px] flex-shrink-0 flex flex-col justify-between shadow-xl"
+        style={{ scrollSnapAlign: "start" }}
         >
           {/* Title & Description */}
           <div>
@@ -138,7 +157,12 @@ export default function ServicesSection() {
             </div>
           </div>
         </div>
+        
       ))}
+      <div
+  className="w-[370px] min-w-[370px] flex-shrink-0"
+  aria-hidden="true"
+/>
     </div>
   </div>
 
