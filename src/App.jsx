@@ -1,7 +1,10 @@
 import './App.css';
-import Home from './Home'
-import SvgLoader from './SvgLoader'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import ContactPage from './ContactPage';
+import SvgLoader from './SvgLoader';
 import { useEffect, useState } from 'react';
+
 export default function App() {
   const [loading, setLoading] = useState(true);
 
@@ -10,16 +13,17 @@ export default function App() {
     const timer = setTimeout(() => setLoading(false), 5000);
     return () => clearTimeout(timer);
   }, []);
+
+  if (loading) {
+    return <SvgLoader />;
+  }
+
   return (
-    <> 
-    {loading ? (
-      <SvgLoader />
-    ) : (<div>
-      <Home/>
-   </div>)}
-   
-   </>
-    
-  
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+    </Router>
   );
 }

@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
 
 @keyframes float {
     0% { transform: translateY(0px); }
