@@ -438,6 +438,37 @@ height: 26px !important;
   margin-top: 1rem;
   margin-bottom: 0.4rem;
 } 
+
+/* Contact-Page section adjustments */
+
+/* optional repositioning so shapes don’t overlap */
+.con-1 { top: -38lvh !important; left: -48lvh !important; width: 700px; }
+.con-2 { top: 0lvh !important; right: 0lvh !important;width: 300px;height: 700px; }
+.con-3 { top: 35lvh !important; left: 55lvh !important;width:100px ; }
+.con-4 { top: 50lvh !important; right: 55lvh !important;width:100px ; }
+.con-5 { top: -45lvh !important; left: -300px !important;width: 600px; }
+
+.contact-form-section{
+height: 130vh !important;
+}
+
+.title-line{
+font-size: 7rem !important; /* reduce char size */
+line-height: 7rem !important;
+}
+
+.cards-cover{
+height: 70vh !important;
+}
+
+/* ===== MAP ===== */
+.contact-map-section iframe {
+width: 100% !important;
+height: 400px !important;
+margin: 1rem auto 0;
+display: block;
+}
+
 }
   
 
