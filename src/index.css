@@ -999,13 +999,13 @@ height: 20px;
 .con-1 {
   width: 320px;
   top: -7lvh !important;
-  left: -15lvh !important;
+  left: -17lvh !important;
 }
 .con-2 {
-  top: 2lvh !important;
-  right: -2lvh !important;
-  width: 180px;
-  height: 500px;
+  top: 0lvh !important;
+  right: 0lvh !important;
+  width: 150px;
+  height: 400px;
 }
 .con-3{
   top: 45lvh !important;
@@ -1014,13 +1014,13 @@ height: 20px;
 }
 .con-4 {
   top: 55lvh !important;
-  left: 35lvh !important;
+  left: 37lvh !important;
   width: 50px;
 }
 
 .con-5 {
   top: -20lvh !important;
-  right: 30dvh !important;
+  right: 33dvh !important;
   width: 300px;
 }
 .contact-hero .contact-title .title-line {

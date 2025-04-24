@@ -84,7 +84,7 @@ const ContactPage = () => {
   <motion.img
       src="/shape-3.png"
       alt="White Shape"
-      style={{ scale }}
+      
       className="con-5 floating absolute md:top-[-500px] md:left-[-450px] md:w-[800px] z-[100]"
     />
   <div className=" cards-cover w-full h-[60vh] bg-gradient-to-b from-[#193C56F2] to-[#0B1922] py-20 px-4">
