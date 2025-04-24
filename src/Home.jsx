@@ -257,12 +257,22 @@ export default function AnimatedWebsite() {
       Welcome to <span className="text-[#50BD8A] font-semibold">BYTEBANDITS</span> where your ideas come to life. 
       We specialize in crafting unique brands, captivating campaigns, and effective digital strategies.
     </p>
-    <Link to="/contact" >
-    <button className="cursor-pointer bg-[#37CC8D] tracking-[2px] text-[18px] text-white px-6 py-4 rounded-full text-sm font-semibold w-50 transition-all"data-aos="fade-up"
-          data-aos-delay="10">
-      CONTACT
-    </button>
-    </Link>
+   
+<Link
+  to="/contact"
+  onClick={() => {
+    window.scrollTo(0, 0);
+  }}
+>
+  <button
+    className="cursor-pointer bg-[#37CC8D] tracking-[2px] text-[18px] text-white px-6 py-4 rounded-full text-sm font-semibold w-50 transition-all"
+    data-aos="fade-up"
+    data-aos-delay="10"
+  >
+    CONTACT
+  </button>
+</Link>
+
    
   </div>
 

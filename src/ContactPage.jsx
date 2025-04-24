@@ -3,6 +3,8 @@ import Footer from "./Footer";
 import { useScroll, useTransform, motion } from "framer-motion";
 import  { useRef } from "react"; 
 import { ArrowRight } from "lucide-react";
+import "./index.css"; 
+
 
 const ContactPage = () => { 
     const scrollRef = useRef(null);
@@ -13,9 +15,10 @@ const ContactPage = () => {
     // Scale the hero background image slightly on scroll
        const scale = useTransform(scrollYProgress, [0, 1], [1.5, 1.1]);
   return (
-    <div>
+    
+    <div className="overflow-hidden ">
   <Navbar />
-  <section className="relative  overflow-hidden h-[90vh] flex flex-col justify-center items-center text-center ">
+  <section className=" contact-hero relative  overflow-hidden h-[90vh] flex flex-col justify-center items-center text-center ">
   
   <div className="contact-shapes ">
   <div>
@@ -23,26 +26,26 @@ const ContactPage = () => {
       src="/shape-1.png"
       alt="Orange Shape"
       style={{ scale }}
-      className="floating absolute top-[-430px] left-[-580px] w-[1000px] z-0"
+      className="con-1 floating absolute top-[-430px] left-[-580px] w-[1000px] z-0"
     />
     
     <motion.img
       src="/blue-shape.png"
       alt="Green Shape"
       style={{ scale }}
-      className="floating absolute top-[10px] right-[-10px] w-[400px] h-[900px] z-10"
+      className="con-2 floating absolute top-[10px] right-[-10px] w-[400px] h-[900px] z-10"
     />
   </div>
 
   <img
     src="/shape-4.png"
     alt="Loop Shape"
-    className="absolute top-[300px] left-[580px] w-[120px] z-30 floating"
+    className="con-3 absolute top-[300px] left-[580px] w-[120px] z-30 floating"
   />
   <img
     src="/shape-5.png"
     alt="Loop Shape"
-    className="absolute top-[450px] right-[600px] w-[130px] z-30 floating"
+    className="con-4 absolute top-[450px] right-[600px] w-[130px] z-30 floating"
   />
 </div>
   
@@ -77,14 +80,14 @@ const ContactPage = () => {
 
 
   </section>
-  <section className="relative z-10">
+  <section className=" contact-info-cards relative z-10">
   <motion.img
       src="/shape-3.png"
       alt="White Shape"
       style={{ scale }}
-      className="floating absolute top-[-500px] left-[-450px] w-[800px] z-[100]"
+      className="con-5 floating absolute md:top-[-500px] md:left-[-450px] md:w-[800px] z-[100]"
     />
-  <div className="w-full h-[60vh] bg-gradient-to-b from-[#193C56F2] to-[#0B1922] py-20 px-4">
+  <div className=" cards-cover w-full h-[60vh] bg-gradient-to-b from-[#193C56F2] to-[#0B1922] py-20 px-4">
   <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-100 text-center mt-5 ">
     
     {/* Address */}
@@ -123,7 +126,7 @@ const ContactPage = () => {
 
   </section>
 
-  <div className="w-full h-[105vh] bg-white px-6 py-16 text-black">
+  <div className="overflow-hidden contact-form-section w-full h-[105vh] bg-white px-6 py-16 text-black">
 
   {/* === CONTACT FORM SECTION === */}
   <div className="max-w-7xl mx-auto px-4 mb-16">
@@ -169,18 +172,18 @@ const ContactPage = () => {
         <textarea rows="5" className="w-full h-[200px] border-[0.5px] border-[#0E2B32] p-2 rounded-lg bg-[#F3F8FF]"></textarea>
       </div>
 
-      <div className="flex items-center gap-4 mt-10">
+      <div className="b1 flex items-center gap-4 mt-10">
         <button type="submit" className="w-[200px] h-[60px] bg-gradient-to-b from-[#193C56F2] to-[#0B1922] text-white text-[18px] inter px-5 py-2 rounded-full ">
           Send a Message
         </button>
-        <button type="button" className="w-12 h-12 ml-5  rounded-full bg-[#353639] text-white flex items-center justify-center">
+        <button type="button" className="b2 w-12 h-12 ml-5  rounded-full bg-[#353639] text-white flex items-center justify-center">
           <ArrowRight size={30} className="text-white" />
         </button>
       </div>
     </form>
 
     {/* RIGHT IMAGE (2/5) */}
-    <div className="md:col-span-2 flex justify-center">
+    <div className="contact-right md:col-span-2 flex justify-center">
       <img
         src="contact-right.png"
         alt="Contact Person"
@@ -191,17 +194,18 @@ const ContactPage = () => {
 </div>
 </div>
   {/* === LOCATION MAP SECTION === */}
-  <div className="w-Full h-[66vh] bg-gradient-to-b from-[#193C56F2] to-[#0B1922] py-8 ">
-    <div className="max-w-8xl  mx-auto px-4">
-      <iframe
-        title="Our Location"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3530.612199639886!2d80.16661824060697!3d13.020161203012064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5260c32694274f%3A0x65271faa992c61ca!2s1%2F628%2C%20Kumudham%20Nagar%204th%20St%2C%20Dhanak%20Nagar%2C%20Kumudam%20Nagar%2C%20Mugalivakkam%2C%20Chennai%2C%20Tamil%20Nadu%2C%20India!5e1!3m2!1sen!2sus!4v1745326430041!5m2!1sen!2sus" 
-        className="ml-24 mt-6 w-[90%] h-[500px] rounded-lg"
-        allowFullScreen
-        loading="lazy"
-      ></iframe>
-    </div>
+  <div className="contact-map-section w-full h-[66vh] bg-gradient-to-b from-[#193C56F2] to-[#0B1922] py-8 overflow-x-hidden">
+  <div className="max-w-8xl mx-auto px-4">
+    <iframe
+      title="Our Location"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3530.612199639886!2d80.16661824060697!3d13.020161203012064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5260c32694274f%3A0x65271faa992c61ca!2s1%2F628%2C%20Kumudham%20Nagar%204th%20St%2C%20Dhanak%20Nagar%2C%20Kumudam%20Nagar%2C%20Mugalivakkam%2C%20Chennai%2C%20Tamil%20Nadu%2C%20India!5e1!3m2!1sen!2sus!4v1745326430041!5m2!1sen!2sus"
+      className="block mx-auto mt-6 max-w-full w-[90%] h-[500px] rounded-lg"
+      allowFullScreen
+      loading="lazy"
+    ></iframe>
   </div>
+</div>
+
 
 
   <Footer />
