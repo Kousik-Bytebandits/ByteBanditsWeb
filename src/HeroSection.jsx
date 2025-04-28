@@ -13,39 +13,40 @@ const scrollRef = useRef(null);
         <section className="relative h-[117vh] flex flex-col justify-center items-center text-center ... hero-section"> 
 <div className="landing-hero ">
 
-  {/* Floating 3D shapes */}
-  <div className="shapes">
+ {/* Floating 3D shapes */}
+<div className="shapes">
   {/* Scroll-based animated shapes with Framer Motion */}
   <div className="floating">
-  <motion.img
-    src="shape-1.png"
-    alt="Orange Shape"
-    style={{ scale }}
-    className="absolute shape-1 top-[-630px] left-[-1000px] w-[700px] z-0"
-  />
-  <motion.img
-    src="shape-3.png"
-    alt="White Shape"
-    style={{ scale }}
-    className="absolute shape-3 top-[300px] right-[1100px] w-[550px] z-0"
-  />
-  <motion.img
-    src="shape-2.png"
-    alt="Green Shape"
-    style={{ scale }}
-    className="absolute shape-2 top-[-200px] right-[-1000px] w-[600px] h-[600px] z-0"
-  />
-</div>
+    <motion.img
+      src="shape-1.png"
+      alt="Orange Shape"
+      style={{ scale }}
+      className="absolute shape-1 top-[-39.375rem] left-[-62.5rem] w-[43.75rem] z-0"
+    />
+    <motion.img
+      src="shape-3.png"
+      alt="White Shape"
+      style={{ scale }}
+      className="absolute shape-3 top-[18.75rem] right-[68.75rem] w-[34.375rem] z-0"
+    />
+    <motion.img
+      src="shape-2.png"
+      alt="Green Shape"
+      style={{ scale }}
+      className="absolute shape-2 top-[-12.5rem] right-[-62.5rem] w-[37.5rem] h-[37.5rem] z-0"
+    />
+  </div>
+  
   {/* Floating non-animated shapes */}
   <img
     src="shape-4.png"
     alt="Loop Shape"
-    className="floating absolute shape-4 top-[290px] left-[460px] w-[120px] z-100"
+    className="floating absolute shape-4 top-[18.125rem] left-[28.75rem] w-[7.5rem] z-100"
   />
   <img
     src="shape-5.png"
     alt="Loop Shape"
-    className="floating absolute shape-5 top-[590px] right-[650px] w-[130px] z-100"
+    className="floating absolute shape-5 top-[36.875rem] right-[40.625rem] w-[8.125rem] z-100"
   />
 </div>
 

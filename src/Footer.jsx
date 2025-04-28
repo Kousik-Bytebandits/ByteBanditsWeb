@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return(
@@ -7,6 +7,7 @@ const Footer = () => {
 
     {/* Left Section - 40% */}
     <div className="left-foot md:w-[40%] ml-15">
+      <Link to="/">
       <div className="lf-container w-[200px] h-[80px] mb-6">
         <img
           src="ByteBandits 2.png"
@@ -14,6 +15,7 @@ const Footer = () => {
           className="w-full h-auto object-contain lf-img"
         />
       </div>
+      </Link>
       <p className="lf-desc text-[16px] text-[#E0E0E0] inter max-w-[70%] lg:ml-2 leading-8">
         We are a passionate team of tech innovators dedicated to crafting smart, scalable, and user-centric digital solutions. From custom software and mobile apps to eCommerce platforms, digital marketing, branding, and cloud services.
       </p>
@@ -29,7 +31,7 @@ const Footer = () => {
         <div className="flex items-start gap-2 foot text-[20px]">
           <img src="Mask group (1).png" alt="Location" className="w-5 h-5 mt-[6px]" />
           <p>
-            plot no.3a, door no.1/1033,<br />
+            No.3a, door no.1/1033,<br />
             kumudham nagar extension,<br />
             mugaliivakkam, Chennai -600125
           </p>
@@ -54,26 +56,33 @@ const Footer = () => {
       <div className="links-container ">
         <h4 className="links-head text-[20px] mb-4 text-[#8F8F8F] inter font-bold">LINKS</h4>
         <ul className="space-y-2 text-[20px] text-[#E0E0E0] underline foot">
-          <li><a href="#">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="#">Blogs</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="contact">Contact Us</a></li>
         </ul>
       </div>
       
       {/* Social Media */}
       <div className="social-container">
-        <h4 className="social-head text-[20px] inter mb-1 text-[#8F8F8F] font-bold">SOCIAL MEDIA</h4>
-        <div className="grid grid-cols-3 gap-8 mt-8">
-          {[
-            "image 23.png", "image 24.png", "Group 21.png",
-            "image 27.png", "image 28.png", "image 26.png"
-          ].map((img, i) => (
-            <a key={i} href="#"><img src={img} alt="social" className="w-10 h-10 social-img" /></a>
-          ))}
-        </div>
-      </div>
+  <h4 className="social-head text-[20px] inter mb-1 text-[#8F8F8F] font-bold">SOCIAL MEDIA</h4>
+  <div className="grid grid-cols-3 gap-8 mt-8">
+    {[
+      { img: "image 23.png", link: "https://www.instagram.com" },
+      { img: "image 24.png", link: "https://wa.me/+918925618429" },
+      { img: "Group 21.png", link: "https://www.linkedin.com" },
+      { img: "image 27.png", link: "https://www.x.com" },
+      { img: "image 28.png", link: "https://www.facebook.com" },
+      { img: "image 26.png", link: "https://www.threads.com" },
+    ].map((social, i) => (
+      <a key={i} href={social.link} target="_blank" rel="noopener noreferrer">
+        <img src={social.img} alt="social" className="w-10 h-10 social-img" />
+      </a>
+    ))}
+  </div>
+</div>
+
     </div>
   </div>
 

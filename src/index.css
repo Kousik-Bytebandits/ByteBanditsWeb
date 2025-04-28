@@ -444,22 +444,58 @@ height: 26px !important;
 /* optional repositioning so shapes don’t overlap */
 .con-1 { top: -38lvh !important; left: -48lvh !important; width: 700px; }
 .con-2 { top: 0lvh !important; right: 0lvh !important;width: 300px;height: 700px; }
-.con-3 { top: 35lvh !important; left: 55lvh !important;width:100px ; }
-.con-4 { top: 50lvh !important; right: 55lvh !important;width:100px ; }
-.con-5 { top: -45lvh !important; left: -300px !important;width: 600px; }
+.con-3 { top: 25lvh !important; left: 57lvh !important;width:100px ; }
+.con-4 { top: 40lvh !important; right: 60lvh !important;width:100px ; }
+.con-5 { top: -45lvh !important; left: -45lvh !important;width: 600px; }
 
+.con-div{
+max-width: 72rem;
+}
 .contact-form-section{
-height: 130vh !important;
+height: 115vh !important;
+}
+.contact-head{
+font-size: 60px;
+}
+.para{
+font-size: 16px;
+}
+.four-box{
+width: 280px;
+height: 45px;
+}
+.len{
+height: 45px;
+}
+.big{
+height: 140px;
+}
+.b1{
+height: 50px;
+width: 240px;
+font-size: 16px;
+}
+.b2{
+width: 10lvh;
+height: 6lvh;
+}
+.contact-right{
+height: 580px;
 }
 
 .title-line{
 font-size: 7rem !important; /* reduce char size */
-line-height: 7rem !important;
+line-height: 8rem !important;
 }
 
 .cards-cover{
 height: 70vh !important;
 }
+.card-div{
+max-width: 82rem;
+
+}
+
 
 /* ===== MAP ===== */
 .contact-map-section iframe {
@@ -985,13 +1021,13 @@ height: 20px;
 
 .social-container a {
   font-size: 14px !important;
-  padding: 0.5rem !important;
+  padding: 0.3rem !important;
   margin-top: 1rem !important;
 }
 
 .social-container img {
-  width: 20px !important;
-  height: 20px !important;
+  width: 30px !important;
+  height: 30px !important;
 
   
 }
@@ -1015,7 +1051,7 @@ height: 20px;
 }
 
 .copy-container {
-  font-size: 10px !important;
+  font-size: 11px !important;
   padding: 0.5rem 0 !important;
   margin-top: 1rem !important;
 }
