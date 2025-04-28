@@ -53,16 +53,16 @@ const Footer = () => {
       </div>
 
       {/* Links */}
-      <div className="links-container ">
-        <h4 className="links-head text-[20px] mb-4 text-[#8F8F8F] inter font-bold">LINKS</h4>
-        <ul className="space-y-2 text-[20px] text-[#E0E0E0] underline foot">
-          <li><a href="/">Home</a></li>
-          <li><a href="#">Blogs</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="contact">Contact Us</a></li>
-        </ul>
-      </div>
+      <div className="links-container">
+  <h4 className="links-head text-[20px] mb-4 text-[#8F8F8F] inter font-bold">LINKS</h4>
+  <ul className="space-y-2 text-[20px] text-[#E0E0E0] underline foot">
+    <li><Link to="/">Home</Link></li>
+    <li><Link to="/blogs">Blogs</Link></li>
+    <li><Link to="/services">Services</Link></li>
+    <li><Link to="/about">About Us</Link></li>
+    <li><Link to="/contact">Contact Us</Link></li>
+  </ul>
+</div>
       
       {/* Social Media */}
       <div className="social-container">

@@ -1075,14 +1075,14 @@ height: 20px;
   height: 400px;
 }
 .con-3{
-  top: 45lvh !important;
-  left: 2lvh !important;
-  width: 50px;
+  top: 35lvh !important;
+  left: 1lvh !important;
+  width: 60px;
 }
 .con-4 {
-  top: 55lvh !important;
-  left: 37lvh !important;
-  width: 50px;
+  top: 43lvh !important;
+  left: 36lvh !important;
+  width: 60px;
 }
 
 .con-5 {
@@ -1115,12 +1115,12 @@ height: 20px;
 }
 
 .cards-cover{
-  height: 140vh !important;
+  height: 133vh !important;
 }
  /* FORM SECTION */
  .contact-form-section {
   padding: 2rem 1rem !important;
-  height: 115vh !important;
+  height: 105vh !important;
 }
 
 /* Heading */
@@ -1164,7 +1164,14 @@ height: 20px;
   display: none;
 }
 /* Buttons: full width & centered */
-
+.b1{
+  width: 240px;
+  height: 55px;
+}
+.b2{
+  width: 85px;
+  height: 50px;
+}
 
 /* MAP SECTION */
 .contact-map-section {

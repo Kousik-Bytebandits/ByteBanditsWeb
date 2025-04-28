@@ -79,7 +79,7 @@ const ContactPage = () => {
           alt="White Shape"
           className="con-5 floating absolute md:top-[-31.25rem] md:left-[-28.125rem] md:w-[50rem] z-[100]"
         />
-        <div className="cards-cover w-full h-[60] bg-gradient-to-b from-[#193C56F2] to-[#0B1922] py-[5rem] px-[1rem]">
+        <div className="cards-cover w-full h-[60vh] bg-gradient-to-b from-[#193C56F2] to-[#0B1922] py-[5rem] px-[1rem]">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-[6.25rem] text-center mt-[1.25rem]">
 
             {/* Address */}
