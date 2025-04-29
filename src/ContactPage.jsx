@@ -282,7 +282,7 @@ const ContactPage = () => {
         </div>
       </div>
 
-      <ToastContainer position="top-center" autoClose={3000} hideProgressBar={false} newestOnTop closeOnClick />
+      <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} newestOnTop closeOnClick />
 
       <Footer />
     </div>
