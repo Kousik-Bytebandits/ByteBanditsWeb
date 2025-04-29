@@ -84,7 +84,7 @@ const ContactPage = () => {
 
             {/* Address */}
             <div className="bg-[#E7E7E8] p-[2rem] md:w-[18.75rem] md:h-[21.875rem] lg:w-[18.75rem] rounded-lg shadow-md">
-              <h3 className="md:text-[2.1875rem] lg:text-[1.875rem] font-[anton] mt-[1.25rem]">ADDRESS</h3>
+              <h3 className="text-[2.1875rem]  font-[anton] mt-[1.25rem]">ADDRESS</h3>
               <img src="loc.png" alt="Location Icon" className="w-[3.125rem] h-[3.125rem] mx-auto mt-[2rem]" />
               <p className="text-[1.125rem] leading-relaxed mt-[1.25rem] inter">
                 No.3a, door no.1/1033,<br />
