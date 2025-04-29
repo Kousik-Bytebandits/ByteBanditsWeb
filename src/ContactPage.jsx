@@ -49,7 +49,7 @@ const ContactPage = () => {
     };
 
     try {
-      const response = await fetch("https://bytebandits.in/send-email", requestOptions);
+      const response = await fetch("https://api.bytebandits.in/send-email", requestOptions);
       const result = await response.text();
       console.log(result); 
       alert("Message sent successfully!"); 
