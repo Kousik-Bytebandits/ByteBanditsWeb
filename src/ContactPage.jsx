@@ -54,13 +54,28 @@ const ContactPage = () => {
     try {
       const response = await fetch("https://api.bytebandits.in/send-email", requestOptions);
       const result = await response.text();
-      console.log(result); 
-      toast.success("Message sent successfully!");
-      setFormData({ first_name: '',last_name:'', email: '', subject: '', message: '',phone:'' }); // Clear the form
+      console.log(result);
+    
+      toast.success("Message sent successfully!", {
+        className: 'toast-success'
+      });
+    
+      setFormData({
+        first_name: '',
+        last_name: '',
+        email: '',
+        subject: '',
+        message: '',
+        phone: ''
+      });
     } catch (error) {
       console.error("Error:", error);
-      toast.error("Something went wrong. Please try again.");
+    
+      toast.error("Something went wrong. Please try again.", {
+        className: 'toast-error'
+      });
     }
+    
     
   };
 

@@ -86,3 +86,53 @@ body::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
 
+/* toastify color */
+
+/* Success Toast Styles */
+/* Success Toast */
+.toast-success {
+  background-color: #003617 !important; /* Green background */
+  color: white !important;
+}
+
+.toast-success .Toastify__toast-icon {
+  background-color: white !important; /* White icon background */
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.toast-success .Toastify__toast-icon svg {
+  color: #2ecc71 !important; /* Green tick icon */
+}
+.toast-success .Toastify__progress-bar {
+  background-color: white !important; /* White progress bar */
+}
+
+.toast-success .Toastify__close-button {
+  color: white !important; /* White close button */
+  opacity: 1;
+}
+
+/* Error Toast */
+.toast-error {
+  background-color: #e74c3c !important; /* Red background for error */
+  color: white !important;
+}
+
+.toast-error .Toastify__toast-icon {
+  background-color: white !important;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.toast-error .Toastify__toast-icon svg {
+  color: #e74c3c !important; /* Red error icon */
+}
+.toast-error .Toastify__progress-bar {
+  background-color: white !important; /* White progress bar */
+}
+
+.toast-error .Toastify__close-button {
+  color: white !important; /* White close button */
+}
+
