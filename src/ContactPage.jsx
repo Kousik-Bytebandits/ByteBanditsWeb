@@ -1,24 +1,69 @@
+import { useState,useRef } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { useScroll, useTransform, motion } from "framer-motion";
-import { useRef } from "react"; 
 import { ArrowRight } from "lucide-react";
 import "./index.css"; 
 
-const ContactPage = () => { 
-    const scrollRef = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: scrollRef,
-        offset: ["start end", "end start"]
-    });
-    const scale = useTransform(scrollYProgress, [0, 1], [1.5, 1.1]);
+const ContactPage = () => {
+  const scrollRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: scrollRef,
+    offset: ["start end", "end start"]
+  });
+  const scale = useTransform(scrollYProgress, [0, 1], [1.5, 1.1]);
 
-    return (
+  // State to hold form data
+  const [formData, setFormData] = useState({
+    first_name: "",
+    last_name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  // Handle input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault(); 
+
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const raw = JSON.stringify(formData);
+
+    const requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
+
+    try {
+      const response = await fetch("https://bytebandits.in/send-email", requestOptions);
+      const result = await response.text();
+      console.log(result); 
+      alert("Message sent successfully!"); 
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Something went wrong. Please try again.");
+    }
+  };
+
+  return (
     <div className="overflow-hidden">
       <Navbar />
       
       <section className="contact-hero relative overflow-hidden h-[90vh] flex flex-col justify-center items-center text-center">
-        
         {/* Floating Shapes */}
         <div className="contact-shapes">
           <div>
@@ -72,8 +117,8 @@ const ContactPage = () => {
 
       </section>
 
-      {/* Contact Info Cards */}
-      <section className="contact-info-cards relative z-10">
+       {/* Contact Info Cards */}
+       <section className="contact-info-cards relative z-10">
         <motion.img
           src="/shape-3.png"
           alt="White Shape"
@@ -128,37 +173,73 @@ const ContactPage = () => {
           <div className="grid md:grid-cols-5 gap-[2rem] items-start">
 
             {/* Form */}
-            <form className="space-y-4 md:col-span-3">
+            <form className="space-y-4 md:col-span-3" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-[1rem]">
                 <div>
                   <label className="block details md:text-[1.25rem] para mb-[1rem]">First Name *</label>
-                  <input type="text" className="md:w-[21.875rem] md:h-[3.75rem] four-box border-[0.5px] border-[#0E2B32] p-2 rounded-lg bg-[#F3F8FF]" />
+                  <input
+                    type="text"
+                    name="first_name"
+                    value={formData.first_name}
+                    onChange={handleChange}
+                    className="md:w-[21.875rem] md:h-[3.75rem] four-box border-[0.5px] border-[#0E2B32] p-2 rounded-lg bg-[#F3F8FF]"
+                  />
                 </div>
                 <div>
                   <label className="block details md:text-[1.25rem] para mb-[1rem]">Last Name</label>
-                  <input type="text" className="md:w-[21.875rem] md:h-[3.75rem] four-box border-[0.5px] border-[#0E2B32] p-2 rounded-lg bg-[#F3F8FF]" />
+                  <input
+                    type="text"
+                    name="last_name"
+                    value={formData.last_name}
+                    onChange={handleChange}
+                    className="md:w-[21.875rem] md:h-[3.75rem] four-box border-[0.5px] border-[#0E2B32] p-2 rounded-lg bg-[#F3F8FF]"
+                  />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-[1rem]">
                 <div>
                   <label className="block details md:text-[1.25rem] para mb-[1rem]">Email *</label>
-                  <input type="email" className="md:w-[21.875rem] md:h-[3.75rem] four-box border-[0.5px] border-[#0E2B32] p-2 rounded-lg bg-[#F3F8FF]" />
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="md:w-[21.875rem] md:h-[3.75rem] four-box border-[0.5px] border-[#0E2B32] p-2 rounded-lg bg-[#F3F8FF]"
+                  />
                 </div>
                 <div>
                   <label className="block details md:text-[1.25rem] para mb-[1rem]">Phone</label>
-                  <input type="tel" className="md:w-[21.875rem] md:h-[3.75rem] four-box border-[0.5px] border-[#0E2B32] p-2 rounded-lg bg-[#F3F8FF]" />
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="md:w-[21.875rem] md:h-[3.75rem] four-box border-[0.5px] border-[#0E2B32] p-2 rounded-lg bg-[#F3F8FF]"
+                  />
                 </div>
               </div>
 
               <div>
                 <label className="block details md:text-[1.25rem] para mb-[1rem]">Subject *</label>
-                <input type="text" className="w-full md:h-[3.75rem] len border-[0.5px] border-[#0E2B32] p-2 rounded-lg bg-[#F3F8FF]" />
+                <input
+                  type="text"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  className="w-full md:h-[3.75rem] len border-[0.5px] border-[#0E2B32] p-2 rounded-lg bg-[#F3F8FF]"
+                />
               </div>
 
               <div>
                 <label className="block details md:text-[1.25rem] para mb-[1rem]">Your Message *</label>
-                <textarea rows="5" className="w-full md:h-[12.5rem] big border-[0.5px] border-[#0E2B32] p-2 rounded-lg bg-[#F3F8FF]"></textarea>
+                <textarea
+                  rows="5"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full md:h-[12.5rem] big border-[0.5px] border-[#0E2B32] p-2 rounded-lg bg-[#F3F8FF]"
+                ></textarea>
               </div>
 
               <div className="b1 flex items-center gap-[1rem] mt-[2.5rem]">
@@ -171,8 +252,8 @@ const ContactPage = () => {
               </div>
             </form>
 
-            {/* Right Image */}
-            <div className="contact-right md:col-span-2 flex justify-center">
+             {/* Right Image */}
+             <div className="contact-right md:col-span-2 flex justify-center">
               <img
                 src="contact-right.png"
                 alt="Contact Person"
@@ -183,9 +264,8 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
-
-      {/* Location Map */}
-      <div className="contact-map-section w-full h-[66vh] bg-gradient-to-b from-[#193C56F2] to-[#0B1922] py-[2rem] overflow-x-hidden">
+   {/* Location Map */}
+   <div className="contact-map-section w-full h-[66vh] bg-gradient-to-b from-[#193C56F2] to-[#0B1922] py-[2rem] overflow-x-hidden">
         <div className="max-w-8xl mx-auto px-[1rem]">
           <iframe
             title="Our Location"
@@ -199,6 +279,7 @@ const ContactPage = () => {
 
       <Footer />
     </div>
-    );
-}
+  );
+};
+
 export default ContactPage;
