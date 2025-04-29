@@ -4,6 +4,9 @@ import Footer from "./Footer";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import "./index.css"; 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const ContactPage = () => {
   const scrollRef = useRef(null);
@@ -52,11 +55,13 @@ const ContactPage = () => {
       const response = await fetch("https://api.bytebandits.in/send-email", requestOptions);
       const result = await response.text();
       console.log(result); 
-      alert("Message sent successfully!"); 
+      toast.success("Message sent successfully!");
+      setFormData({ first_name: '',last_name:'', email: '', subject: '', message: '',phone:'' }); // Clear the form
     } catch (error) {
       console.error("Error:", error);
-      alert("Something went wrong. Please try again.");
+      toast.error("Something went wrong. Please try again.");
     }
+    
   };
 
   return (
@@ -276,6 +281,8 @@ const ContactPage = () => {
           ></iframe>
         </div>
       </div>
+
+      <ToastContainer position="top-center" autoClose={3000} hideProgressBar={false} newestOnTop closeOnClick />
 
       <Footer />
     </div>
