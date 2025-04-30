@@ -49,7 +49,6 @@ export default function AnimatedWebsite() {
     >
       {/* Background Image with Zoom */}
       <motion.img
-      rel="preload"
         src="hero.png"
         alt="Hero"
         style={{ scale }}
@@ -58,7 +57,6 @@ export default function AnimatedWebsite() {
 
       {/* Scroll Down Icon with Rotation */}
       <motion.img
-      rel="preload"
   src="scroll-down.png"
   alt="Scroll Down"
   style={{
