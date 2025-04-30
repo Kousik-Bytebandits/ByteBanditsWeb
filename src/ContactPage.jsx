@@ -88,12 +88,14 @@ const ContactPage = () => {
         <div className="contact-shapes">
           <div>
             <motion.img
+            rel="preload"
               src="/shape-1.png"
               alt="Orange Shape"
               style={{ scale }}
               className="con-1 floating absolute top-[-26.875rem] left-[-36.25rem] w-[62.5rem] z-0"
             />
             <motion.img
+            rel="preload"
               src="/blue-shape.png"
               alt="Green Shape"
               style={{ scale }}
@@ -140,6 +142,7 @@ const ContactPage = () => {
        {/* Contact Info Cards */}
        <section className="contact-info-cards relative z-10">
         <motion.img
+        rel="preload"
           src="/shape-3.png"
           alt="White Shape"
           className="con-5 floating absolute md:top-[-31.25rem] md:left-[-28.125rem] md:w-[50rem] z-[100]"
