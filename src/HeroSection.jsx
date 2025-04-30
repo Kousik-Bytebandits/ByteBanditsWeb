@@ -18,21 +18,18 @@ const scrollRef = useRef(null);
   {/* Scroll-based animated shapes with Framer Motion */}
   <div className="floating">
     <motion.img
-    rel="preload"
       src="shape-1.png"
       alt="Orange Shape"
       style={{ scale }}
       className="absolute shape-1 top-[-39.375rem] left-[-62.5rem] w-[43.75rem] z-0"
     />
     <motion.img
-    rel="preload"
       src="shape-3.png"
       alt="White Shape"
       style={{ scale }}
       className="absolute shape-3 top-[18.75rem] right-[68.75rem] w-[34.375rem] z-0"
     />
     <motion.img
-    rel="preload"
       src="shape-2.png"
       alt="Green Shape"
       style={{ scale }}
