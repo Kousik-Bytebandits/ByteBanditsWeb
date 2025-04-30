@@ -5,7 +5,7 @@ import ContactPage from './ContactPage';
 import SvgLoader from './SvgLoader';
 import { useEffect, useState } from 'react';
 import Scroll from './Scroll';
-
+import ErrorPage from './ErrorPage';
 export default function App() {
   const [loading, setLoading] = useState(true);
 
@@ -26,7 +26,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<ContactPage />} />
-        
+        <Route path="/error" element={<ErrorPage/>}/>
       </Routes>
     </Router>
   );
