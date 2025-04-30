@@ -235,7 +235,7 @@ export default function AnimatedWebsite() {
 <div className="contact-section flex flex-col md:flex-row h-auto md:h-[700px] w-full">
   {/* Left Content */}
   <div className="bg-[#2c2c2c] text-white flex flex-col  md:items-center   px-10 py-14 md:w-1/2 space-y-15">
-    <p className="mr-42 uppercase text-left  year  " data-aos="fade-up"
+    <p className="mr-42 uppercase text-left  year text-[#818181] font-bold " data-aos="fade-up"
           data-aos-delay="10">
       Contact
     </p>
@@ -291,7 +291,7 @@ export default function AnimatedWebsite() {
 <section>
   {/* Our Agency Section */}
   <div className="agency-section bg-[#ececea] text-center py-20 px-6">
-  <p className="uppercase  year mb-4 tracking-wide agency"data-aos="fade-up"
+  <p className="uppercase text-[#818181] font-semibold year mb-4 tracking-wide agency"data-aos="fade-up"
           data-aos-delay="10">Our Agency</p>
 
   <h2 className="agency-heading-mobile text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] font-[anton] leading-tight max-w-8xl mx-auto  mt-10 text-[#312F2F]">

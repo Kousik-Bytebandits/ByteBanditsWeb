@@ -132,7 +132,7 @@ const ContactPage = () => {
             </div>
           ))}
 
-          <p className="year text-[#818181] text-[1.5625rem]">SINCE 2024</p>
+          <p className="year text-[#818181] text-[1.5625rem] font-medium mt-5 ">SINCE 2024</p>
         </motion.div>
 
       </section>

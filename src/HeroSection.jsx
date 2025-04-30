@@ -75,7 +75,7 @@ const scrollRef = useRef(null);
   </div>
 ))}
 
-<p className="year years text-[15px]  ">SINCE 2024</p>
+<p className="mt-5  text-[14px] text-[#818181] font-bold year years  ">SINCE 2024</p>
   
 </motion.div>
 </div>
