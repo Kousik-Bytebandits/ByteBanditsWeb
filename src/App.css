@@ -51,7 +51,7 @@
   }
   
   svg text {
-    animation: stroke 6s infinite alternate;
+    animation: stroke 5s infinite alternate;
     stroke-width: 2;
     stroke: #353639;
     font-size: 200px;
