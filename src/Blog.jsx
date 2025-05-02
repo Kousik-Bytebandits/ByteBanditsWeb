@@ -20,7 +20,7 @@ const BlogSection = () => {
   ];
 
   return (
-    <section className="blog-section-custom bg-[#ececea] py-20 px-[20px] sm:px-[30px] md:px-[40px] lg:px-[20px]">
+    <section className="blog-section-custom bg-[#ececea] py-20 px-[20px] sm:px-[30px] md:px-[40px] lg:px-[20px]" id="blog-section">
       {/* Section Heading */}
       <div className="blog-header mb-12 mx-50">
         <p className="blog-subtitle mb-4 text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] text-[#818181] uppercase tracking-widest"data-aos="fade-up"

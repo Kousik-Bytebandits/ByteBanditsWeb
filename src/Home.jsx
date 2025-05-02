@@ -14,11 +14,24 @@ import Footer from "./Footer";
 import HeroSection from "./HeroSection";
 import AboutSection from "./AboutSection";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 
 
 export default function AnimatedWebsite() {
   const scrollRef = useRef(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const el = document.getElementById(location.state.scrollTo);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location]);
   const { scrollYProgress } = useScroll({
     target: scrollRef,
     offset: ["start end", "end start"]
@@ -74,7 +87,7 @@ export default function AnimatedWebsite() {
    <Solution />
      
  
-      <section className="bg-[#353639] text-white md:py-20 md:px-11  text-center  client-section"> 
+      <section className="bg-[#353639] text-white md:py-20 md:px-11  text-center  client-section" > 
   <p className="client-label mx-50 text-xs uppercase text-[#818181] tracking-widest md:mb-3 text-left  inter"data-aos="fade-up"
           data-aos-delay="10">
     Our Clients
@@ -229,7 +242,7 @@ export default function AnimatedWebsite() {
 
 
 
-<section className="w-full mt-20">
+<section className="w-full mt-20" id="service-section">
   {/* Contact Section */}
  
 <div className="contact-section flex flex-col md:flex-row h-auto md:h-[700px] w-full">

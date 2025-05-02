@@ -70,7 +70,7 @@ export default function ServicesSection() {
   };
   
   return (
-    <section className="solutions-section mx-45 bg-[#ececea] py-16 px-5 sm:px-10 md:px-20 text-[#333] ">
+    <section className="solutions-section mx-45 bg-[#ececea] py-16 px-5 sm:px-10 md:px-20 text-[#333] " id="solution-section">
       <div className="mb-15 solutions-header">
         <p className="section-label text-xs sm:text-sm uppercase tracking-widest text-[#818181] mb-15 inter"data-aos="fade-up"
     data-aos-delay="5">
