@@ -299,7 +299,7 @@ const ContactPage = () => {
         <div className="max-w-8xl mx-auto px-[1rem]">
           <iframe
             title="Our Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3530.612199639886!2d80.16661824060697!3d13.020161203012064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5260c32694274f%3A0x65271faa992c61ca!2s1%2F628%2C%20Kumudham%20Nagar%204th%20St%2C%20Dhanak%20Nagar%2C%20Kumudam%20Nagar%2C%20Mugalivakkam%2C%20Chennai%2C%20Tamil%20Nadu%2C%20India!5e1!3m2!1sen!2sus!4v1745326430041!5m2!1sen!2sus"
+             src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4674.96046621705!2d80.16806819881968!3d13.019817215654273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDAxJzEzLjkiTiA4MMKwMTAnMTAuNyJF!5e1!3m2!1sen!2sin!4v1746170916775!5m2!1sen!2sin"
             className="block mx-auto mt-[1.5rem] max-w-full w-[90%] h-[31.25rem] rounded-lg"
             allowFullScreen
             loading="lazy"

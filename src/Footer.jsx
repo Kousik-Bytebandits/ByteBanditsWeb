@@ -70,7 +70,7 @@ const Footer = () => {
   <div className="grid grid-cols-3 gap-8 mt-8">
     {[
       { img: "image 23.png", link: "https://www.instagram.com" },
-      { img: "image 24.png", link: "https://wa.me/+918925618429" },
+      { img: "image 24.png", link: "https://wa.me/+917904812982" },
       { img: "Group 21.png", link: "https://www.linkedin.com" },
       { img: "image 27.png", link: "https://www.x.com" },
       { img: "image 28.png", link: "https://www.facebook.com" },
