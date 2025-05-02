@@ -34,9 +34,8 @@ export default function Navbar() {
   const menuItems = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "#about-section" },
-    { name: "Service", href: "#service-section" },
+    { name: "Services", href: "#service-section" },
     { name: "Contact Us", href: "/contact" },
-    { name: "Solutions and Consulting", href: "#solution-section" },
     { name: "Blogs", href: "#blog-section" }
   ];
 

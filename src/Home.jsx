@@ -242,7 +242,7 @@ export default function AnimatedWebsite() {
 
 
 
-<section className="w-full mt-20" id="service-section">
+<section className="w-full mt-20" >
   {/* Contact Section */}
  
 <div className="contact-section flex flex-col md:flex-row h-auto md:h-[700px] w-full">
