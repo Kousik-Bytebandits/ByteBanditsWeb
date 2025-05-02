@@ -11,11 +11,19 @@ export default function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // simulate load delay
-    const timer = setTimeout(() => setLoading(false), 5000);
+    const timer = setTimeout(() => {
+      setLoading(false);
+
+      window.scrollTo(0, 0);
+
+      if ('scrollRestoration' in window.history) {
+        window.history.scrollRestoration = 'manual';
+      }
+    }, 5000);
+  
     return () => clearTimeout(timer);
   }, []);
-
+  
   if (loading) {
     return <SvgLoader />;
   }
