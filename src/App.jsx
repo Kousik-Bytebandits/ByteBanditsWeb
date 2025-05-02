@@ -6,6 +6,7 @@ import SvgLoader from './SvgLoader';
 import { useEffect, useState } from 'react';
 import Scroll from './Scroll';
 import ErrorPage from './ErrorPage';
+
 export default function App() {
   const [loading, setLoading] = useState(true);
 
@@ -20,7 +21,7 @@ export default function App() {
   }
 
   return (
-   
+    <div className='fade-in'>
     <Router>
       <Scroll/>
       <Routes>
@@ -29,5 +30,6 @@ export default function App() {
         <Route path="/error" element={<ErrorPage/>}/>
       </Routes>
     </Router>
+    </div>
   );
 }

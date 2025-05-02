@@ -3,8 +3,8 @@
 
 const AboutSection = () => {
   return (
-     <section className="about-section mx-50 mt-50 sm:py-[80px]  sm:px-[30px] md:px-[50px] text-[#333]" id="about-section">
-             <p className="section-label text-left mb-10 text-[12px] sm:text-[12px] text-[#818181] font-semibold year">ABOUT US</p>
+     <section className="about-section mx-50 mt-50 sm:py-[80px]  sm:px-[30px] md:px-[50px] " id="about-section">
+             <p className="section-label text-left mb-10 md:text-[14px] sm:text-[12px] text-[#818181] font-normal year">ABOUT US</p>
              <div className="about-content flex flex-col lg:flex-row  items-start">
                <div className="about-title flex-1 text-[40px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[1.3] font-[anton] title
                " data-aos="fade-up"
