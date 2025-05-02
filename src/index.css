@@ -500,6 +500,47 @@ margin: 1rem auto 0;
 display: block;
 }
 
+/*Error Page */
+
+.poop{
+width: 2rem;
+margin-bottom: 2px;
+}
+.poop-para{
+font-size: 12px;
+margin-bottom: 4rem;
+}
+.ershape-1{
+width: 52rem;
+left: -30rem;
+top: -22.5rem;
+}
+.ershape-2{
+width: 45rem;
+height: 50rem;
+right: -27.5rem;
+top: 0rem;
+}
+.ershape-3{
+width: 37rem;
+top: 23rem;
+left: -19rem;
+}
+.ershape-4{
+width: 6.5rem;
+left: 25rem;
+top: 15rem;
+}
+.error-head{
+font-size: 8.5rem;
+}
+.error-para{
+font-size: 3rem;
+}
+.error-button{
+font-size: 0.7rem;
+
+}
 }
   
 

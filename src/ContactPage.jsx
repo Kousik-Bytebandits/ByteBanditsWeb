@@ -38,6 +38,16 @@ const ContactPage = () => {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault(); 
+    
+    if (!formData.first_name.trim() || 
+      !formData.email.trim() || 
+      !formData.subject.trim() || 
+      !formData.message.trim()) {
+    toast.error("Please fill in all required fields.", {
+      className: 'toast-error'
+    });
+    return; 
+  }
 
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -202,7 +212,7 @@ const ContactPage = () => {
                     name="first_name"
                     value={formData.first_name}
                     onChange={handleChange}
-                    className="md:w-[21.875rem] md:h-[3.75rem] four-box border-[0.5px] border-[#0E2B32] p-2 rounded-lg bg-[#F3F8FF]"
+                    className="md:w-[21.875rem] md:h-[3.75rem] four-box border-[0.5px] border-[#0E2B32] p-2 rounded-lg bg-[#F3F8FF] required"
                   />
                 </div>
                 <div>
@@ -225,7 +235,7 @@ const ContactPage = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="md:w-[21.875rem] md:h-[3.75rem] four-box border-[0.5px] border-[#0E2B32] p-2 rounded-lg bg-[#F3F8FF]"
+                    className="md:w-[21.875rem] md:h-[3.75rem] four-box border-[0.5px] border-[#0E2B32] p-2 rounded-lg bg-[#F3F8FF] required"
                   />
                 </div>
                 <div>
@@ -247,7 +257,7 @@ const ContactPage = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full md:h-[3.75rem] len border-[0.5px] border-[#0E2B32] p-2 rounded-lg bg-[#F3F8FF]"
+                  className="w-full md:h-[3.75rem] len border-[0.5px] border-[#0E2B32] p-2 rounded-lg bg-[#F3F8FF] required"
                 />
               </div>
 
@@ -258,12 +268,12 @@ const ContactPage = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full md:h-[12.5rem] big border-[0.5px] border-[#0E2B32] p-2 rounded-lg bg-[#F3F8FF]"
+                  className="w-full md:h-[12.5rem] big border-[0.5px] border-[#0E2B32] p-2 rounded-lg bg-[#F3F8FF] required"
                 ></textarea>
               </div>
 
               <div className="b1 flex items-center gap-[1rem] mt-[2.5rem]">
-                <button type="submit" className="md:w-[12.5rem] md:h-[3.75rem] b1 bg-gradient-to-b from-[#193C56F2] to-[#0B1922] text-white md:text-[1.125rem] inter px-[1.25rem] py-[0.5rem] rounded-full">
+                <button type="submit" className="md:w-[12.5rem] md:h-[3.75rem] b1 bg-gradient-to-b from-[#193C56F2] to-[#0B1922] text-white md:text-[1.125rem] inter px-[1.25rem] py-[0.5rem] rounded-full cursor-pointer">
                   Send a Message
                 </button>
                 <button type="button" className="b2 w-[3rem] h-[3rem] ml-[1.25rem] rounded-full bg-[#353639] text-white flex items-center justify-center">
