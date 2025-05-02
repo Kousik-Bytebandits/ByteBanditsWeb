@@ -10,22 +10,22 @@ export default function ErrorPage() {
       <img
         src="shape-1.png"
         alt="Orange Shape"
-        className="absolute floating shape-1 top-[-25rem] left-[-32.5rem] w-[59.75rem] z-0"
+        className="absolute floating ershape-1 md:top-[-25rem] md:left-[-32.5rem] w-[59.75rem] z-0"
       />
       <img
         src="shape-3.png"
         alt="White Shape"
-        className="absolute floating shape-3 top-[30rem] left-[-24rem] w-[44.375rem] z-0"
+        className="absolute floating ershape-3 md:top-[30rem] md:left-[-24rem] w-[44.375rem] z-0"
       />
       <img
         src="shape-2.png"
         alt="Green Shape"
-        className="absolute floating shape-2 top-[1.5rem] right-[-30.5rem] w-[50.5rem] h-[57.5rem] z-0"
+        className="absolute floating ershape-2 md:top-[1.5rem] md:right-[-30.5rem] w-[50.5rem] h-[57.5rem] z-0"
       />
       <img
         src="shape-4.png"
         alt="Loop Shape"
-        className="absolute floating shape-4 top-[20.125rem] left-[33.75rem] w-[7.5rem] z-[100]"
+        className="absolute floating ershape-4 md:top-[20.125rem] md:left-[33.75rem] w-[7.5rem] z-[100]"
       />
       </div>
       {/* Centered 404 Content */}
