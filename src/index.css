@@ -104,6 +104,10 @@ font-weight: 600;
   padding-right: 30px;
 }
 
+.nav-content{
+font-size: 18px;
+padding: 0px;
+}
 .logo-box {
   padding: 1.5rem 2.5rem; /* more room for zoomed scale */
 }
@@ -123,7 +127,7 @@ font-weight: 600;
 }
 
 .sidebar {
-  width: 30% !important; /* override Tailwind width */
+  width: 25% !important; /* override Tailwind width */
 }
 
 .sibebar-links {
@@ -969,8 +973,10 @@ width: 260px;
 }
 
 .blog-tag {
-font-size: 9px;
-padding: 6px 14px;
+font-size: 8px;
+padding: 4px 8px;
+ top: 5px;
+left: 4px;
 }
 
 .blog-image {
@@ -984,12 +990,12 @@ margin-bottom: 32px;
 }
 
 .read-more-button {
-width: 50px;
-height: 40px;
+width: 45px;
+height: 35px;
 }
 
 .read-more-text {
-font-size: 8px;
+font-size: 7px;
 padding-top: 5px;
 }
 .arrow-icon{

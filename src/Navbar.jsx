@@ -49,7 +49,7 @@ export default function Navbar() {
       <div
         className={`sidebar fixed top-0 ${
           isSidebarOpen ? "right-0" : "right-[-100%]"
-        } w-full sm:w-[80%] md:w-[60%] lg:w-[500px] h-screen bg-[#f5f5f5] transition-all duration-300 ease-in-out shadow-lg z-[999]`}
+        } w-full sm:w-[80%] lg:w-[500px] h-screen bg-[#f5f5f5] transition-all duration-300 ease-in-out shadow-lg z-[999]`}
       >
         <button
           onClick={toggleSidebar}
@@ -61,13 +61,15 @@ export default function Navbar() {
         <ul className="sidebar-links list-none px-[30px] sm:px-[45px] mt-[25%] sm:mt-[20%] leading-[60px] sm:leading-[70px]">
   {[
     { name: "Home", link: "/" },
-    { name: "About", link: "/about" },
-    { name: "Services", link: "/services" },
-    { name: "Contact", link: "/contact" }
+    { name: "About Us", link: "/about" },
+    { name: "Service", link: "/service" },
+    { name: "Contact Us", link: "/contact" },
+    { name: "Solutions and Consulting", link: "/solution" },
+    { name: "Blogs", link: "/blog" }
   ].map((item) => (
     <li
       key={item.name}
-      className="py-3 text-[16px] sm:text-[18px] font-bold cursor-pointer"
+      className="py-3 md:text-[22px] sm:text-[18px] font-bold cursor-pointer nav-content"
     >
       <Link
         to={item.link}

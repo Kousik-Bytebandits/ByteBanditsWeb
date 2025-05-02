@@ -1,5 +1,5 @@
 import { ArrowRight , ArrowUpRight} from "lucide-react";
-
+import { Link } from "react-router-dom";
 const BlogSection = () => {
   const blogData = [
     {
@@ -64,16 +64,17 @@ const BlogSection = () => {
               <p className="blog-title text-[12px] sm:text-[11px] md:text-[12px] lg:text-[25px] font-[anton] text-[#454545] leading-9 tracking-[0.5px] mb-10 max-w-[70%] text-blog-title">
                 {blog.title}
               </p>
-
+            <Link to="/error">
               <button className="read-more-button relative h-[110px] w-[120px] bg-[#D9D9D9] text-black">
                 <ArrowUpRight
                   size={40}
                   className="arrow-icon absolute md:top-2 md:right-2 right-0 top-0"
                 />
                 <span className="read-more-text absolute md:bottom-4 md:left-1/2 md:transform -translate-x-1/2 text-[9px] sm:text-[10px] md:text-[11px] lg:text-[13px] font-semibold whitespace-nowrap">
-    READ MORE
-  </span>
+                 READ MORE
+               </span>
               </button>
+              </Link>
             </div>
           </div>
         ))}
