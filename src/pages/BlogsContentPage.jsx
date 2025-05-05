@@ -301,7 +301,7 @@ export default function BlogContentPage() {
     {/* Submit Button */}
     <button
       type="submit"
-      className="bg-[#E5FFF3] text-[#0E2B32] md:px-20 px-12 py-2 rounded-4xl hover:bg-[#a6d1c2] transition font-bold mx-auto block md:ml-70 md:mt-10"
+      className="bg-[#E5FFF3] text-[#0E2B32] md:px-20 px-12 py-3 rounded-4xl hover:bg-[#a6d1c2] transition font-bold mx-auto block md:ml-70 md:mt-10"
     >
       SEND
     </button>
