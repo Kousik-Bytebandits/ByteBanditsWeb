@@ -256,7 +256,7 @@ export default function BlogContentPage() {
   </div>
 
  
-  <div className="bg-[#0E2B32] text-white md:py-12 md:mt-60 mt-25 md:h-[60vh] h-[61vh] md:ml-10 md:mr-10 ml-2 mr-2 mb-15 md:rounded-4xl rounded-2xl ">
+  <div className="bg-[#0E2B32] text-white md:py-12 md:mt-60 mt-25 md:h-[60vh] h-[63vh] md:ml-10 md:mr-10 ml-2 mr-2 mb-15 md:rounded-4xl rounded-2xl ">
     <div className="max-w-8xl mx-auto md:px-6">
       <div className="flex flex-col md:flex-row items-start gap-10 ">
         {/* Left text */}
@@ -273,18 +273,18 @@ export default function BlogContentPage() {
         <div className="w-[380px] md:w-[900px] md:w-2/5 font-[inter] font-bold md:text-[25px] text-[12px]">
   <form className="space-y-4">
     {/* Name and Email - Row on small screens */}
-    <div className="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-4 px-8 md:px-0">
+    <div className="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-6 px-8 md:px-0">
       <div className="flex flex-col ">
         <label className="mb-1">Nick Name</label>
         <input
           type="text"
-          className="p-2 rounded-lg bg-[#E5FFF3] text-black md:w-full w-[320px]"  />
+          className="p-2 rounded-lg bg-[#E5FFF3] text-black md:w-[340px] w-[320px] h-[40px] md:h-[50px]"  />
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col md:ml-[-100px]">
         <label className="mb-1">Email</label>
         <input
           type="email"
-          className="p-2 rounded-lg bg-[#E5FFF3] text-black md:w-full w-[320px]"
+          className="p-2 rounded-lg bg-[#E5FFF3] text-black md:w-[535px] w-[320px] h-[40px]  md:h-[50px] "
         />
       </div>
     </div>
@@ -301,7 +301,7 @@ export default function BlogContentPage() {
     {/* Submit Button */}
     <button
       type="submit"
-      className="bg-[#E5FFF3] text-[#0E2B32] md:px-20 px-12 py-2 rounded-4xl hover:bg-[#a6d1c2] transition font-bold mx-auto block md:ml-70"
+      className="bg-[#E5FFF3] text-[#0E2B32] md:px-20 px-12 py-2 rounded-4xl hover:bg-[#a6d1c2] transition font-bold mx-auto block md:ml-70 md:mt-10"
     >
       SEND
     </button>
