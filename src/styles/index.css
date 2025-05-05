@@ -1240,7 +1240,7 @@ width: 150px;
 .blog-header-text {
 font-size: 1.125rem !important;       /* 18px */
 margin-top: 10rem !important;         /* 160px */
-width: 21.875rem;                     /* 350px */
+width: 23rem;                     /* 350px */
 height: 5rem;                         /* 80px */
 padding: 0.9375rem;                   /* 15px */
 border-radius: 0.625rem;              /* 10px */
@@ -1250,10 +1250,10 @@ margin-left: 0.625rem;                /* 10px */
 /* Reduce side padding and image size */
 .blog-header-image {
 margin-left: 0.625rem !important;     /* 10px */
-margin-right: 0.625rem !important;    /* 10px */
+margin-right: 0.2rem !important;    /* 10px */
 border-radius: 1.2rem !important;
 margin-top: 6.25rem;                  /* 100px */
-width: 23.125rem;                     /* 370px */
+width: 24.5rem;                     /* 370px */
 height: 15.625rem;                    /* 250px */
 }
 
