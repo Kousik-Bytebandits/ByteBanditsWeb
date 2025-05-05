@@ -1,12 +1,12 @@
-import './App.css';
+import './styles/App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './Home';
-import ContactPage from './ContactPage';
-import SvgLoader from './SvgLoader';
+import Home from './pages/Home';
+import ContactPage from './pages/ContactPage';
+import SvgLoader from './utils/SvgLoader';
 import { useEffect, useState } from 'react';
-import Scroll from './Scroll';
-import ErrorPage from './ErrorPage';
-
+import Scroll from './utils/Scroll';
+import ErrorPage from './pages/ErrorPage';
+import BlogsContentPage from './pages/BlogsContentPage';
 export default function App() {
   const [loading, setLoading] = useState(true);
 
@@ -36,6 +36,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/error" element={<ErrorPage/>}/>
+        <Route path='/blogs' element={<BlogsContentPage/>}/>
       </Routes>
     </Router>
     </div>

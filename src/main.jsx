@@ -1,8 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import ScrollButton from './ScrollButton.jsx'
+import '../src/styles/index.css'
+import App from './App'
+import ScrollButton from '../src/components/ScrollButton'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
