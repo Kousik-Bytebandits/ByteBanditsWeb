@@ -1,6 +1,5 @@
 import{ useRef } from "react";
-import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+
 export default function ServicesSection() {
   const carouselRef = useRef(null);
 
@@ -139,23 +138,14 @@ export default function ServicesSection() {
             </div>
 
             <div className="pt-1">
-              <div className="card-footer flex items-center mb-8">
+              <div className="card-footer flex items-center mb-18">
                 {/* Red + Gray Line */}
                 <div className="kine-wrapper flex w-full items-center">
                   <div className="red-line h-[2px] w-[20px] bg-[#BA4D4D] mr-1"></div>
                   <div className="gray-line h-[2px] flex-1 bg-[#D3D3D3]"></div>
                 </div>
               </div>
-               <Link to='/error'>
-              <div className="learn-more flex items-center justify-flex-end gap-2 cursor-pointer mb-5">
-                <span className="learn-text text-[11px] sm:text-[13px] font-bold uppercase text-black hover:text-[#BA4D4D] transition-all">
-                  Learn More
-                </span>
-                <span className="learn-icon w-8 h-8 bg-[#BA4D4D] rounded-full flex items-center justify-center">
-  <ArrowRight className="icon text-white w-8 h-4.5" />
-</span>
-              </div>
-              </Link>
+             
             </div>
           </div>
         </div>

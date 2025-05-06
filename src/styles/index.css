@@ -1150,12 +1150,12 @@ height: 20px;
 }
 
 .cards-cover{
-  height: 140vh !important;
+  height: 100% !important;
 }
  /* FORM SECTION */
  .contact-form-section {
   padding: 2rem 1rem !important;
-  height: 110vh !important;
+  height: 100% !important;
 }
 
 /* Heading */
@@ -1211,13 +1211,14 @@ height: 20px;
 /* MAP SECTION */
 .contact-map-section {
   overflow-x: hidden;
-  height: 50vh;
+  height: 50%;
   
 }
 .contact-map-section iframe {
   width: 100% !important;
   margin-left: 0 !important;
   height: 350px !important;
+  margin-top: 2px;
 }
  
 /*Error Page */
@@ -1249,12 +1250,12 @@ margin-left: 0.625rem;                /* 10px */
 
 /* Reduce side padding and image size */
 .blog-header-image {
-margin-left: 0.625rem !important;     /* 10px */
-margin-right: 0.2rem !important;    /* 10px */
+margin-left: 0.625rem !important;     
+margin-right: 0.2rem !important;   
 border-radius: 1.2rem !important;
-margin-top: 6.25rem;                  /* 100px */
-width: 24.5rem;                     /* 370px */
-height: 15.625rem;                    /* 250px */
+margin-top: 6.25rem;                  
+width: 95%;                     
+height: 15.625rem;                    
 }
 
 /* Hide sidebars */
@@ -1282,26 +1283,26 @@ width: 24rem;
 .cta-heading {
 font-size: 1.5625rem !important;      /* 25px */
 text-align: center !important;
-width: 15.625rem;                     /* 250px */
+width: 75%;                     
 }
 
 /* Card section */
 .card-section {
 flex-direction: row !important;
-gap: 0.75rem !important;              /* 12px */
-height: 11.25rem !important;          /* 180px */
-width: 25.175rem !important;          /* 390px */
-margin-top: -11.25rem;                /* -180px */
+gap: 0.75rem !important;              
+height: 11.25rem !important;          
+width: 100% !important;          
+margin-top: -40%;                
 }
 
 .card {
-height: 15.625rem !important;         /* 250px */
-width: 11.25rem !important;           /* 180px */
+height: 140% !important;       
+width: 100% !important;          
 }
 
 .card-img {
-height: 9.375rem;                     /* 150px */
-width: 11.25rem;                      /* 180px */
+height:60%;                     
+width: 100%;                      
 }
 
 .card h3 {
@@ -1313,11 +1314,8 @@ font-size: 0.5rem !important;         /* 8px */
 }
 
 .feed h3 {
-width: 23.75rem;                      /* 380px */
+width: 100%;                      
 }
 
-.feedback {
-display: grid;
-}
 
 }

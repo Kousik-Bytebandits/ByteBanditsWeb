@@ -321,17 +321,6 @@ export default function AnimatedWebsite() {
           
   </h2>
 
-  <div className="agency-para flex flex-col sm:flex-row sm:items-center justify-center md:gap-15 md:mt-15  px-2">
-    <div className=" agency-paragraph-mobile about max-w-md sm:leading-[1] sm:mt-1 "data-aos="fade-up"
-          data-aos-delay="10">
-      We may be new, but we’re already building <div className="md:mt-1.5 md:ml-30  ">a portfolio we’re proud of</div>
-    </div>
-
-    <button className="agency-button-mobile bg-[#37CC8D] text-[12px] hover:bg-[#43a976] text-black md:px-8 md:py-6 rounded-full text-sm inter  transition-all whitespace-nowrap tracking-[1px]"data-aos="fade-up"
-          data-aos-delay="10">
-      VIEW PORTFOLIO
-    </button>
-  </div>
 </div>
 
 </section>

@@ -132,18 +132,18 @@ export default function BlogContentPage() {
         <img
           src="/images/image 65.png"
           alt="Blog Header"
-          className="absolute top-0 left-0 w-full h-full object-cover scale-110 rounded-2xl"
+          className="absolute top-0 left-5 w-full h-full object-cover scale-110 rounded-2xl"
         />
-      <div  className="blog-header-text absolute inset-0  rounded-2xl flex items-left justify-left flex-col font-[inter] h-[330px] bg-[#65685269]/61 font-bold border-3 rounded-4xl  border-white text-white text-[80px] mt-195 mb-8 ml-10 mr-10 px-10  py-10   backdrop-blur-lg">
+      <div  className="blog-header-text absolute inset-0  rounded-4xl flex items-left justify-left flex-col font-[inter] h-[330px] bg-[#65685269]/61 font-bold border-3 rounded-4xl  border-white text-white text-[80px] mt-195 mb-8 ml-10 mr-10 px-10  py-10   backdrop-blur-lg">
         <p >10 UI Mistakes Beginners Make </p>
         <p>And How to Fix Them </p>
       </div>
 
       </div>
 
-      <div className="max-w-8xl main-layout mx-auto grid grid-cols-1 md:grid-cols-15  px-5 py-22 mt-20" ref={contentRef}>
+      <div className=" max-w-8xl main-layout mx-auto grid grid-cols-1 md:grid-cols-15  px-5 py-22 mt-20" ref={contentRef}>
 
-        <aside className="hidden md:block col-span-3 left-article sticky top-[80px] ">
+  <aside className="col-span-3 left-article sticky top-[72px]   ">
           <div className="relative mb-4 ">
             <h3 className="font-bold text-[18px] font-[inter] uppercase md:text-[18px]">In This Article</h3>
            
@@ -209,7 +209,7 @@ export default function BlogContentPage() {
 
 {/* Light Green Background Section */}
       <div>
-   <div className="bg-[#C7DDDB] h-[50vh] md:h-[100vh] w-full pt-12 pb-32 relative">
+   <div className="bg-[#C7DDDB] h-[50vh] md:h-[100vh] w-full pt-12 pb-32 relative overflow-hidden">
     <div className="max-w-8xl mx-auto px-6 flex items-center justify-center mt-10">
       {/* Heading */}
       <div className="text-xl md:text-[70px] cta-heading font-black text-black font-[inter]   ">
@@ -256,7 +256,7 @@ export default function BlogContentPage() {
   </div>
 
  
-  <div className="bg-[#0E2B32] text-white md:py-12 md:mt-60 mt-25 md:h-[60vh] h-[63vh] md:ml-10 md:mr-10 ml-2 mr-2 mb-15 md:rounded-4xl rounded-2xl ">
+  <div className="bg-[#0E2B32] text-white md:py-12 md:mt-60 mt-25 md:h-[60vh] h-[100%] md:ml-10 md:mr-10 ml-2 mr-2 mb-15 md:rounded-4xl rounded-2xl ">
     <div className="max-w-8xl mx-auto md:px-6">
       <div className="flex flex-col md:flex-row items-start gap-10 ">
         {/* Left text */}
@@ -270,21 +270,21 @@ export default function BlogContentPage() {
         </div>
 
         {/* Right form */}
-        <div className="w-[380px] md:w-[900px] md:w-2/5 font-[inter] font-bold md:text-[25px] text-[12px]">
+        <div className="w-[100%] md:w-[900px] md:w-2/5 font-[inter] font-bold md:text-[25px] text-[12px] overflow-hidden">
   <form className="space-y-4">
-    {/* Name and Email - Row on small screens */}
+    
     <div className="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-6 px-8 md:px-0">
       <div className="flex flex-col ">
         <label className="mb-1">Nick Name</label>
         <input
           type="text"
-          className="p-2 rounded-lg bg-[#E5FFF3] text-black md:w-[340px] w-[320px] h-[40px] md:h-[50px]"  />
+          className="p-2 rounded-lg bg-[#E5FFF3] text-black md:w-[340px] w-[100%] h-[40px] md:h-[50px]"  />
       </div>
       <div className="flex flex-col md:ml-[-100px]">
         <label className="mb-1">Email</label>
         <input
           type="email"
-          className="p-2 rounded-lg bg-[#E5FFF3] text-black md:w-[535px] w-[320px] h-[40px]  md:h-[50px] "
+          className="p-2 rounded-lg bg-[#E5FFF3] text-black md:w-[535px] w-[100%] h-[40px]  md:h-[50px] "
         />
       </div>
     </div>
@@ -294,14 +294,14 @@ export default function BlogContentPage() {
       <label className="mb-1">Suggestions</label>
       <textarea
         rows="4"
-        className=" md:w-full w-[320px] md:h-[200px] h-[150px] p-2 rounded-lg bg-[#E5FFF3] text-black"
+        className=" md:w-full w-[100%] md:h-[200px] h-[140px] p-2 rounded-lg bg-[#E5FFF3] text-black"
       ></textarea>
     </div>
 
     {/* Submit Button */}
     <button
       type="submit"
-      className="bg-[#E5FFF3] text-[#0E2B32] md:px-20 px-12 py-3 rounded-4xl hover:bg-[#a6d1c2] transition font-bold mx-auto block md:ml-70 md:mt-10"
+      className="bg-[#E5FFF3] text-[#0E2B32] md:px-20 px-12 py-3 rounded-4xl hover:bg-[#a6d1c2] transition font-bold mx-auto block md:ml-70 md:mt-10 mb-5"
     >
       SEND
     </button>
