@@ -128,20 +128,20 @@ export default function BlogContentPage() {
   return (
     <div className="min-h-screen bg-white overflow-hidden">
       <Navbar/>
-      <div className="relative blog-header-image h-[120vh] w-100% overflow-hidden rounded-[3rem] ml-10 mr-10 shadow-lg mt-45">
+      <div className="relative blog-header-image h-[90vh] w-100% overflow-hidden rounded-[2rem] ml-10 mr-10 shadow-lg mt-40">
         <img
           src="/images/image 65.png"
           alt="Blog Header"
-          className="absolute top-0 left-5 w-full h-full object-cover scale-110 rounded-2xl"
+          className="absolute top-0  w-full h-full object-cover  rounded-sm"
         />
-      <div  className="blog-header-text absolute inset-0  rounded-4xl flex items-left justify-left flex-col font-[inter] h-[330px] bg-[#65685269]/61 font-bold border-3 rounded-4xl  border-white text-white text-[80px] mt-195 mb-8 ml-10 mr-10 px-10  py-10   backdrop-blur-lg">
+      <div  className="blog-header-text absolute inset-0  rounded-4xl flex items-left justify-left flex-col font-[inter] h-[250px] bg-[#65685269]/100 font-bold border-3 rounded-4xl  border-white text-white text-[80px] mt-140  ml-10 mr-10 px-20  py-5   backdrop-blur-lg">
         <p >10 UI Mistakes Beginners Make </p>
-        <p>And How to Fix Them </p>
+        <p className="-mt-5">And How to Fix Them </p>
       </div>
 
       </div>
 
-      <div className=" max-w-8xl main-layout mx-auto grid grid-cols-1 md:grid-cols-15  px-5 py-22 mt-20" ref={contentRef}>
+      <div className=" max-w-8xl main-layout mx-auto grid grid-cols-1 md:grid-cols-15  px-5 py-22 " ref={contentRef}>
 
   <aside className="col-span-3 left-article sticky top-[72px]   ">
           <div className="relative mb-4 ">
