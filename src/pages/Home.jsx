@@ -15,10 +15,11 @@ import HeroSection from "../sections/HeroSection";
 import AboutSection from "../sections/AboutSection";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-
+import { Helmet } from "react-helmet";
 
 
 export default function AnimatedWebsite() {
+  
   const scrollRef = useRef(null);
   const location = useLocation();
 
@@ -50,6 +51,16 @@ export default function AnimatedWebsite() {
   
  return (
     <div className="w-full overflow-x-hidden bg-[#ececea] text-black  scrollbar-none">
+      <Helmet>
+      <title>Byte Bandits | Digital Products That Scale</title>
+      <meta name="description" content="We build high-performance websites, apps, and marketing strategies that convert. Join India’s fast-growing digital agency." />
+      <meta name="keywords" content="web development, mobile app development, cloud services, SEO, digital marketing, branding, Byte Bandits" />
+      <meta property="og:title" content="Byte Bandits - Your Partner in Digital Growth" />
+      <meta property="og:description" content="Custom software, app development, cloud scaling, and SEO strategies that drive real business results." />
+      <meta property="og:image" content="https://yourdomain.com/home-og.jpg" />
+      <meta property="og:url" content="https://yourdomain.com/" />
+      <meta name="twitter:card" content="summary_large_image" />
+    </Helmet>
     
       <Navbar />
 
