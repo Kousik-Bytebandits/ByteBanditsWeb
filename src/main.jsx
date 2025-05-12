@@ -3,13 +3,14 @@ import { createRoot } from 'react-dom/client'
 import '../src/styles/index.css'
 import App from './App'
 import ScrollButton from '../src/components/ScrollButton'
-import { HashRouter } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <HashRouter>
-    <App />
-    </HashRouter>
+    <HelmetProvider>
+         <App />
     <ScrollButton/>
+    </HelmetProvider>
+ 
   </StrictMode>,
 )
