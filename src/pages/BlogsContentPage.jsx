@@ -111,7 +111,7 @@ const sectionContents = [
 ];
 
 export default function BlogContentPage() {
-  const contentRef = useRef(null); // Attach this to your aside (already done)
+  const contentRef = useRef(null); 
 
   const { scrollYProgress } = useScroll({
     target: contentRef,
@@ -136,12 +136,12 @@ export default function BlogContentPage() {
         />
       <div  className="blog-header-text absolute inset-0  rounded-4xl flex items-left justify-left flex-col font-[inter] h-[250px] bg-[#65685269]/100 font-bold border-3 rounded-4xl  border-white text-white text-[80px] mt-140  ml-10 mr-10 px-20  py-5   backdrop-blur-lg">
         <p >10 UI Mistakes Beginners Make </p>
-        <p className="-mt-5">And How to Fix Them </p>
+        <p className="md:-mt-5 ">And How to Fix Them </p>
       </div>
 
       </div>
 
-      <div className=" max-w-8xl main-layout mx-auto grid grid-cols-1 md:grid-cols-15  px-5 py-22 " ref={contentRef}>
+      <div className=" max-w-8xl main-layout mx-auto grid grid-cols-1 md:grid-cols-15  px-5 py-30 md:py-20 " ref={contentRef}>
 
   <aside className="col-span-3 left-article sticky top-[72px]   ">
           <div className="relative mb-4 ">
