@@ -17,14 +17,16 @@ const Footer = () => {
     { name: "Home", href: "/" },
     { name: "Blogs", href: "#blog-section" },
     { name: "Services", href: "#service-section" },
+     {name:"Careers", href: "/career"},
     { name: "About Us", href: "#about-section" },
     { name: "Contact Us", href: "/contact" },
+   
     
    
   ];
 
   return (
-    <footer className="custom-footer bg-[#353639] text-white pt-15">
+    <footer className="custom-footer bg-[#353639] text-white pt-15 overflow-hidden">
       <div className="max-w-10xl md:px-6 md:py-5 flex flex-col md:flex-row gap-10">
 
         {/* Left Section - 40% */}
@@ -77,7 +79,7 @@ const Footer = () => {
           {/* Links */}
           <div className="links-container">
             <h4 className="links-head text-[20px] mb-4 text-[#8F8F8F] inter font-bold">LINKS</h4>
-            <ul className="space-y-2 text-[20px] text-[#E0E0E0] underline foot">
+            <ul className="space-y-1 text-[20px] text-[#E0E0E0] underline foot">
               {menuItems.map((item) => (
                 <li key={item.name} className=" font-bold cursor-pointer">
                   <a

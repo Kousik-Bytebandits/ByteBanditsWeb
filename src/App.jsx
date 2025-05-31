@@ -7,6 +7,8 @@ import { useEffect, useState } from 'react';
 import Scroll from './utils/Scroll';
 import ErrorPage from './pages/ErrorPage';
 import BlogsContentPage from './pages/BlogsContentPage';
+import CareerPage from './pages/CareerPage';
+
 export default function App() {
   const [loading, setLoading] = useState(true);
 
@@ -37,6 +39,7 @@ export default function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/error" element={<ErrorPage/>}/>
         <Route path='/blogs' element={<BlogsContentPage/>}/>
+        <Route path='/career' element={<CareerPage/>}/>
       </Routes>
     </Router>
     </div>

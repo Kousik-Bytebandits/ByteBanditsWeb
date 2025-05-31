@@ -23,10 +23,10 @@ export default function Navbar() {
   const handleNavigation = (item) => {
     setSidebarOpen(false);
     if (item.href.startsWith("#")) {
-      // Navigate to / with section ID
+   
       navigate("/", { state: { scrollTo: item.href.substring(1) } });
     } else {
-      // Navigate to full path like /contact
+
       navigate(item.href);
     }
   };
@@ -36,7 +36,8 @@ export default function Navbar() {
     { name: "About Us", href: "#about-section" },
     { name: "Services", href: "#service-section" },
     { name: "Contact Us", href: "/contact" },
-    { name: "Blogs", href: "#blog-section" }
+    { name: "Blogs", href: "#blog-section" },
+    {name:"Careers", href:'/career'},
   ];
 
   return (
