@@ -5,10 +5,10 @@ const Footer = () => {
 
   const handleNavigation = (item) => {
     if (item.href.startsWith("#")) {
-      // Navigate to / with section ID
+      
       navigate("/", { state: { scrollTo: item.href.substring(1) } });
     } else {
-      // Navigate to full path like /contact
+      
       navigate(item.href);
     }
   };
@@ -20,6 +20,7 @@ const Footer = () => {
      {name:"Careers", href: "/career"},
     { name: "About Us", href: "#about-section" },
     { name: "Contact Us", href: "/contact" },
+    { name: "Internship", href: "/internship" },
    
     
    

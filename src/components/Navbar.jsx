@@ -38,6 +38,7 @@ export default function Navbar() {
     { name: "Contact Us", href: "/contact" },
     { name: "Blogs", href: "#blog-section" },
     {name:"Careers", href:'/career'},
+    {name:"Internship", href:'/internship'},
   ];
 
   return (

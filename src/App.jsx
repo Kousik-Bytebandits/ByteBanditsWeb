@@ -8,6 +8,7 @@ import Scroll from './utils/Scroll';
 import ErrorPage from './pages/ErrorPage';
 import BlogsContentPage from './pages/BlogsContentPage';
 import CareerPage from './pages/CareerPage';
+import Internship from './pages/Internship';
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -40,6 +41,7 @@ export default function App() {
         <Route path="/error" element={<ErrorPage/>}/>
         <Route path='/blogs' element={<BlogsContentPage/>}/>
         <Route path='/career' element={<CareerPage/>}/>
+        <Route path="/internship" element={<Internship />} />
       </Routes>
     </Router>
     </div>
