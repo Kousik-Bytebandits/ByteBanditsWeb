@@ -96,7 +96,7 @@ const quarterlyRocket = useRef();
     <div className="bg-[#ececea]  font-[inter] overflow-x-hidden">
     <div className="min-h-screen  flex items-center justify-center px-4 py-10">
         <Navbar />
-      <div className="w-full relative min-h-[200vh] "ref={containerRef}>
+      <div className="w-full relative "ref={containerRef}>
         {/* Heading */}
         <div className="  relative text-center mb-6 ">
           <img
