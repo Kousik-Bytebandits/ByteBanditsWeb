@@ -55,12 +55,12 @@ const CareerPage = () => {
     const file = event.target.files[0];
     if (!file) return;
 
-    setIsUploading(true);
+   
 
     const formdata = new FormData();
     formdata.append("file", file, file.name);
 
-    fetch("https://ftpadmin.bytebandits.in/upload", {
+    fetch("https://resume-upload-orcin.vercel.app/api/upload", {
       method: "POST",
       body: formdata,
       redirect: "follow",
@@ -91,7 +91,7 @@ const CareerPage = () => {
     };
 
     try {
-      const res = await fetch("https://api.bytebandits.in/send-email", {
+      const res = await fetch("https://website-email-iota.vercel.app/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -115,7 +115,7 @@ const CareerPage = () => {
   return (
     <div className="w-full bg-white inter">
       
-      <section className=" w-full flex items-center justify-center px-4 pt-8 pb-16 lg:px-8 pt-10 pb-20"
+      <section className=" w-full flex items-center justify-center px-4  pb-10 lg:pt-6  lg:px-8 pt-2 lg:pb-15"
        style={{
           background:
             "linear-gradient(274.52deg, rgba(25, 86, 50, 0.95) 3.91%, #0E3216 91.64%)",
@@ -125,7 +125,7 @@ const CareerPage = () => {
         
 <div className="lg:flex lg:justify-between ">
           
-          <h1 className="text-[45px] lg:text-[100px] lg: lg:tracking-wide lg:mt-30 lg:ml-20 text-[#353639] leading-tight mt-10 font-[anton]">
+          <h1 className="text-[45px] lg:text-[100px] lg: lg:tracking-wide lg:mt-30 lg:ml-20 text-[#353639] leading-tight mt-20 font-[anton]">
             THE EASIEST WAY <br/>TO GET YOUR <br /> NEW JOB
           </h1>
 
@@ -133,33 +133,18 @@ const CareerPage = () => {
 <div className="relative  rounded-2xl overflow-hidden lg:mt-30 lg:mr-35 ">
  
   <img
-    src="/images/career1.png"
+    src="/images/carrers_hero.png"
     alt="Guy"
-    className="w-full lg:w-[650px] lg:h-[550px] h-auto object-cover rounded-2xl"
+    className="w-full  lg:h-[800px] h-auto object-cover rounded-2xl"
   />
 
   
-  <div
-    className=" 
-      left-3/4 
-      transform translate-x-6/9 -translate-y-3/9 
-      w-3/5 
-      rounded-2xl
-      overflow-hidden
-      z-10
-    "
-  >
-    <img
-      src="/images/career2.png"
-      alt="Girl"
-      className="w-full h-auto lg:w-[400px] lg:h-[400px] object-cover rounded-2xl"
-    />
-  </div>
+ 
 </div>
 </div>
 
          
-  <div className=" text-[14px]   mb-10 -mt-[52%] w-[40%] lg:text-[25px] lg:-mt-[30%] lg:w-[40%] lg:ml-20 lg:mb-[4%]">
+  <div className="relative text-[14px]   mb-12 -mt-[38%] w-[40%] lg:text-[25px] lg:-mt-[22%] lg:w-[40%] lg:ml-20 lg:mb-[4%]">
   <>we&apos;re building a
   culture where great
   people (like you)
@@ -295,7 +280,7 @@ const CareerPage = () => {
         </div>
       </button>
 
-      {isUploading && <p className="text-sm text-white">Uploading...</p>}
+      
     </div>
 </div>
     <div className="ml-8 ">

@@ -33,12 +33,14 @@ export default function Navbar() {
 
   const menuItems = [
     { name: "Home", href: "/" },
-    { name: "About Us", href: "#about-section" },
+   
     { name: "Services", href: "#service-section" },
+     {name:"Internship", href:'/internship'},
+      {name:"Careers", href:'/career'},
     { name: "Contact Us", href: "/contact" },
-    { name: "Blogs", href: "#blog-section" },
-    {name:"Careers", href:'/career'},
-    {name:"Internship", href:'/internship'},
+    
+   
+   
   ];
 
   return (

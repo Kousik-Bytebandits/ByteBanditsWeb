@@ -1,127 +1,123 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const navigate = useNavigate();
 
   const handleNavigation = (item) => {
     if (item.href.startsWith("#")) {
-      
       navigate("/", { state: { scrollTo: item.href.substring(1) } });
     } else {
-      
       navigate(item.href);
     }
   };
 
   const menuItems = [
     { name: "Home", href: "/" },
-    { name: "Blogs", href: "#blog-section" },
     { name: "Services", href: "#service-section" },
-     {name:"Careers", href: "/career"},
-    { name: "About Us", href: "#about-section" },
-    { name: "Contact Us", href: "/contact" },
     { name: "Internship", href: "/internship" },
-   
-    
-   
+    { name: "About Us", href: "#about-section" },
+    { name: "Careers", href: "/career" },
+    { name: "Contact Us", href: "/contact" },
   ];
 
   return (
-    <footer className="custom-footer bg-[#353639] text-white pt-15 overflow-hidden">
-      <div className="max-w-10xl md:px-6 md:py-5 flex flex-col md:flex-row gap-10">
-
-        {/* Left Section - 40% */}
-        <div className="left-foot md:w-[40%] ml-15">
-          <Link to="/">
-            <div className="lf-container w-[200px] h-[80px] mb-6">
-              <img
-                src="/images/ByteBandits 2.png"
-                alt="Byte Bandits Logo"
-                className="w-full h-auto object-contain lf-img"
-              />
-            </div>
-          </Link>
-          <p className="lf-desc text-[16px] text-[#E0E0E0] inter max-w-[70%] lg:ml-2 leading-8">
-            We are a passionate team of tech innovators dedicated to crafting smart, scalable, and user-centric digital solutions. From custom software and mobile apps to eCommerce platforms, digital marketing, branding, and cloud services.
-          </p>
+    <footer className="bg-[#1D1D1D] text-white px-6 lg:px-20 py-5 lg:py-10">
+      {/* === TOP ROW === */}
+      <div className="flex flex-col mt-10  lg:flex-row justify-between items-start gap-10">
+        {/* Left Text */}
+        <div className="lg:w-3/5  ">
+          <h2 className="text-[27px] lg:text-[80px] font-[inter] font-bold ">
+            <span className="text-[#3CD382]">Let’s</span> start building your<br />
+            future with <span className="text-[#3CD382]">powerful</span><br />
+            <span className="text-[#3CD382]">technology.</span>
+          </h2>
         </div>
 
-        {/* Right Section - 60% (3 sections inside) */}
-        <div className="right-foot md:w-[60%] grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-8">
-        
-          {/* Office Info */}
-          <div className="office-container text-[#E0E0E0]">
-            <h4 className="office-head text-[20px] inter mb-4 text-[#8F8F8F] font-bold">OFFICE</h4>
-
-            <div className="flex items-start gap-2 foot text-[20px]">
-              <img src="/icons/location.png" alt="Location" className="w-5 h-5 mt-[6px]" />
-              <p>
-                No.3a, door no.1/1033,<br />
-                kumudham nagar extension,<br />
-                mugaliivakkam, Chennai -600125
-              </p>
-            </div>
-
-            <div className="flex items-center gap-2 foot text-[20px] mt-5">
-              <img src="/icons/mobile.png" alt="Phone" className="w-5 h-5" />
-              <p>Phone: +91 79048 12982</p>
-            </div>
-
-            <div className="flex items-center gap-2 foot text-[20px] mt-4">
-              <img src="/icons/email.png" alt="Email" className="w-5 h-5" />
-              <p>
-                Email: <a href="mailto:bbtechworks@gmail.com" className="underline foot">
-                  bbtechworks@gmail.com
-                </a>
-              </p>
-            </div>
-          </div>
-
-          {/* Links */}
-          <div className="links-container">
-            <h4 className="links-head text-[20px] mb-4 text-[#8F8F8F] inter font-bold">LINKS</h4>
-            <ul className="space-y-1 text-[20px] text-[#E0E0E0] underline foot">
-              {menuItems.map((item) => (
-                <li key={item.name} className=" font-bold cursor-pointer">
-                  <a
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleNavigation(item);
-                    }}
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          
-          {/* Social Media */}
-          <div className="social-container">
-            <h4 className="social-head text-[20px] inter mb-1 text-[#8F8F8F] font-bold">SOCIAL MEDIA</h4>
-            <div className="grid grid-cols-3 gap-8 mt-8">
-              {[
-                { img: "/images/image 23.png", link: "https://www.instagram.com" },
-                { img: "/images/image 24.png", link: "https://wa.me/+917904812982" },
-                { img: "/images/image 29.png", link: "https://www.linkedin.com" },
-                { img: "/images/image 27.png", link: "https://www.x.com" },
-                { img: "/images/image 28.png", link: "https://www.facebook.com" },
-                { img: "/images/image 26.png", link: "https://www.threads.com" },
-              ].map((social, i) => (
-                <a key={i} href={social.link} target="_blank" rel="noopener noreferrer">
-                  <img src={social.img} alt="social" className="w-10 h-10 social-img" />
-                </a>
-              ))}
-            </div>
-          </div>
-
+        {/* Right Logo */}
+        <div className="lg:w-2/5 flex justify-start lg:justify-end">
+          <img src="/images/ByteBandits.png" alt="Byte Bandits Logo" className="h-18 lg:h-45 lg:mt-6  object-contain" />
         </div>
       </div>
 
-      {/* Copyright */}
-      <div className="copy-container text-center text-[#D9D9D9] mt-10 border-t border-[#444] py-6 inter bg-[#454545]">
-        Copyright © Byte Bandits. All Rights Reserved.
+      {/* === SPACING BEFORE REST === */}
+      <div className="mt-10" />
+
+      {/* === MIDDLE SECTION === */}
+      
+   {/* === MIDDLE SECTION === */}
+<div className="mt-10 flex flex-col lg:flex-row lg:justify-between lg:gap-8 ">
+
+  {/* === Row 1 (Mobile) or Col 1 + 2 (Desktop) === */}
+  <div className="flex flex-row gap-6 lg:gap-0 lg:w-1/2">
+    {/* Transform */}
+    <div className="w-3/5 lg:w-[100%] lg:gap-0 flex flex-col gap-4">
+      <h3 className="text-[#B3E2FF] text-[18px] font-bold lg:text-[28px] mb-3 lg:mb-5">Transform</h3>
+      <p className="text-[12px] lg:text-[22px] text-white leading-relaxed ">
+        We are a passionate team of tech innovators dedicated to crafting smart, scalable, and user-centric digital
+        solutions. From custom software and mobile apps to eCommerce platforms, digital marketing, branding, and cloud services.
+      </p>
+    </div>
+
+    {/* Company */}
+    <div className="w-2/5 lg:w-1/6 lg:ml-30 lg:gap-0 lg:mt-15 flex flex-col gap-4">
+      <h4 className="text-[#B3E2FF] font-semibold text-[18px] lg:text-[24px] mb-3 lg:mb-6">Company</h4>
+      <ul className="space-y-1 lg:space-y-3 lg:no-underline lg:font-normal text-[14px] font-semibold underline ml-2 lg:ml-0 lg:text-[20px] text-white">
+        {menuItems.map((item) => (
+          <li key={item.name} className="cursor-pointer hover:underline">
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation(item);
+              }}
+            >
+              {item.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  {/* === Row 2 (Mobile) or Col 3 + 4 (Desktop) === */}
+  <div className="flex flex-row gap-6 mt-6 lg:mt-15  lg:w-1/2">
+    {/* Branch Office */}
+    <div className="w-1/2 lg:w-2/2 lg:ml-15  flex flex-col gap-4">
+      <h4 className="text-[#B3E2FF] font-semibold text-[18px] lg:text-[24px] mb-3">Branch Office</h4>
+      <p className="text-[12px] lg:text-[20px] text-white leading-relaxed">
+        12b, 3, North Eda Street,<br />
+        Bhima Nagar,<br/> 
+        Sangillyandapuram,<br />
+        Tiruchirappalli-620001.<br /><br />
+        Phone: +91 79048 12982<br />
+        Email: <a href="mailto:bbtechworks@gmail.com" className="underline">bbtechworks@gmail.com</a>
+      </p>
+    </div>
+
+    {/* Head Office */}
+    <div className="w-1/2  lg:w-1/1 flex flex-col gap-4">
+      <h4 className="text-[#B3E2FF] font-semibold text-[18px] lg:text-[24px] mb-3">Head Office</h4>
+      <p className="text-[12px] lg:text-[20px] text-white leading-relaxed">
+        Plot no.3a, door no.1/1033,<br />
+        Kumudham Nagar Extension,
+        Mugalivakkam,<br/>
+         Chennai -600125<br /><br />
+        Phone: +91 79048 12982<br />
+        Email: <a href="mailto:bbtechworks@gmail.com" className="underline">bbtechworks@gmail.com</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+      {/* === Divider === */}
+      <div className="border-t  my-5 lg:my-10" />
+
+      {/* === Bottom Line === */}
+      <div className="flex flex-col lg:flex-row justify-between items-center text-[10px] lg:text-[18px]">
+        <p>Copyright © Byte Bandits. All Rights Reserved.</p>
+        <p className="mt-1 lg:mt-0">Privacy Policy | Terms & Conditions</p>
       </div>
     </footer>
   );

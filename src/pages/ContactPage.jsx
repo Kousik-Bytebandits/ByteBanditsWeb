@@ -62,7 +62,7 @@ const ContactPage = () => {
     };
 
     try {
-      const response = await fetch("https://api.bytebandits.in/send-email", requestOptions);
+      const response = await fetch("https://website-email-iota.vercel.app/send-email", requestOptions);
       const result = await response.text();
       console.log(result);
     
@@ -71,6 +71,7 @@ const ContactPage = () => {
       });
     
       setFormData({
+        template_type: 'contact',
         first_name: '',
         last_name: '',
         email: '',
