@@ -5,6 +5,53 @@ import { FaArrowUp } from "react-icons/fa";
 import { useState,useRef } from "react";
 
 
+
+const jobSuggestions = {
+  frontend: [
+    "React Developer",
+    "Vue.js Developer",
+    "HTML/CSS Developer",
+    "JavaScript Developer",
+    "Angular Developer",
+    "Webflow Developer",
+    "UI Developer"
+  ],
+  backend: [
+    "Node.js Developer",
+    "Python Developer",
+    "Django Developer",
+    "Express.js Developer",
+    "MongoDB Specialist",
+    "REST API Developer",
+    "GraphQL Developer"
+  ],
+  design: [
+    "UI/UX Designer",
+    "Graphic Designer",
+    "Figma Designer",
+    "Web Designer",
+    "Product Designer",
+    "Interaction Designer",
+    "Creative Designer"
+  ],
+  content: [
+    "Content Writer",
+    "Technical Writer",
+    "Copywriter",
+    "Blog Writer",
+    "Scriptwriter",
+    "Editor"
+  ],
+  marketing: [
+    "SEO Specialist",
+    "Digital Marketing Executive",
+    "Social Media Manager",
+    "Performance Marketer",
+    "Email Marketing Specialist",
+    "Brand Strategist"
+  ]
+};
+
 const benefits = [
   {
     icon:'images/growth.png',
@@ -32,15 +79,19 @@ const benefits = [
     bgColor: 'bg-[#B3D0C3]',
   },
 ];
+
 const CareerPage = () => {
-  
-  const [formData, setFormData] = useState({
+const [formData, setFormData] = useState({
     full_name: "",
     email: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const inputRef = useRef(null);
   const [isUploading, setIsUploading] = useState(false);
+  const [category, setCategory] = useState("");
+  const [query, setQuery] = useState("");
+  const [filteredRoles, setFilteredRoles] = useState([]);
+  const [selectedRole, setSelectedRole] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -55,11 +106,9 @@ const CareerPage = () => {
     const file = event.target.files[0];
     if (!file) return;
 
-   
-
     const formdata = new FormData();
     formdata.append("file", file, file.name);
-
+      setIsUploading(true);
     fetch("https://resume-upload-orcin.vercel.app/api/upload", {
       method: "POST",
       body: formdata,
@@ -74,19 +123,58 @@ const CareerPage = () => {
       .catch((error) => {
         console.error("Upload error:", error);
         alert("Upload failed. Please try again.");
+        setIsUploading(false);
       })
       .finally(() => setIsUploading(false));
   };
 
+  const handleCategoryChange = (e) => {
+    const value = e.target.value;
+    setCategory(value);
+    setQuery("");
+    setFilteredRoles(jobSuggestions[value] || []);
+    setSelectedRole(value); 
+  };
+
+  const handleSearchChange = (e) => {
+    const value = e.target.value;
+    setQuery(value);
+    if (category && jobSuggestions[category]) {
+      const suggestions = jobSuggestions[category].filter((role) =>
+        role.toLowerCase().includes(value.toLowerCase())
+      );
+      setFilteredRoles(suggestions);
+    } else {
+      setFilteredRoles([]);
+    }
+  };
+
+  const handleRoleClick = (role) => {
+    setSelectedRole(role);
+    setQuery(role);
+    setFilteredRoles([]);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+     if (!category) {
+      alert("Please select a category before submitting.");
+      return;
+    }
+    if(!formData.full_name && !formData.email) {
+      alert("Please fill in all required fields");
+    }
+    if(!isUploading){
+      alert("Please upload your CV before submitting.");
+      return;
+    }
     setIsSubmitting(true);
 
     const payload = {
       template_type: "job_application",
       full_name: formData.full_name,
       email: formData.email,
-      position: "Software Engineer",
+      position: category || selectedRole , 
       date: getCurrentDate(),
     };
 
@@ -111,7 +199,9 @@ const CareerPage = () => {
     } finally {
       setIsSubmitting(false);
     }
+    console.log("Form submitted with data:", payload);
   };
+
   return (
     <div className="w-full bg-white inter">
       
@@ -144,7 +234,7 @@ const CareerPage = () => {
 </div>
 
          
-  <div className="relative text-[14px]   mb-12 -mt-[38%] w-[40%] lg:text-[25px] lg:-mt-[22%] lg:w-[40%] lg:ml-20 lg:mb-[4%]">
+  <div className="relative text-[14px]   mb-15 -mt-[40%] w-[39%] lg:text-[25px] lg:-mt-[22%] lg:w-[40%] lg:ml-20 lg:mb-[4%]">
   <>we&apos;re building a
   culture where great
   people (like you)
@@ -153,41 +243,55 @@ const CareerPage = () => {
 
 
         
-<div className="mb-10 bg-white rounded-full px-3 py-2 lg:py-5 lg:w-[38%] lg:ml-20 flex items-center justify-between shadow-md border border-gray-200">
-  {/* Category Selector with icon */}
-  <div className="flex items-center  lg:gap-5 pr-5 lg:pr-20 relative">
-    <div className="lg:ml-5 ">
-      <img
-        src="images/suitcase.png"
-        alt="Category Icon"
-        className="w-[25px] h-[25px] lg:w-[50px] lg:h-[50px]"
-      />
-    </div>
-    <select
-      className="bg-transparent text-sm lg:text-[20px] focus:outline-none "
-    >
-      <option>Category</option>
-      <option>React developer</option>
-      <option>Node.Js</option>
-      <option>Graphic Designer</option>
-    </select>
-
-  
-    <div className="absolute right-4 top-0 bottom-0 w-[2px] bg-[#1B4C2D]" />
-  </div> 
-
- <div className="relative flex-1 ">
-    <input
-      type="text"
-      placeholder="Search Job"
-      className="w-full px-1  py-1  text-sm lg:text-[20px] lg:w-[100%]  lg:placeholder:text-lg lg:py-3 lg:px-5  focus:outline-none border-1 border-[#1B4C2D] rounded-full"
-    />
-    <div className="absolute text-3xl right-0  top-1/2 transform -translate-y-1/2 text-[#1B4C2D] ">
-     
-       <IoSearchCircle className="lg:w-[60px] lg:h-[60px]"/>
-    </div>
-  </div>
-</div>
+  <div className="mb-10 bg-white rounded-full px-3 py-2 lg:py-5 lg:w-[38%] lg:ml-20 flex items-center justify-between shadow-md border border-gray-200">
+        <div className="flex items-center lg:gap-5 pr-5 lg:pr-20 relative">
+          <div className="lg:ml-5">
+            <img
+              src="images/suitcase.png"
+              alt="Category Icon"
+              className="w-[25px] h-[25px] lg:w-[50px] lg:h-[50px]"
+            />
+          </div>
+          <select
+            value={category}
+            onChange={handleCategoryChange}
+            className="bg-transparent text-sm lg:text-[20px] focus:outline-none"
+          >
+            <option value="">Category</option>
+            <option value="frontend">Frontend</option>
+            <option value="backend">Backend</option>
+            <option value="design">Design</option>
+            <option value="content">Content</option>
+            <option value="marketing">Marketing</option>
+          </select>
+          <div className="absolute right-4 top-0 bottom-0 w-[2px] bg-[#1B4C2D]" />
+        </div>
+        <div className="relative flex-1">
+          <input
+            type="text"
+            value={query}
+            onChange={handleSearchChange}
+            placeholder="Search Job"
+            className="w-full px-1 py-1 text-sm lg:text-[20px] lg:w-[100%] lg:placeholder:text-lg lg:py-3 lg:px-5 focus:outline-none border-1 border-[#1B4C2D] rounded-full"
+          />
+          <div className="absolute text-3xl right-0 top-1/2 transform -translate-y-1/2 text-[#1B4C2D]">
+            <IoSearchCircle className="lg:w-[60px] lg:h-[60px]" />
+          </div>
+          {filteredRoles.length > 0 && (
+            <ul className="absolute z-10 w-full mt-2 bg-white border border-gray-300 rounded-lg max-h-48 overflow-y-auto scrollbar-none">
+              {filteredRoles.map((role, index) => (
+                <li
+                  key={index}
+                  className="p-2 cursor-pointer hover:bg-gray-100"
+                  onClick={() => handleRoleClick(role)}
+                >
+                  {role}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
 
 
           
