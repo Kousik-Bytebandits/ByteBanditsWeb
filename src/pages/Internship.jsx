@@ -1,4 +1,4 @@
-import  { useState,useRef } from "react";
+import  { useState, } from "react";
 import { FaInfoCircle, FaCheck } from "react-icons/fa";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -42,61 +42,15 @@ const technologies = [
 
 const Internship = () => {
   const [activeTab, setActiveTab] = useState("monthly");
- const containerRef = useRef();
-const headingRocket = useRef();
-const monthlyRocket = useRef();
-const quarterlyRocket = useRef();
 
- useGSAP(() => {
-  // Heading Rocket Animation (bottom-right to top-left)
-  gsap.to(headingRocket.current, {
-       x: -2050,
-    y: 10,
-    scrollTrigger: {
-      trigger: containerRef.current,
-      start: '  top',
-      end: 'bottom top',
-      scrub: true,
-    
-    },
-  });
 
-  // Monthly Rocket Animation
-  if (monthlyRocket.current) {
-    gsap.to(monthlyRocket.current, {
-      x: 450,
-      y: -300,
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: 'top ',
-        end: 'bottom top',
-        scrub: true,
-        
-      },
-    });
-  }
-
-  // Quarterly Rocket Animation
-  if (quarterlyRocket.current) {
-    gsap.to(quarterlyRocket.current, {
-       x: 450,
-      y: -300,
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: 'top ',
-        end: 'bottom top',
-        scrub: true,
-       
-      },
-    });
-  }
-}, [activeTab]);
+ 
 
   return (
     <div className="bg-[#ececea]  font-[inter] overflow-x-hidden">
     <div className="min-h-screen  flex items-center justify-center px-4 py-10">
         <Navbar />
-      <div className="w-full relative "ref={containerRef}>
+      <div className="w-full relative  ">
         {/* Heading */}
         <div className="  relative text-center mb-6 ">
           <img
@@ -105,19 +59,30 @@ const quarterlyRocket = useRef();
             
             className="absolute left-[0.5%] top-[30%] w-15 block lg:hidden  "
           />
+          <img
+        src="images/rocket-right.png"
+        alt="rocket"
+      
+        className="absolute block lg:hidden top-[30%] right-[0.5%] w-15 rotate-360 "
+      />
+
 <h1 className="hidden lg:block text-[#0F1112]  lg:mt-[8%] lg:text-[100px] uppercase  leading-normal font-[anton]">
       <div className="relative">
-        
-       
-        Launch Your Tech Career
-        
+        {/* Left Rocket */}
         <img
           src="images/Frame.png"
           alt="rocket"
-           ref={headingRocket}
-          className="absolute right-[0%] top-[450%] rotate-280  w-14 lg:w-100  z-10 overflow-x-hidden"
+          className="absolute left-[20%] top-[100%]  w-14 lg:w-70 rotate-298 "
         />
+        Launch Your Tech Career
+        <img
+          src="images/Frame.png"
+          alt="rocket"
+          className="absolute right-[20%] top-[100%]   w-14 lg:w-70 rotate-360 "
+        />
+        
       </div>
+      
       <div>with Our Hands-On</div>
       <div>Internships</div>
     </h1>
@@ -172,12 +137,7 @@ const quarterlyRocket = useRef();
     
     {/* Starter Plan */}
     <div className="relative bg-[linear-gradient(180deg,_#2C17A3_2.51%,_#B51A5B_87.35%)] text-white mt-6 pt-10 pb-6 px-6 rounded-xl lg:w-[400px] ">
-      <img
-        src="images/rocket-right.png"
-        alt="rocket"
-       ref={monthlyRocket}
-        className="absolute block lg:hidden -top-12 right-25 w-18 rotate-360 rocket-mobile-right"
-      />
+      
       <div className="absolute -top-7 left-1/2 transform -translate-x-1/2 w-56 h-20 bg-[#2C17A3] text-white flex items-center justify-center font-semibold clip-path-trapezoid-reverse">
         <p className="-mt-11 lg:text-[17px]">Most popular</p>
       </div>
@@ -280,12 +240,7 @@ const quarterlyRocket = useRef();
 
     {/* Starter Plan */}
     <div className="relative bg-[linear-gradient(180deg,_#2C17A3_2.51%,_#B51A5B_87.35%)] text-white mt-6 pt-10 pb-6 px-6 rounded-xl w-full lg:w-[400px] ">
-      <img
-        src="images/rocket-right.png"
-        alt="rocket"
-        ref={quarterlyRocket}
-        className="absolute block lg:hidden -top-12 right-25 w-18 rotate-360"
-      />
+     
       <div className="absolute -top-7 left-1/2 transform -translate-x-1/2 w-56 h-20 bg-[#2C17A3] text-white flex items-center justify-center font-semibold clip-path-trapezoid-reverse">
         <p className="-mt-11 lg:text-[17px]">Most popular</p>
       </div>
@@ -418,7 +373,7 @@ const quarterlyRocket = useRef();
 
 
     <div className="py-10 px-4 flex flex-col items-center mb-5 lg:mb-25">
-  <h2 className="text-[28px] lg:text-[70px] font-[anton] tracking-wide mb-8 text-center">
+  <h2 className="text-[28px] lg:text-[70px] font-[anton] tracking-wide mb-8 text-center lg:mb-20">
     PERKS & OUTCOMES
   </h2>
 
